@@ -1,5 +1,9 @@
 /*correct color for links in menu and logout button*/
-.logo {
+/*@font-face {
+  font-family: jennasue;
+  src: url('jennasue-webfont-7223bec614edab1b17133f137673c644.eot');
+}
+*/.logo {
   float: left;
   width: 87%;
   margin-left: 25px;
@@ -9,3 +13,4 @@
   width: 150px;
   margin-left: 100px;
 }
+
