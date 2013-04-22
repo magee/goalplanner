@@ -1,11 +1,8 @@
 fs-goalmanager
 ==============
 
-Dependences
-
-Goal Planner requires the following:
+Dependences:  Goal Planner requires the following:
 <ul>
-  <li>Backbone.js</li>
-  <li>jQuery</li>
-  <li>jQueryUI</li>
+  <li><a href="www.jQuery.com">jQuery</a></li>
+  <li><a href="www.jQueryUI.com">jQueryUI</a></li>
 </ul>
