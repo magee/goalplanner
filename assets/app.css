@@ -13,4 +13,57 @@
   width: 150px;
   margin-left: 100px;
 }
-
+.app-logo {
+  margin: 0 auto;
+  width: 90px;
+}
+.icons-sprite,.icons-activities-gray,.icons-activities-orange,.icons-add-investor,.icons-add-round-green,.icons-add-round-white,.icons-add-round,.icons-airplane,.icons-alarm-clock-gray,.icons-alarm-clock-orange,.icons-alarm-clock-shadow,.icons-alert-error,.icons-alert-success,.icons-anglelist,.btn-angelist:after,.icons-arrow-left-down,.icons-arrow-left-up,.icons-arrow-right-down-short,.icons-arrow-right-down,.icons-arrow-right-up-white,.icons-arrow-right-up,.icons-arrow-right-upper,.icons-arrow-round-b,.icons-arrow-round-r,.icons-back,.icons-cap,.icons-case,.icons-chain-huge,.icons-chain-mid,.icons-chart-huge,.icons-chart-market,.icons-chart-mid,.icons-chart-round,.icons-chart-shadow,.icons-chart-tiny,.icons-chart,.icons-chart1,.icons-chart_2,.icons-checked-tiny,.icons-checked-white,.icons-clock,.icons-close-red,.icons-completed-progress-bar-bg,.icons-connections-icon,.icons-counsel,.icons-currency-dolars,.icons-currency-huge,.icons-currency-mid,.icons-currency-round,.icons-currency-small,.icons-currency,.icons-dashboard,.icons-design-huge,.icons-dna,.icons-dropdown-triangle,.icons-end-connection,.icons-envelope,.icons-eye,.icons-fake-radio-bg,.icons-fake-radio-checked-bg,.icons-file-document,.icons-file-presentation,.icons-file-spreadsheet,.icons-files,.icons-first-connection,.icons-folder-advisors,.icons-folder-chair,.icons-folder-corporation,.icons-folder-doc-small,.icons-folder-doc,.icons-folder-people,.icons-folder-press,.icons-folder-puzzle,.icons-folder-suitcase,.icons-founds,.icons-funnel-ribbon,.icons-funnel,.icons-group-of-people,.icons-icon-1,.icon.login,.icons-idea,.icons-import-active,.icons-import-color,.icons-info-shadow,.icons-info,.icons-innovation,.icons-lab-huge,.icons-lab-mid,.icons-lab-round,.icons-lab,.icons-linkedin-logo,.icons-linkedin,.btn-linkedIn:after,.icons-logo,.icons-lost-state,.icons-main-logo-no-shadow,.icons-megaphone,.icons-millestone,.icons-normal-connection,.icons-one-connection,.icons-open-folder,.icons-opportunity,.icons-paused-state,.icons-pen,.icons-people-mid,.icons-people,.icons-phone,.icons-progress-bar-bg,.icons-progress-bar-completed,.icons-progress-bar-current,.icons-progress-bar-empty,.icons-radar-small,.icons-radar,.icons-reopen-state,.icons-round-bg,.icons-round-large-bg,.icons-round-small-bg,.icons-service,.icons-settings-huge,.icons-share-white,.icons-share,.icons-slide-down,.icons-slide-up,.icons-stage-closed-bg,.icons-stage-cold-bg,.icons-stage-contacted-bg,.icons-stage-contacted,.icons-stage-pitched-bg,.icons-stage-responded-bg,.icons-stages-bg,.icons-suitcase,.icons-suitecase-huge,.icons-ticket,.icons-tie-huge,.icons-tie-mid,.icons-tie-round,.icons-tie-small,.icons-tie,.icons-tube-r,.icons-tube,.icons-view,.icons-viewfinder-small,.icons-viewfinder,.icons-yes,.icons-you-connection,.page-title:before,.page-title.dashboard:after,.page-title.tube:after,.page-title.currency:after,.page-title.tie-small:after,.page-title.counsel:after,.page-title.radar-small:after,.page-title.viewfinder:after,.page-title.chart:after,.page-title-folder.doc:before,.lab-round,.tie-round,.connections-icon,.dropdown-triangle,#dateRanges:after,#departmentsRanges:after,.currency-round,.chart-round,.main-logo-no-shadow,.group-of-people,.opportunity,.service,.innovation,.case,.currency-dolars,.currency-small,.eye,.dna,.founds,.chart-market,.yes,.millestone,.linkedin-logo,.open-folder,.slide-down,.slide-up,.back,.alarm-clock-orange,.alarm-clock-gray,.activities-orange,.activities-gray,.add-round,.add-round-green,.add-round-white,.add-investor,.share,.share-white,.view,.arrow-right-down,.arrow-right-down-short,.arrow-right-up,.arrow-left-down,.arrow-left-up,.arrow-right-upper,.envelope,.phone,.import-color,.import-active,.close-red,.alert-success:before,.alert-danger:before,.alert-error:before,.breadcrumb-progress li:before,.breadcrumb-progress li:after,.breadcrumb-progress .completed:after,.breadcrumb-progress .current:after,.breadcrumb-progress .completed:before,.breadcrumb-progress .current:before,.modal-header .close,#editTodo h3:before,#editActivity h3:before,#dashboard-carousel .arrow-icon,.elements-grid .lab:after,.elements-grid .tie:after,.elements-grid .airplane:after,.elements-grid .suitcase:after,.elements-grid .cap:after,.elements-grid .ticket:after,.elements-grid .funnel:after,.elements-grid .currency:after,.elements-grid .chart:after,.elements-grid .chart-2:after,.elements-grid .clock:after,.elements-grid .pen:after,.elements-grid .idea:after,.elements-grid .people:after,.elements-grid .chart1:after,.elements-grid .radar:after,.elements-grid .viewfinder:after,.elements-grid .megaphone:after,.elements-grid .folder-doc:before,.elements-grid .folder-chair:before,.elements-grid .folder-people:before,.elements-grid .folder-suitcase:before,.elements-grid .folder-corporation:before,.elements-grid .folder-advisors:before,.elements-grid .folder-puzzle:before,.elements-grid .folder-press:before,.elements-grid .file-document:before,.elements-grid .file-spreadsheet:before,.elements-grid .file-presentation:before,.elements-grid .file-pdf:before,.elements-grid.features .box:before,.tips-box:before,.list-arrows>li:before,.description-group .lab:after,.description-group .business:after,.description-group .money:after,.description-group .chart:after,.description-group .contacts:after,.description-group .settings:after,.description-group .suitcase:after,.description-group .design:after,.description-group .lab-mid:after,.description-group .currency-mid:after,.description-group .chart-mid:after,.description-group .chain-mid:after,.description-group .people-mid:after,.description-group .tie-mid:after,.description-group .toggle-content.down:before,.description-group .toggle-content:before,.fake-radio,.fake-radio.checked,.no-borderradius .fake-radio.checked,ul.stages,.cold .stage-cold,.contacted .stage-contacted,.responded .stage-responded,.pitched .stage-pitched,.closed .stage-closed,.personal-card .re-open,.personal-card .paused,.personal-card .lost,#noGroup .modal-header .info,#alert .modal-header .info,#editInvestorTrack #how-connected .single-connections>.connection:first-child .avatar,#editInvestorTrack #how-connected .single-connections>.connection:last-child .avatar,#editInvestorTrack #how-connected .single-connections .connection.one .avatar,#editInvestorTrack #how-connected .connection .avatar,#editInvestorTrack #how-connected .you .avatar,.main-header hgroup,.links_with-desc a:before,.links_with-desc .counsel:after,.links_with-desc .files:after {
+  background:url(/assets/icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png) no-repeat;
+}
+.page-title.tube:after {
+  background-position:-290px 0;
+  height:31px;
+  width:28px;
+  margin-left:-13px;
+  top:8px;
+}
+.icons-tube {
+  background-position:-290px 0;
+}
+.page-title,.page-title-folder {
+  color:#f79832;
+  font:18px "Trebuchet MS",Arial,sans-serif;
+  padding:20px 0 20px;
+  position:relative;
+  text-align:center;
+}
+.page-title span,.page-title-folder span {
+  font-weight:bold;
+}
+.separator {
+  margin:30px 0;
+  position:relative;
+}
+.separator p {
+  color:#525252;
+  position:absolute;
+  text-align:center;
+  top:-11px;
+  width:100%;
+}
+.separator-header {
+  border-top:1px solid #ddd;
+  font-size:18px;
+  height:1px;
+  line-height:0;
+  margin:25px 0;
+  text-align:center;
+  width:100%;
+}
+.separator-header span {
+  background:#fff;
+  padding:0 15px;
+}
+.l-col .separator-header {
+  float:left;
+}
