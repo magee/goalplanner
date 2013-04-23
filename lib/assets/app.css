@@ -101,6 +101,20 @@ ol.breadcrumb-progress {
   border-radius:50%;
   z-index: 400;
 }
+.progress-bar {
+  position:absolute;
+  -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.2);
+  -moz-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.2);
+  box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.2);
+  height: 10px;
+  width: 720px;
+  background-color: lightgrey;
+  margin: 100px 0 0 135px;
+}
+.progress-bar.four {
+  width: 400px;
+  margin-left: 300px;
+}
 .class-circle span {
   margin-top: 10px;
   padding-top: 10px;
