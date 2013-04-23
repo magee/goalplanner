@@ -3,7 +3,9 @@
   font-family: jennasue;
   src: url('jennasue-webfont-7223bec614edab1b17133f137673c644.eot');
 }
-*/.logo {
+*/
+
+.logo {
   float: left;
   width: 87%;
   margin-left: 25px;
@@ -38,6 +40,7 @@
 .table-box {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   border:1px solid #e3e3e3;
   width: 80%;
 }
@@ -60,6 +63,8 @@
   right: 0;
 }
 #proto-group {
+  position: absolute;
+  margin-top: 65px;
   float:left;
 }
 div.task-circle {
@@ -136,8 +141,8 @@ li div.label {
 }
 .dashboard {
   font-size: .7em;
-  margin: 60px 0 20px 0;
-  position: absolute;
+  margin: 20px 0 10px 0;
+  float: right;
 }
 .dashboard td {
   padding: 5px;
@@ -154,12 +159,21 @@ li div.label {
   font-weight: bold;
 }
 .graph-title {
-  text-align: right;
-  float: right;
+  position: absolute;
+  width: 100%;
+  text-align: center;
   line-height: 1.5em;
+  margin-right: 85px;
 }
 .graph-title .title {
   font-size: 1.3em;
   color:#fe6d00;
   margin-bottom: 5px;
+}
+.breadcrumbs {
+  margin-bottom: 10px;
+}
+.dev-note {
+  font-size: .75em;
+  margin-left: 100px;
 }

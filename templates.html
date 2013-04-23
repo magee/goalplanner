@@ -37,7 +37,7 @@
       <div class="navbar-inner">
         <ul class="nav nav-pointer">
           <li class="dropdown">
-            <a href="./goals/new.html">Goal Management</a>
+            <a href="./goals/goals.html">Goal Management</a>
           </li>
           <li class="dropdown">
             <a href="#">Administration</a>
@@ -56,15 +56,48 @@
     <!-- content region of page -->
     <div id="main">
       <div class="wrapper">
-        <div class="btn btn-primary btn-toggle-slide btn-r-space pull-right">Add template</div>
-        <br />
         <p class="page-title">
-<!--           <img class="app-logo" src="./assets/app-logo.png"/><br /> -->
+<!--           <img class="app-logo" src="./lib/assets/app-logo.png"/><br /> -->
           goal planner
         </p>
       </div>
       <div class="wrapper">
         <h3 class="separator-header"><span>templates</span></h3>
+          <div class="table-box">
+            <table class="table" id="goalsList">
+              <thead>
+                <tr>
+<!--                   <th>Select</th> -->
+                  <th>Template name</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="task">
+                  <td>
+                    <a href="#">Media Outreach</a>
+                  </td>
+                  <td>
+                    <a href="#" class="normal-text">30 days</a>
+                  </td>
+                </tr>
+                <tr class="task">
+                  <td>
+                    <a href="#">Launch Fundraising Campaign</a>
+                  </td>
+                  <td>
+                    <a href="#" class="normal-text">45 days</a>
+                  </td>
+                </tr>
+                <tr class="even">
+                  <td colspan="3">
+                  <a class="add_new" href="./edit-template.html">add a template</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div><!-- /page -->
