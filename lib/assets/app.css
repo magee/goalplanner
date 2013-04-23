@@ -53,6 +53,9 @@
 .float-clear {
   float: clear;
 }
+.align-left {
+  text-align: left;
+}
 .hidden {
   display:none;
 }
@@ -176,4 +179,27 @@ li div.label {
 .dev-note {
   font-size: .75em;
   margin-left: 100px;
+}
+table.tasks {
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+  border:1px solid #e3e3e3;
+  margin:20px auto;
+  overflow:hidden;
+
+  font-size: .85em;
+}
+table.tasks td, table.tasks th {
+  text-align: center;
+  border:1px solid #e3e3e3;
+  padding: 10px 10px;
+}
+.table.tasks td {
+  text-align: left;
+  border: 1px solid black;
+  margin: 100px;
+}
+.table-box.tasks {
+  margin-top: 5px;
 }
