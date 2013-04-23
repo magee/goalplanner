@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  due_on: 2013-04-22
+  is_complete: false
+  order: 1
+  goal_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  due_on: 2013-04-22
+  is_complete: false
+  order: 1
+  goal_id: 1

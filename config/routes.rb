@@ -1,4 +1,16 @@
 FsGoalplanner::Application.routes.draw do
+  resources :people
+
+
+  resources :tasks
+
+
+  resources :milestones
+
+
+  resources :goals
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
