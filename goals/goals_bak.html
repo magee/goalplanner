@@ -18,7 +18,13 @@
         <div class="row-fluid">
           <div class="span4">
             <a href="../index.html">
+              <!-- temp logo graphic to compensate for 'missing' hgroup from screen.  Don't to for demo -->
               <img class="logo" src="../lib/assets/logo-temp.png" />
+              <!-- below doesn't work - must review .js and .css from FS -->
+<!--               <hgroup>
+                <h1>Foundersuite</h1>
+                <h2>goal planner</h2>
+              </hgroup> -->
             </a>
           </div>
           <div class="user-opt span5 offset3">
@@ -32,7 +38,15 @@
         <ul class="nav nav-pointer">
           <li class="dropdown">
             <a href="./new.html">Goal Management</a>
-          </li>
+<!--             <ul class="dropdown-menu" role="menu">
+              <li role="menuitem">
+                <a href="./new.html">define new goal</a>
+              </li>
+              <li role="menuitem">
+                <a href="./goals.html">open existing goal</a>
+              </li>
+            </ul>
+ -->          </li>
           <li class="dropdown">
             <a href="#">Administration</a>
             <ul class="dropdown-menu" role="menu">
@@ -50,46 +64,16 @@
     <!-- content region of page -->
     <div id="main">
       <div class="wrapper">
-        <div class="btn btn-primary btn-toggle-slide btn-r-space pull-right">Add new goal</div>
-        <br />
         <p class="page-title">
-<!--           <img class="app-logo" src="../lib/assets/app-logo.png"/><br /> -->
+          <img class="app-logo" src="../lib/assets/app-logo.png"/><br />
           goal planner
         </p>
       </div>
       <div class="wrapper">
         <h3 class="separator-header"><span>goals</span></h3>
-          <div class="table-box">
-            <table class="table" id="goalsList">
-              <thead>
-                <tr>
-                  <th>Select</th>
-                  <th>Milestone</th>
-                  <th>Due Date</th>
-                  <th>Completed?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="odd">
-                  <td class="selection">
-                    <input id="goal_1" name="goal_1" type="checkbox" value="1">
-                  </td>
-                  <td>
-                    <a href="./1_edit.html" class="normal-text">Media Outreach</a>
-                  </td>
-                  <td>
-                    <a href="./1_edit.html">07/30/2013</a>
-                  </td>
-                  <td>
-                    <a href="./1_edit.html">No</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div> <!-- wrapper -->
-    </div> <!-- main -->
+      <div class="btn btn-primary btn-toggle-slide btn-r-space pull-right">Add new goal</div>
+      </div>
+    </div>
   </div><!-- /page -->
 
 </body>

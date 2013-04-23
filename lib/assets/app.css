@@ -62,3 +62,104 @@
 #proto-group {
   float:left;
 }
+div.task-circle {
+  margin: 70px 0 0 45px;
+  color: #000;
+  background-color: lightgrey;
+  height: 50px;
+  width: 50px;
+/*  opacity:.5;
+  filter:Alpha(Opacity=50);
+*/  -moz-border-radius:50%;
+  -khtml-border-radius:50%;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+}
+ol.breadcrumb-progress {
+  margin-top: -30px;
+}
+.progress {
+  position:absolute;
+  background-color:#fe6d00;
+  margin: -50px 0 0 45px;
+  color: #000;
+  height: 50px;
+  width: 50px;
+/*  opacity:.5;
+  filter:Alpha(Opacity=50);
+*/  -moz-border-radius:50%;
+  -khtml-border-radius:50%;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+  z-index: 400;
+}
+.class-circle span {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.progress-10 {
+  clip: rect(auto, 5px, auto, auto);
+}
+.progress-20 {
+  clip: rect(auto, 10px, auto, auto);
+}
+.progress-30 {
+  clip: rect(auto, 15px, auto, auto);
+}
+.progress-40 {
+  clip: rect(auto, 20px, auto, auto);
+}
+.progress-50 {
+  clip: rect(auto, 25px, auto, auto);
+}
+.progress-60 {
+  clip: rect(auto, 30px, auto, auto);
+}
+.progress-70 {
+  clip: rect(auto, 35px, auto, auto);
+}
+.progress-75 {
+  clip: rect(auto, 37px, auto, auto);
+}
+.progress-80 {
+  clip: rect(auto, 40px, auto, auto);
+}
+.progress-90 {
+  clip: rect(auto, 45px, auto, auto);
+}
+.progress-100 {
+  clip: rect(auto, 50px, auto, auto);
+}
+li div.label {
+  margin-top: -50px;
+  z-index: 500;
+}
+.dashboard {
+  font-size: .7em;
+  margin: 60px 0 20px 0;
+  position: absolute;
+}
+.dashboard td {
+  padding: 5px;
+  border: 1px solid black;
+}
+.dashboard td.header {
+  text-align: center;
+  font-size: 1em;
+  color:#fe6d00;
+  font-weight: bold;
+}
+.dashboard td.value {
+  color:#fe6d00;
+  font-weight: bold;
+}
+.graph-title {
+  text-align: right;
+  float: right;
+  line-height: 1.5em;
+}
+.graph-title .title {
+  font-size: 1.3em;
+  color:#fe6d00;
+  margin-bottom: 5px;
+}

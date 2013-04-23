@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foundersuite | startup management software</title>
+
+  <!-- local copy of Foundersuite stylesheet -->
+  <link rel="stylesheet" href="../lib/assets/fs-app.css" />
+
+  <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
+  <script src="../lib/jquery-1.8.3.min.js"></script>
+  <script src="../lib/assets/app.js"></script>
+  <link rel="stylesheet" href="../lib/assets/app.css" />
+</head>
+<body>
+  <div data-role="page">
+    <div role="banner" class="main-header">
+      <div class="wrapper">
+        <div class="row-fluid">
+          <div class="span4">
+            <a href="../index.html">
+              <!-- temp logo graphic to compensate for 'missing' hgroup from screen.  Don't do for demo -->
+              <img class="logo" src="../lib/assets/logo-temp.png" />
+              <!-- below doesn't work - must review .js and .css from FS -->
+              <!-- <hgroup>
+                <h1>Foundersuite</h1>
+                <h2>goal planner</h2>
+              </hgroup> -->
+            </a>
+          </div>
+          <div class="user-opt span5 offset3">
+            <a href="#" class="btn-info btn" data-method="delete" rel="nofollow">Log out</a><p>You are logged in as<br /><span>foundersuiteuser@domain.com</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-center">
+      <div class="navbar-inner">
+        <ul class="nav nav-pointer">
+          <li class="dropdown">
+            <a href="./new.html">Goal Management</a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Administration</a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="menuitem">
+                <a href="../teammembers.html">Manage team members</a>
+              </li>
+              <li role="menuitem">
+                <a href="../templates.html">Manage templates</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- content region of page -->
+    <div id="main">
+      <div class="wrapper">
+        <div id="proto-group" class="clearfix">
+          <div class="btn-group pull-left">
+            <a href="./1_edit.html" id="list_view" class="btn">list</a>
+            <a href="./1_graph.html" id="graph_view" class="btn btn-info active">graph</a>
+          </div>
+        </div> <!-- proto-group -->
+<!--         <p class="page-title"> -->
+          <div class="dashboard">
+            <table>
+              <tr>
+                <td class="header" colspan="3">
+                  goal summary
+                </td>
+              </tr>
+              <tr>
+                <td>You have</td>
+                <td class="value">24</td>
+                <td>days left until goal</td>
+              </tr>
+              <tr>
+                <td>Your team has completed</td>
+                <td class="value">18/20</td>
+                <td>of your required tasks</td>
+              </tr>
+            </table>
+          </div>
+        <!-- </p> -->
+        <br />
+
+        <div class="graph-title">
+          <div class="title">Media Outreach</div>
+          <div class="launch-date">target launch: August 26, 2013</div>
+          <div class="countdown">t-minus: 120 days</div>
+        </div>
+      </div> <!-- wrapper -->
+
+      <div class="wrapper status-bar">
+          <!-- Pull Milestone Title Here -->
+<!--         <h3 class="separator-header"><span>Media Outreach</span></h3> -->
+<!--         <img src="../lib/assets/tube-slug.png" /> -->
+        <ol class="breadcrumb-progress">
+          <li class="task">
+            <div class="task-circle">
+            </div>
+            <div class="progress progress-50">&nbsp;
+            </div>
+            <div>Identify Blogs</div>
+          </li>
+          <li>
+            <div class="task-circle">
+            </div>
+            <div class="progress progress-75">&nbsp;
+            </div>
+            <span>Story List</span>
+          </li>
+          <li>
+            <div class="task-circle">
+            </div>
+            <div class="progress progress-30">&nbsp;
+            </div>
+            <span>Target Journalists</span>
+          </li>
+          <li>
+            <div class="task-circle">&nbsp;
+            </div>
+            <div class="progress-wrapper progress-0">
+            </div>
+              <span>Pitch Materials</span>
+          </li>
+          <li>
+            <div class="task-circle">&nbsp;
+            </div>
+            <div class="progress-wrapper progress-0">
+            </div>
+              <span>Line up Intros</span>
+          </li>
+          <li>
+            <div class="task-circle">&nbsp;
+            </div>
+            <div class="progress-wrapper progress-0">
+            </div>
+              <span>Identify Magazines</span>
+          </li>
+        </ul>
+      </div> <!-- wrapper -->
+    </div> <!-- main -->
+  </div><!-- /page -->
+
+</body>
+</html>
