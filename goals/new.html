@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/fs-app.css" />
 
   <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
+  <script src="../lib/jquery-1.8.3.min.js"></script>
   <script src="../assets/app.js"></script>
   <link rel="stylesheet" href="../assets/app.css" />
 </head>
@@ -17,13 +18,7 @@
         <div class="row-fluid">
           <div class="span4">
             <a href="../index.html">
-              <!-- temp logo graphic to compensate for 'missing' hgroup from screen.  Don't to for demo -->
               <img class="logo" src="../assets/logo-temp.png" />
-              <!-- below doesn't work - must review .js and .css from FS -->
-<!--               <hgroup>
-                <h1>Foundersuite</h1>
-                <h2>goal planner</h2>
-              </hgroup> -->
             </a>
           </div>
           <div class="user-opt span5 offset3">
@@ -37,15 +32,7 @@
         <ul class="nav nav-pointer">
           <li class="dropdown">
             <a href="./new.html">Goal Management</a>
-<!--             <ul class="dropdown-menu" role="menu">
-              <li role="menuitem">
-                <a href="./new.html">define new goal</a>
-              </li>
-              <li role="menuitem">
-                <a href="./goals.html">open existing goal</a>
-              </li>
-            </ul>
- -->          </li>
+          </li>
           <li class="dropdown">
             <a href="#">Administration</a>
             <ul class="dropdown-menu" role="menu">
@@ -63,22 +50,14 @@
     <!-- content region of page -->
     <div id="main">
       <div class="wrapper">
-        <div id="cancel" class="add_new btn btn-primary btn-toggle-slide float-right">cancel
-          <i class="icon slide-down"></i>
-        </div>
-        <div id="add" class="edit_existing btn btn-primary btn-toggle-slide float-right">add new goal
-          <i class="icon slide-down"></i>
-        </div>
+        <div class="btn btn-primary btn-toggle-slide btn-r-space pull-right">Add new goal</div>
         <br />
         <p class="page-title">
-          <img class="app-logo" src="../assets/app-logo.png"/><br />
+<!--           <img class="app-logo" src="./assets/app-logo.png"/><br /> -->
           goal planner
         </p>
-      </div> <!-- wrapper -->
-
+      </div>
       <div class="wrapper">
-        <h3 class="add_new separator-header"><span>add goal</span></h3>
-
         <h3 class="separator-header"><span>goals</span></h3>
           <div class="table-box">
             <table class="table" id="goalsList">
@@ -96,13 +75,13 @@
                     <input id="goal_1" name="goal_1" type="checkbox" value="1">
                   </td>
                   <td>
-                    <a href="./goals/1/edit" class="normal-text">Media Outreach</a>
+                    <a href="./1_edit.html" class="normal-text">Media Outreach</a>
                   </td>
                   <td>
-                    <a href="./goals/1/edit">07/30/2013</a>
+                    <a href="./1_edit.html">07/30/2013</a>
                   </td>
                   <td>
-                    <a href="./goals/1/edit">No</a>
+                    <a href="./1_edit.html">No</a>
                   </td>
                 </tr>
               </tbody>
