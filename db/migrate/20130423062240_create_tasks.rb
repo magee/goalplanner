@@ -2,6 +2,7 @@ class CreateTasks < ActiveRecord::Migration
   def change
     create_table :tasks do |t|
       t.string :title
+      t.string :short_title
       t.text :description
       t.date :due_on
       t.integer :owner_id

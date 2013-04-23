@@ -2,6 +2,7 @@ class CreateMilestones < ActiveRecord::Migration
   def change
     create_table :milestones do |t|
       t.string :title
+      t.string :short_title
       t.text :description
       t.date :due_on
       t.boolean :is_complete
