@@ -106,12 +106,12 @@ ol.breadcrumb-progress {
 }
 .progress-bar {
   position:absolute;
-  -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
-  -moz-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
-  box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
+  -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.9);
+  -moz-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.9);
+  box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.9);
   height: 10px;
   width: 720px;
-  background-color: lightgrey;
+  background-color: darkgrey;
   margin: 100px 0 0 135px;
 }
 .progress-bar.four {
