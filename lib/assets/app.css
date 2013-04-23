@@ -162,11 +162,9 @@ li div.label {
   font-weight: bold;
 }
 .graph-title {
-  position: absolute;
-  width: 100%;
   text-align: center;
   line-height: 1.5em;
-  margin-right: 85px;
+  margin: 0 270px;
 }
 .graph-title .title {
   font-size: 1.3em;
