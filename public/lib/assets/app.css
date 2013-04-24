@@ -133,6 +133,9 @@ ol.breadcrumb-progress {
   margin-top: 10px;
   padding-top: 10px;
 }
+.progress-0 {
+  clip: rect(auto, 0px, auto, auto);
+}
 .progress-10 {
   clip: rect(auto, 5px, auto, auto);
 }
