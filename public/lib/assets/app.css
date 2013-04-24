@@ -229,3 +229,7 @@ table.tasks td, table.tasks th {
 .table-box.tasks {
   margin-top: 5px;
 }
+.highlight {
+  color: red;
+  font-weight: bold;
+}

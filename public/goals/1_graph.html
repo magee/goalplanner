@@ -100,44 +100,44 @@
           <li class="task">
             <div class="tid_01 task-circle">
             </div>
-            <div class="progress progress-50">&nbsp;
+            <div class="progress  tid_01 progress-50">&nbsp;
             </div>
-            <div>Identify Blogs</div>
+            <div class="title">Identify Blogs</div>
           </li>
           <li>
             <div class="tid_02 task-circle">
             </div>
-            <div class="progress progress-80">&nbsp;
+            <div class="progress tid_02 progress-100">&nbsp;
             </div>
-            <span>Story ideas</span>
+            <div class="title">Story ideas</div>
           </li>
           <li>
             <div class="tid_03 task-circle">
             </div>
-            <div class="progress progress-30">&nbsp;
+            <div class="progress tid_03 progress-30">&nbsp;
             </div>
-            <span>Target Journalists</span>
+            <div class="title">Target Journalists</div>
           </li>
           <li>
             <div class="tid_04 task-circle">
             </div>
-            <div class="progress-wrapper progress-0">
+            <div class="progress-wrapper tid_04 progress-0">
             </div>
-              <span>Pitch Materials</span>
+              <div class="title">Pitch Materials</div>
           </li>
           <li>
             <div class="tid_05 task-circle">
             </div>
-            <div class="progress-wrapper progress-0">
+            <div class="progress-wrapper tid_05 progress-0">
             </div>
-              <span>Line up Intros</span>
+              <div class="title">Line up Intros</div>
           </li>
           <li>
             <div class="tid_06 task-circle">
             </div>
-            <div class="progress-wrapper progress-0">
+            <div class="progress-wrapper tid_06 progress-0">
             </div>
-              <span>Identify Magazines</span>
+              <div class="title">Identify Magazines</div>
           </li>
         </ul>
       </div> <!-- wrapper -->
@@ -145,6 +145,26 @@
       <!-- TODO: modify to allow progress bar to accommodate > 6 tasks without wrapping -->
       <div class="table-box tasks">
 
+        <table class="tid_01 hidden tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox"  value="1">
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
 
       <!--  *********** table 2 ***********  -->
         <table class="tid_02 hidden tasks">
@@ -159,7 +179,7 @@
           <tbody>
             <tr>
               <td class="select">
-                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" checked value="1">
               </td>
               <td>Create story list</td>
               <td>Jennifer</td>
@@ -181,7 +201,7 @@
           <tbody>
             <tr>
               <td class="select">
-                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" checked value="1">
               </td>
               <td>Identify relevant magazines</td>
               <td>Jennifer</td>
@@ -262,6 +282,27 @@
               <td>Get contacts from PR firm</td>
               <td>Tom</td>
               <td>July 13</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="tid_06 hidden tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox"  value="1">
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>

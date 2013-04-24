@@ -101,35 +101,75 @@
           <li class="task">
             <div class="tid_01 task-circle red">
             </div>
-            <div class="progress green progress-100">&nbsp;
+            <div class="tid_01 progress green progress-100">&nbsp;
             </div>
             <div>Funding strategy</div>
           </li>
           <li>
             <div class="tid_02 task-circle red">
             </div>
-            <div class="progress green progress-30">&nbsp;
+            <div class="tid_02 progress green progress-30">&nbsp;
             </div>
-            <span>Target VC list</span>
+            <div>Target VC list</div>
           </li>
           <li>
             <div class="tid_03 task-circle red">
             </div>
-            <div class="progress green progress-30">&nbsp;
+            <div class="tid_03 progress green progress-30">&nbsp;
             </div>
-            <span>Pitch materials</span>
+            <div>Pitch materials</div>
           </li>
           <li>
             <div class="tid_04 task-circle red">&nbsp;
             </div>
-            <div class="progress-wrapper green progress-0">
+            <div class="tid_04 progress-wrapper green progress-0">
             </div>
-              <span>Intros lined up</span>
+              <div>Intros lined up</div>
           </li>
         </ul>
       </div> <!-- wrapper -->
       <div class="table-box tasks">
       <!-- TODO: left align task descriptions -->
+        <table class="tid_01 hidden tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox"  value="1">
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="tid_02 hidden tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox"  value="1">
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
         <table class="tid_03 hidden tasks">
           <thead>
             <tr>
@@ -142,7 +182,7 @@
           <tbody>
             <tr>
               <td class="select">
-                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" checked value="1">
               </td>
               <td>Pitch deck built</td>
               <td>Jennifer</td>
@@ -196,6 +236,40 @@
         </table>
       </div>    </div> <!-- main -->
   </div><!-- /page -->
+<script>
+  // TODO: doesn't appear to be accessing external js file
+  // don't debug -- fix in production
+  $("div.tid_01").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_01").removeClass("hidden");
+  });
+
+  $("div.tid_02").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_02").removeClass("hidden");
+  });
+
+  $("div.tid_03").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_03").removeClass("hidden");
+  });
+
+  $("div.tid_04").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_04").removeClass("hidden");
+  });
+
+  $("div.tid_05").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_05").removeClass("hidden");
+  });
+
+  $("div.tid_06").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_06").removeClass("hidden");
+    $("div.title:first").addClass("highlight");
+  });
+  </script>
   <script src="../lib/assets/app.js"></script>
 </body>
 </html>
