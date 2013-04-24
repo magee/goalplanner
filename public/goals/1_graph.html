@@ -8,7 +8,6 @@
 
   <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
   <script src="../lib/jquery-1.8.3.min.js"></script>
-  <script src="../lib/assets/app.js"></script>
   <link rel="stylesheet" href="../lib/assets/app.css" />
 </head>
 <body>
@@ -99,42 +98,42 @@
         <div class="progress-bar"></div>
         <ol class="breadcrumb-progress">
           <li class="task">
-            <div class="task-circle">
+            <div class="tid_01 task-circle">
             </div>
             <div class="progress progress-50">&nbsp;
             </div>
             <div>Identify Blogs</div>
           </li>
           <li>
-            <div class="task-circle">
+            <div class="tid_02 task-circle">
             </div>
-            <div class="progress progress-120">&nbsp;
+            <div class="progress progress-80">&nbsp;
             </div>
-            <span>Story List</span>
+            <span>Story ideas</span>
           </li>
           <li>
-            <div class="task-circle">
+            <div class="tid_03 task-circle">
             </div>
             <div class="progress progress-30">&nbsp;
             </div>
             <span>Target Journalists</span>
           </li>
           <li>
-            <div class="task-circle">&nbsp;
+            <div class="tid_04 task-circle">
             </div>
             <div class="progress-wrapper progress-0">
             </div>
               <span>Pitch Materials</span>
           </li>
           <li>
-            <div class="task-circle">&nbsp;
+            <div class="tid_05 task-circle">
             </div>
             <div class="progress-wrapper progress-0">
             </div>
               <span>Line up Intros</span>
           </li>
           <li>
-            <div class="task-circle">&nbsp;
+            <div class="tid_06 task-circle">
             </div>
             <div class="progress-wrapper progress-0">
             </div>
@@ -145,7 +144,32 @@
       <!-- TODO: left align task descriptions -->
       <!-- TODO: modify to allow progress bar to accommodate > 6 tasks without wrapping -->
       <div class="table-box tasks">
-        <table class="tasks">
+
+
+      <!--  *********** table 2 ***********  -->
+        <table class="tid_02 hidden tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+              </td>
+              <td>Create story list</td>
+              <td>Jennifer</td>
+              <td>June 18</td>
+            </tr>
+          </tbody>
+        </table>
+
+      <!--  *********** table 3 ***********  -->
+        <table class="tid_03 hidden tasks">
           <thead>
             <tr>
               <th>complete?</th>
@@ -180,11 +204,104 @@
               <td>June 22</td>
             </tr>
           </tbody>
+        </table>
 
+      <!--  *********** table 4 ***********  -->
+        <table class="tid_04 tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+              </td>
+              <td>Marketing brief</td>
+              <td>Jennifer</td>
+              <td>July 4</td>
+            </tr>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+              </td>
+              <td>Private demo video</td>
+              <td>Tom</td>
+              <td>July 6</td>
+            </tr>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+              </td>
+              <td>Press release</td>
+              <td>Tom</td>
+              <td>May 19</td>
+            </tr>
+          </tbody>
+        </table>
+
+      <!--  *********** table 5 ***********  -->
+        <table class="tid_05 hidden tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+              </td>
+              <td>Get contacts from PR firm</td>
+              <td>Tom</td>
+              <td>July 13</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div> <!-- main -->
   </div><!-- /page -->
+  <script>
+  // TODO: doesn't appear to be accessing external js file
+  // don't debug -- fix in production
+  $("div.tid_01").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_01").removeClass("hidden");
+  });
 
+  $("div.tid_02").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_02").removeClass("hidden");
+  });
+
+  $("div.tid_03").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_03").removeClass("hidden");
+  });
+
+  $("div.tid_04").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_04").removeClass("hidden");
+  });
+
+  $("div.tid_05").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_05").removeClass("hidden");
+  });
+
+  $("div.tid_06").hover(function(){
+    $("div.table-box table").addClass("hidden");
+    $("table.tid_06").removeClass("hidden");
+  });
+
+  </script>
+  <script src="../lib/assets/app.js"></script>
 </body>
 </html>

@@ -8,7 +8,6 @@
 
   <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
   <script src="../lib/jquery-1.8.3.min.js"></script>
-  <script src="../lib/assets/app.js"></script>
   <link rel="stylesheet" href="../lib/assets/app.css" />
 </head>
 <body>
@@ -86,7 +85,6 @@
           </div>
         <!-- </p> -->
         <br />
-
         <div class="graph-title">
           <div class="title">Launch Fundraising Campaign</div>
           <div class="launch-date">target launch: May 1, 2013</div>
@@ -101,30 +99,30 @@
         <div class="progress-bar four"></div>
         <ol class="breadcrumb-progress">
           <li class="task">
-            <div class="task-circle">
+            <div class="tid_01 task-circle red">
             </div>
-            <div class="progress progress-100">&nbsp;
+            <div class="progress green progress-100">&nbsp;
             </div>
             <div>Funding strategy</div>
           </li>
           <li>
-            <div class="task-circle">
+            <div class="tid_02 task-circle red">
             </div>
-            <div class="progress progress-30">&nbsp;
+            <div class="progress green progress-30">&nbsp;
             </div>
             <span>Target VC list</span>
           </li>
           <li>
-            <div class="task-circle">
+            <div class="tid_03 task-circle red">
             </div>
-            <div class="progress progress-30">&nbsp;
+            <div class="progress green progress-30">&nbsp;
             </div>
             <span>Pitch materials</span>
           </li>
           <li>
-            <div class="task-circle">&nbsp;
+            <div class="tid_04 task-circle red">&nbsp;
             </div>
-            <div class="progress-wrapper progress-0">
+            <div class="progress-wrapper green progress-0">
             </div>
               <span>Intros lined up</span>
           </li>
@@ -132,7 +130,7 @@
       </div> <!-- wrapper -->
       <div class="table-box tasks">
       <!-- TODO: left align task descriptions -->
-        <table class="tasks">
+        <table class="tid_03 hidden tasks">
           <thead>
             <tr>
               <th>complete?</th>
@@ -167,10 +165,37 @@
               <td>May 19</td>
             </tr>
           </tbody>
-
+        </table>
+        <table class="tid_04 hidden tasks">
+          <thead>
+            <tr>
+              <th>complete?</th>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="1">
+              </td>
+              <td>Contacts from Attorney</td>
+              <td>Tom</td>
+              <td>June 6</td>
+            </tr>
+            <tr>
+              <td class="select">
+                <input id="ms_2_task_1" name="ms_2_task_1" type="checkbox" value="0">
+              </td>
+              <td>Contacts from Advisory Brd</td>
+              <td>Tom</td>
+              <td>June 6</td>
+            </tr>
+          </tbody>
         </table>
       </div>    </div> <!-- main -->
   </div><!-- /page -->
-
+  <script src="../lib/assets/app.js"></script>
 </body>
 </html>
