@@ -4,12 +4,12 @@
   <title>Foundersuite | startup management software</title>
 
   <!-- local copy of Foundersuite stylesheet -->
-  <link rel="stylesheet" href="./lib/assets/fs-app.css" />
+  <link rel="stylesheet" href="../lib/assets/fs-app.css" />
 
   <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
-  <script src="./lib/jquery-1.8.3.min.js"></script>
-  <script src="./lib/assets/app.js"></script>
-  <link rel="stylesheet" href="./lib/assets/app.css" />
+  <script src="../lib/jquery-1.8.3.min.js"></script>
+  <script src="../lib/assets/app.js"></script>
+  <link rel="stylesheet" href="../lib/assets/app.css" />
 </head>
 <body>
   <div data-role="page">
@@ -17,9 +17,9 @@
       <div class="wrapper">
         <div class="row-fluid">
           <div class="span4">
-            <a href="./index.html">
+            <a href="../index.html">
               <!-- temp logo graphic to compensate for 'missing' hgroup from screen.  Don't to for demo -->
-              <img class="logo" src="./lib/assets/logo-temp.png" />
+              <img class="logo" src="../lib/assets/logo-temp.png" />
               <!-- below doesn't work - must review .js and .css from FS -->
 <!--               <hgroup>
                 <h1>Foundersuite</h1>
@@ -37,13 +37,13 @@
       <div class="navbar-inner">
         <ul class="nav nav-pointer">
           <li class="dropdown">
-            <a href="./goals/goals.html">Goal Management</a>
+            <a href="./new.html">Goal Management</a>
 <!--             <ul class="dropdown-menu" role="menu">
               <li role="menuitem">
-                <a href="./goals/new.html">define new goal</a>
+                <a href="./new.html">define new goal</a>
               </li>
               <li role="menuitem">
-                <a href="./goals/goals.html">open existing goal</a>
+                <a href="./goals.html">open existing goal</a>
               </li>
             </ul>
  -->          </li>
@@ -51,10 +51,10 @@
             <a href="#">Administration</a>
             <ul class="dropdown-menu" role="menu">
               <li role="menuitem">
-                <a href="./teammembers.html">Manage team members</a>
+                <a href="../teammembers.html">Manage team members</a>
               </li>
               <li role="menuitem">
-                <a href="./templates.html">Manage templates</a>
+                <a href="../templates.html">Manage templates</a>
               </li>
             </ul>
           </li>
@@ -65,18 +65,15 @@
     <div id="main">
       <div class="wrapper">
         <p class="page-title">
-          <img class="app-logo" src="./lib/assets/app-logo.png"/><br />
+          <img class="app-logo" src="../lib/assets/app-logo.png"/><br />
           goal planner
         </p>
       </div>
-<!--       TODO:  see if it's possible to get this to work locally -->
-<!--       <div class="handdrawn arrow-right">
-        <p class="content">
-          <i class="arrow arrow-right-up-short"></i>
-          Select an option from the menu here
-        </p>
+      <div class="wrapper">
+        <h3 class="separator-header"><span>goals</span></h3>
+      <div class="btn btn-primary btn-toggle-slide btn-r-space pull-right">Add new goal</div>
       </div>
- -->    </div>
+    </div>
   </div><!-- /page -->
 
 </body>
