@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="./lib/assets/fs-app.css" />
 
   <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
+  <script language="javascript" src="./lib/assets/app.js"></script>
   <script src="./lib/jquery-1.8.3.min.js"></script>
-  <script src="./lib/assets/app.js"></script>
   <link rel="stylesheet" href="./lib/assets/app.css" />
 </head>
 <body>
@@ -31,18 +31,16 @@
       <div class="navbar-inner">
         <ul class="nav nav-pointer">
           <li class="dropdown">
-            <a href="./goals/goals.html">Goal Management</a>
+            <a href="./goals/new.html">start a new goal</a>
           </li>
           <li class="dropdown">
-            <a href="#">Administration</a>
-            <ul class="dropdown-menu" role="menu">
-              <li role="menuitem">
-                <a href="./teammembers.html">Manage team members</a>
-              </li>
-              <li role="menuitem">
-                <a href="./templates.html">Manage templates</a>
-              </li>
-            </ul>
+            <a href="./goals/goals.html">review existing goals</a>
+          </li>
+          <li class="dropdown">
+            <a href="./teammembers.html">review team activities</a>
+          </li>
+          <li class="dropdown">
+            <a href="./templates.html">add/edit templates</a>
           </li>
         </ul>
       </div>
@@ -56,49 +54,84 @@
         </p>
       </div>
       <div class="wrapper">
-        <h3 class="separator-header"><span>Carolyn Morris</span></h3>
-          <div class="table-box">
-            <div style="padding: 10px;">new user form here</div>
+        <h3 class="separator-header"><span id="username">Carolyn Morris</span></h3>
+          <div class="table-box user">
+            <div style="padding: 10px;">
+              <div class="user-edit hidden">
+                <form>
+                  <label class="inline-label" for="firstname">first name:</label>
+                  <input type="text" id="firstname"  name="firstname" value="Carolyn" /><br />
+                  <label class="inline-label" for="lastname">last name:</label><input type="text" name="lastname" id="lastname" value="Morris" /><br />
+                  <label class="inline-label" for="email" >email:</label><input type="text" name="email" id="email" value="cmorris@domain.com" /><br />
+                </form>
+              </div>
+              <p class="user-display">
+                <label class="inline-label" name="email">email:</label> 
+                <span id="email-display"></span>
+              </p>
+              <a class="inplace-edit">edit</a>
+            </div>
           </div>
-        <a style="margin-left: 100px;" href="./teammembers.html">cancel</a><a style="margin-left: 30px;" href="./teammembers.html">save</a>
+
         </div>
       </div> <!-- wrapper -->
 
-          <div class="table-box">
-            <table class="table" id="goalsList">
-              <thead>
-                <tr>
-                  <th colspan="3">Assigned tasks</td>
-                </tr>
-                <tr>
-<!--                   <th>Select</th> -->
-                  <th>Task</th>
-                  <th>Due date</th>
-                  <th>Complete?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="task">
-<!--                   <td class="selection">
-                    <input id="goal_1" name="goal_1" type="checkbox" value="1">
-                  </td>
- -->                  <td>
-                    <a href="./user-edit.html">Identify relevant blogs</a>
-                  </td>
-                  <td>
-                    May 15, 2013
-                  </td>
-                  <td>
-                    <a href="./user-edit.html" class="normal-text">no</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-
+      <div class="table-box">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="4">Assigned tasks</td>
+            </tr>
+            <tr>
+              <th>Task</th>
+              <th>Duration</th>
+              <th>Due date</th>
+              <th>Complete?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="task">
+              <td>
+                <a href="./user-edit.html">Identify relevant blogs</a>
+              </td>
+              <td>
+                3 days
+              </td>
+              <td>
+                May 15, 2013
+              </td>
+              <td>
+                <a href="./user-edit.html" class="normal-text">no</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div> <!-- main -->
   </div><!-- /page -->
-
+  <script>
+    var firstname = "Carolyn";
+    var lastname = "Morris";
+    var email = "cmorris@domain.com";
+    $("span#username").text(firstname + " " + lastname);
+    $("span#email-display").text(email);
+    $("a.inplace-edit").toggle(
+      function() {
+        $("p.user-display").addClass("hidden");
+        $("div.user-edit").removeClass("hidden")
+        $(this).text("save");
+      },
+      function() {
+        $("p.user-display").removeClass("hidden");
+        $("div.user-edit").addClass("hidden")
+        firstname = $("#firstname").val();
+        lastname = $("#lastname").val();
+        email = $("#email").val();
+        $("span#username").text(firstname + " " + lastname);
+        $("span#email-display").text(email);
+        $(this).text("edit");
+      }
+    );
+  </script>
 </body>
 </html>

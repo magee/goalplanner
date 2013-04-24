@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  alert("the app.js file loaded");
 
   $("#add_new").on('click', function(){
     $("#page_button").html("<div id='cancel' class='btn btn-primary btn-toggle-slide float-right'>cancel
@@ -39,4 +38,6 @@ $(document).ready(function () {
     $("div.table-box table").addClass("hidden");
     $("table.tid_06").removeClass("hidden");
   });
+
+
 });

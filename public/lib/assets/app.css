@@ -236,3 +236,14 @@ table.tasks td, table.tasks th {
   color: red;
   font-weight: bold;
 }
+.inline-label {
+  display: inline;
+  margin-right: 10px;
+}
+.table-box.user {
+  width: 400px;
+}
+.inplace-edit {
+  float: right;
+  margin: 0 10px 10px 0;
+}
