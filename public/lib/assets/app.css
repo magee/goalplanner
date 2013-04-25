@@ -243,7 +243,8 @@ table.tasks td, table.tasks th {
   display: inline;
   margin-right: 10px;
 }
-.inplace-edit {
+#inplace-edit {
+  color:#fe6d00;
   float: right;
   margin: 0 10px 10px 0;
 }

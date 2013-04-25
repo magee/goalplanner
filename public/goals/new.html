@@ -3,14 +3,17 @@
 <head>
   <title>Foundersuite | startup management software</title>
 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+
   <!-- local copy of Foundersuite stylesheet -->
   <link rel="stylesheet" href="../lib/assets/fs-app.css" />
 
-  <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
-  <script src="../lib/jquery-1.8.3.min.js"></script>
-  <script src="../lib/assets/app.js"></script>
-  <link rel="stylesheet" href="../lib/assets/app.css" />
-</head>
+  <!-- temp development script & style sheets - one or both may be modified to use FS's existing ones -->
+  <script language="javascript" src="../lib/assets/app.js"></script>
+
+  <!-- goal-planner stylesheet -->
+  <link rel="stylesheet" href="../lib/assets/app.css" /></head>
 <body>
   <div data-role="page">
     <div role="banner" class="main-header">
@@ -116,30 +119,5 @@
       </div> <!-- wrapper -->
     </div> <!-- main -->
   </div><!-- /page -->
-
-  <script>
-    var goal-title = "";
-    var launch_on;
-
-    $("span#goal-title").text(goal-title);
-    $("span#email-display").text(email);
-    $("a.inplace-edit").toggle(
-      function() {
-        $("p.user-display").addClass("hidden");
-        $("div.user-edit").removeClass("hidden")
-        $(this).text("save");
-      },
-      function() {
-        $("p.user-display").removeClass("hidden");
-        $("div.user-edit").addClass("hidden")
-        firstname = $("#firstname").val();
-        lastname = $("#lastname").val();
-        email = $("#email").val();
-        $("span#username").text(firstname + " " + lastname);
-        $("span#email-display").text(email);
-        $(this).text("edit");
-      }
-    );
-  </script>
 </body>
 </html>

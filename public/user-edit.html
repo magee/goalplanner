@@ -3,12 +3,16 @@
 <head>
   <title>Foundersuite | startup management software</title>
 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+
   <!-- local copy of Foundersuite stylesheet -->
   <link rel="stylesheet" href="./lib/assets/fs-app.css" />
 
-  <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
+  <!-- temp development script & style sheets - one or both may be modified to use FS's existing ones -->
   <script language="javascript" src="./lib/assets/app.js"></script>
-  <script src="./lib/jquery-1.8.3.min.js"></script>
+
+  <!-- goal-planner stylesheet -->
   <link rel="stylesheet" href="./lib/assets/app.css" />
 </head>
 <body>
@@ -49,12 +53,12 @@
     <div id="main">
       <div class="wrapper">
         <p class="page-title">
-<!--           <img class="app-logo" src="../lib/assets/app-logo.png"/><br /> -->
           goal planner
         </p>
       </div>
       <div class="wrapper">
-        <h3 class="separator-header"><span id="username">Carolyn Morris</span></h3>
+        <h3 class="separator-header">
+          <span id="username"></span></h3>
           <div class="table-box user">
             <div style="padding: 10px;">
               <div class="user-edit hidden">
@@ -65,11 +69,11 @@
                   <label class="inline-label" for="email" >email:</label><input type="text" name="email" id="email" value="cmorris@domain.com" /><br />
                 </form>
               </div>
-              <p class="user-display">
+              <p class="user-edit">
                 <label class="inline-label" name="email">email:</label>
                 <span id="email-display"></span>
               </p>
-              <a class="inplace-edit">edit</a>
+              <div id="inplace-edit">edit</div>
             </div>
           </div>
 
@@ -109,29 +113,5 @@
       </div>
     </div> <!-- main -->
   </div><!-- /page -->
-  <script>
-    var firstname = "Carolyn";
-    var lastname = "Morris";
-    var email = "cmorris@domain.com";
-    $("span#username").text(firstname + " " + lastname);
-    $("span#email-display").text(email);
-    $("a.inplace-edit").toggle(
-      function() {
-        $("p.user-display").addClass("hidden");
-        $("div.user-edit").removeClass("hidden")
-        $(this).text("save");
-      },
-      function() {
-        $("p.user-display").removeClass("hidden");
-        $("div.user-edit").addClass("hidden")
-        firstname = $("#firstname").val();
-        lastname = $("#lastname").val();
-        email = $("#email").val();
-        $("span#username").text(firstname + " " + lastname);
-        $("span#email-display").text(email);
-        $(this).text("edit");
-      }
-    );
-  </script>
 </body>
 </html>

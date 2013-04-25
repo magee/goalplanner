@@ -3,13 +3,17 @@
 <head>
   <title>Foundersuite | startup management software</title>
 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+
   <!-- local copy of Foundersuite stylesheet -->
   <link rel="stylesheet" href="../lib/assets/fs-app.css" />
 
-  <!-- temp development script and style sheets - one or both may be modified to use FS's existing ones -->
-  <script src="../lib/jquery-1.8.3.min.js"></script>
-  <link rel="stylesheet" href="../lib/assets/app.css" />
-</head>
+  <!-- temp development script & style sheets - one or both may be modified to use FS's existing ones -->
+  <script language="javascript" src="../lib/assets/app.js"></script>
+
+  <!-- goal-planner stylesheet -->
+  <link rel="stylesheet" href="../lib/assets/app.css" /></head>
 <body>
   <div data-role="page">
     <div role="banner" class="main-header">
@@ -262,40 +266,5 @@
         </table>
       </div>    </div> <!-- main -->
   </div><!-- /page -->
-<script>
-  // TODO: doesn't appear to be accessing external js file
-  // don't debug -- fix in production
-  $("div.tid_01").hover(function(){
-    $("div.table-box table").addClass("hidden");
-    $("table.tid_01").removeClass("hidden");
-  });
-
-  $("div.tid_02").hover(function(){
-    $("div.table-box table").addClass("hidden");
-    $("table.tid_02").removeClass("hidden");
-  });
-
-  $("div.tid_03").hover(function(){
-    $("div.table-box table").addClass("hidden");
-    $("table.tid_03").removeClass("hidden");
-  });
-
-  $("div.tid_04").hover(function(){
-    $("div.table-box table").addClass("hidden");
-    $("table.tid_04").removeClass("hidden");
-  });
-
-  $("div.tid_05").hover(function(){
-    $("div.table-box table").addClass("hidden");
-    $("table.tid_05").removeClass("hidden");
-  });
-
-  $("div.tid_06").hover(function(){
-    $("div.table-box table").addClass("hidden");
-    $("table.tid_06").removeClass("hidden");
-    $("div.title:first").addClass("highlight");
-  });
-  </script>
-  <script src="../lib/assets/app.js"></script>
 </body>
 </html>
