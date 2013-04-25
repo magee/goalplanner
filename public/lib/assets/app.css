@@ -67,7 +67,7 @@
 }
 #proto-group {
   position: absolute;
-  margin: 10px;
+  margin: 60px 10px 10px 10px;
   float:left;
 }
 div.task-circle {
@@ -79,9 +79,7 @@ div.task-circle {
   background-color: lightgrey;
   height: 50px;
   width: 50px;
-/*  opacity:.5;
-  filter:Alpha(Opacity=50);
-*/  -moz-border-radius:50%;
+  -moz-border-radius:50%;
   -khtml-border-radius:50%;
   -webkit-border-radius:50%;
   border-radius:50%;
@@ -90,9 +88,7 @@ div.task-circle.red {
   background-color: #FAB6B1;
 }
 ol.breadcrumb-progress {
-  margin-top: -30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: -50px auto 50px auto;
 }
 .progress {
   -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
@@ -120,7 +116,7 @@ ol.breadcrumb-progress {
   height: 10px;
   width: 720px;
   background-color: darkgrey;
-  margin: 80px 0 0 135px;
+  margin: 60px 0 0 135px;
 }
 .progress-bar.four {
   width: 400px;
@@ -171,9 +167,16 @@ li div.label {
   z-index: 500;
 }
 .dashboard {
-  font-size: .7em;
-  margin: 20px 0 10px 0;
+  text-align: center;
+  line-height: 1.5em;
+  width: 100px;
+  font-size: .9em;
+  margin: 50px 50px 0 0;
   float: right;
+}
+.dashboard #status {
+  font-size: 1.5em;
+  color:#fe6d00;
 }
 .dashboard td {
   padding: 5px;
@@ -262,7 +265,7 @@ div.new-goal div.progress-bar {
   width: 420px;
 }
 div.new-goal div.task-circle {
-  margin-top: -13px;
+  margin-top: 7px;
   height: 30px;
   width: 30px;
 }
@@ -281,4 +284,7 @@ p.page-title.float-right {
 li.toolname {
   color:#fe6d00;
   color: red;
+}
+.btn-group>.btn-small.active{
+  background:#adadad;
 }
