@@ -277,3 +277,7 @@ div.new-goal h3.separator-header {
 p.page-title.float-right {
   margin-right: 80px;
 }
+li.toolname {
+  color:#fe6d00;
+  color: red;
+}
