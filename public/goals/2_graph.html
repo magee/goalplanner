@@ -43,7 +43,7 @@
             <a href="./goals.html">review existing goals</a>
           </li>
           <li class="dropdown">
-            <a href="../teammembers.html">review team activities</a>
+            <a href="../teammembers.html">review team activity</a>
           </li>
           <li class="dropdown">
             <a href="../templates.html">add/edit templates</a>
@@ -57,8 +57,8 @@
         <div id="proto-group" class="clearfix">
           <!-- TODO: correct button states -->
           <div class="btn-group pull-left">
-            <a href="./2_edit.html" id="list_view" class="btn btn-info">overview</a>
-            <a href="./2_graph.html" id="graph_view" class="btn active">details</a>
+            <a href="./2_edit.html" id="list_view" class="btn btn-info">list</a>
+            <a href="./2_graph.html" id="graph_view" class="btn active">graphs</a>
           </div>
         </div> <!-- proto-group -->
 <!--         <p class="page-title"> -->
@@ -97,39 +97,46 @@
         <div class="progress-bar four"></div>
         <ol class="breadcrumb-progress">
           <li class="task">
-            <div class="tid_01 task-circle red">
+            <div class="tid_01 task-circle">
             </div>
-            <div class="tid_01 progress green progress-0">&nbsp;
+            <div class="tid_01 progress progress-0">&nbsp;
             </div>
             <div>Funding strategy</div>
           </li>
           <li>
-            <div class="tid_02 task-circle red">
+            <div class="tid_02 task-circle">
             </div>
-            <div class="tid_02 progress green progress-0">&nbsp;
+            <div class="tid_02 progress progress-0">&nbsp;
             </div>
             <div>Target VC list</div>
           </li>
           <li>
-            <div class="tid_03 task-circle red">
+            <div class="tid_03 task-circle">
             </div>
-            <div class="tid_03 progress green progress-30">&nbsp;
+            <div class="tid_03 progress progress-30">&nbsp;
             </div>
             <div>Pitch materials</div>
           </li>
           <li>
-            <div class="tid_04 task-circle red">&nbsp;
+            <div class="tid_04 task-circle">&nbsp;
             </div>
-            <div class="tid_04 progress green progress-50">
+            <div class="tid_04 progress progress-50">
             </div>
               <div>Intros lined up</div>
           </li>
-        </ul>
+        </ol>
       </div> <!-- wrapper -->
       <div class="table-box tasks">
       <!-- TODO: left align task descriptions -->
         <table class="tid_01 hidden tasks">
           <thead>
+            <tr>
+              <th colspan="4">
+                Funding Strategy
+                <br />
+                <br />
+              </th>
+            </tr>
             <tr>
               <th>complete?</th>
               <th>task</th>
@@ -151,6 +158,13 @@
         <table class="tid_02 hidden tasks">
           <thead>
             <tr>
+              <th colspan="4">
+                Target VC list
+                <br />
+                <br />
+              </th>
+            </tr>
+            <tr>
               <th>complete?</th>
               <th>task</th>
               <th>owner</th>
@@ -170,6 +184,13 @@
         </table>
         <table class="tid_03 hidden tasks">
           <thead>
+            <tr>
+              <th colspan="4">
+                Pitch Materials
+                <br />
+                <br />
+              </th>
+            </tr>
             <tr>
               <th>complete?</th>
               <th>task</th>
@@ -206,6 +227,13 @@
         </table>
         <table class="tid_04 hidden tasks">
           <thead>
+            <tr>
+              <th colspan="4">
+                Intros lined up
+                <br />
+                <br />
+              </th>
+            </tr>
             <tr>
               <th>complete?</th>
               <th>task</th>

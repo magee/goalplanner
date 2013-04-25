@@ -67,7 +67,7 @@
 }
 #proto-group {
   position: absolute;
-  margin-top: 65px;
+  margin: 10px;
   float:left;
 }
 div.task-circle {
@@ -111,9 +111,6 @@ ol.breadcrumb-progress {
   -webkit-border-radius:50%;
   border-radius:50%;
   z-index: 400;
-}
-.progress.green {
-  background-color: #659E5F;
 }
 .progress-bar {
   position:absolute;
@@ -232,6 +229,12 @@ table.tasks td, table.tasks th {
 .table-box.tasks {
   margin-top: 5px;
 }
+.table-box.user {
+  width: 400px;
+}
+.table-box.goal {
+  width: 500px;
+}
 .highlight {
   color: red;
   font-weight: bold;
@@ -240,10 +243,37 @@ table.tasks td, table.tasks th {
   display: inline;
   margin-right: 10px;
 }
-.table-box.user {
-  width: 400px;
-}
 .inplace-edit {
   float: right;
   margin: 0 10px 10px 0;
+}
+div .custom-template {
+  margin: 0 0 0 50px;
+}
+.table-box.goal div.highlight {
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+div.new-goal div.progress-bar {
+  height: 7px;
+  margin-left: 270px;
+  margin-top: 10px;
+  width: 420px;
+}
+div.new-goal div.task-circle {
+  margin-top: -13px;
+  height: 30px;
+  width: 30px;
+}
+div.new-goal .progress {
+  background-color:#fe6d00;
+  margin: -30px 0 0 45px;
+  height: 30px;
+  width: 30px;
+}
+div.new-goal h3.separator-header {
+  margin-top: -10px
+}
+p.page-title.float-right {
+  margin-right: 80px;
 }
