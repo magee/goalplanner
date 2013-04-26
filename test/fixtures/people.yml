@@ -1,13 +1,49 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  is_active: false
+  first_name: "Magee"
+  last_name: "Mooney"
+  email: "mageemooney@me.com"
+  is_active: true
+  startup_id: 1
+  is_founder: true
 
 two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  is_active: false
+  first_name: "Mike"
+  last_name: "Caliguire"
+  email: "mageemooney@gmail.com"
+  is_active: true
+  startup_id: 2
+  is_founder: true
+
+three:
+  first_name: "Jennifer"
+  last_name: "Jones"
+  email: "jen_jones@domain.com"
+  is_active: true
+  startup_id: 1
+  is_founder: false
+
+four:
+  first_name: "Tom"
+  last_name: "Williams"
+  email: "TWilliams@domain.com"
+  is_active: true
+  startup_id: 1
+  is_founder: false
+
+five:
+  first_name: "Luis"
+  last_name: "Alvarado"
+  email: "lmalverado@domain.com"
+  is_active: true
+  startup_id: 1
+  is_founder: false
+
+six:
+  first_name: "Timothy"
+  last_name: "Desjardins"
+  email: "ttsu@domain.com"
+  is_active: true
+  startup_id: 1
+  is_founder: false

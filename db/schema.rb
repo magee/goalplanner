@@ -11,22 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423062345) do
+ActiveRecord::Schema.define(:version => 20130426225752) do
 
   create_table "goals", :force => true do |t|
     t.string   "title"
+    t.string   "short_title"
     t.text     "description"
     t.date     "due_on"
-    t.boolean  "is_complete"
     t.boolean  "is_template"
+    t.integer  "startup_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "milestones", :force => true do |t|
     t.string   "title"
+    t.string   "short_title"
     t.text     "description"
     t.date     "due_on"
+    t.integer  "owner_id"
     t.boolean  "is_complete"
     t.integer  "order"
     t.integer  "goal_id"
@@ -39,18 +42,28 @@ ActiveRecord::Schema.define(:version => 20130423062345) do
     t.string   "last_name"
     t.string   "email"
     t.boolean  "is_active"
+    t.integer  "startup_id"
+    t.boolean  "is_founder"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "startups", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "tasks", :force => true do |t|
     t.string   "title"
+    t.string   "short_title"
     t.text     "description"
     t.date     "due_on"
     t.integer  "owner_id"
     t.boolean  "is_complete"
     t.integer  "order"
     t.integer  "milestone_id"
+    t.boolean  "is_template"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

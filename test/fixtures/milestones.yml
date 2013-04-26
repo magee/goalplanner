@@ -1,17 +1,225 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  description: MyText
-  due_on: 2013-04-22
+  title: "Identify Blogs"
+  description: "More substantive description"
+  due_on: 2013-05-2
   is_complete: false
   order: 1
   goal_id: 1
+  owner_id: 1
+  startup_id: nil
+  is_template: true
 
 two:
-  title: MyString
-  description: MyText
-  due_on: 2013-04-22
+  title: "Story Ideas"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: true
+  order: 2
+  goal_id: 1
+  owner_id: 1
+  startup_id: nil
+  is_template: true
+  percent_complete: 1.0
+
+three:
+  title: "Target Journalists"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 3
+  goal_id: 1
+  owner_id: 1
+  startup_id: nil
+  is_template: true
+  percent_complete: .33
+
+four:
+  title: "Pitch Materials"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 4
+  goal_id: 1
+  owner_id: 1
+  startup_id: nil
+  is_template: true
+  percent_complete: .66
+
+five:
+  title: "Lineup Intros"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 5
+  goal_id: 1
+  owner_id: 1
+  startup_id: nil
+  is_template: true
+
+six:
+  title: "Identify Magazines"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 6
+  goal_id: 1
+  owner_id: 1
+  startup_id: nil
+  is_template: true
+
+seven:
+  title: "Funding Strategy"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 1
+  goal_id: 2
+  startup_id: nil
+  owner_id: 1
+  is_template: true
+
+eight:
+  title: "Target VC List"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 2
+  goal_id: 2
+  startup_id: nil
+  owner_id: 1
+  is_template: true
+
+nine:
+  title: "Pitch Materials"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 3
+  goal_id: 2
+  startup_id: nil
+  owner_id: 1
+  is_template: true
+
+ten:
+  title: "Intros Lined Up"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 4
+  goal_id: 2
+  startup_id: nil
+  owner_id: 5
+  is_template: true
+
+eleven:
+  title: "Identify Blogs"
+  description: "More substantive description"
+  due_on: 2013-05-2
   is_complete: false
   order: 1
   goal_id: 1
+  startup_id: nil
+  owner_id: 1
+  is_template: false
+
+twelve:
+  title: "Story Ideas"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 2
+  goal_id: 1
+  startup_id: nil
+  owner_id: 1
+  is_template: false
+
+thirteen:
+  title: "Target Journalists"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 3
+  goal_id: 1
+  startup_id: nil
+  owner_id: 1
+  is_template: false
+
+fourteen:
+  title: "Pitch Materials"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 4
+  goal_id: 1
+  startup_id: nil
+  owner_id: 4
+  is_template: false
+
+fifteen:
+  title: "Lineup Intros"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 5
+  goal_id: 1
+  startup_id: nil
+  owner_id: 4
+  is_template: false
+
+sixteen:
+  title: "Identify Magazines"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 6
+  goal_id: 1
+  startup_id: nil
+  owner_id: 3
+  is_template: false
+
+seventeen:
+  title: "Funding Strategy"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 1
+  goal_id: 2
+  startup_id: nil
+  owner_id: 1
+  is_template: false
+
+eighteen:
+  title: "Target VC List"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 2
+  goal_id: 2
+  startup_id: nil
+  owner_id: 4
+  is_template: false
+
+nineteen:
+  title: "Pitch Materials"
+  description: "More substantive description"
+  due_on: 2013-05-2
+  is_complete: false
+  order: 3
+  goal_id: 2
+  startup_id: nil
+  owner_id: 3
+  is_template: false
+
+twenty:
+  title: "Intros Lined Up"
+  description: "More substantive description"
+  due_on: 2013-04-30
+  is_complete: false
+  order: 4
+  goal_id: 2
+  startup_id: nil
+  owner_id: 3
+  is_template: false
+

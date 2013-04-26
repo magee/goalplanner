@@ -5,6 +5,8 @@ class CreatePeople < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.boolean :is_active
+      t.integer :startup_id
+      t.boolean :is_founder
 
       t.timestamps
     end

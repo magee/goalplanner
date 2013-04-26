@@ -5,6 +5,8 @@ class CreateMilestones < ActiveRecord::Migration
       t.string :short_title
       t.text :description
       t.date :due_on
+      t.integer :owner_id
+      t.float :percent_complete
       t.boolean :is_complete
       t.integer :order
       t.integer :goal_id

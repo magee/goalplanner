@@ -1,19 +1,118 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  description: MyText
+  title: "Create story list"
+  description: "...more details..."
   due_on: 2013-04-22
-  owner_id: 1
+  owner_id: 3
   is_complete: false
   order: 1
-  milestone_id: 1
+  milestone_id: 2
 
 two:
-  title: MyString
-  description: MyText
+  title: "Identify relevant magazines"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 1
+  is_complete: true
+  order: 2
+  milestone_id: 3
+
+three:
+  title: "Identify relevant blogs"
+  description: "...more details..."
   due_on: 2013-04-22
   owner_id: 1
   is_complete: false
-  order: 1
-  milestone_id: 1
+  order: 3
+  milestone_id: 3
+
+four:
+  title: "Make list of writers"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 1
+  is_complete: false
+  order: 4
+  milestone_id: 3
+
+five:
+  title: "Marketing brief"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 1
+  is_complete: true
+  order: 4
+  milestone_id: 4
+
+six:
+  title: "Private demo video"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 4
+  is_complete: false
+  order: 6
+  milestone_id: 4
+
+seven:
+  title: "Press release"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 4
+  is_complete: true
+  order: 7
+  milestone_id: 4
+
+eight:
+  title: "Get contacts from PR firm"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 5
+  is_complete: false
+  order: 8
+  milestone_id: 6
+
+nine:
+  title: "Pitch deck built"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 3
+  is_complete: true
+  order: 9
+  milestone_id: 9
+
+ten:
+  title: "AngelList profile"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 6
+  is_complete: false
+  order: 10
+  milestone_id: 9
+
+eleven:
+  title: "Financial model built"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 7
+  is_complete: false
+  order: 11
+  milestone_id: 9
+
+twelve:
+  title: "Contacts from attorney"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 5
+  is_complete: true
+  order: 12
+  milestone_id: 10
+
+thirteen:
+  title: "Contacts from advisory board"
+  description: "...more details..."
+  due_on: 2013-04-22
+  owner_id: 5
+  is_complete: false
+  order: 13
+  milestone_id: 10

@@ -1,4 +1,7 @@
 FsGoalplanner::Application.routes.draw do
+  resources :startups
+
+
   resources :people
 
 

@@ -9,6 +9,7 @@ class CreateTasks < ActiveRecord::Migration
       t.boolean :is_complete
       t.integer :order
       t.integer :milestone_id
+      t.boolean :is_template
 
       t.timestamps
     end

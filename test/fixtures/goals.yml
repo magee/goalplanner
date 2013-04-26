@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  description: MyText
-  due_on: 2013-04-22
+  title: "Media Outreach"
+  description: "Some substantive description of the Media Outreach goal"
+  due_on: 2013-08-26
   is_complete: false
 
 two:
-  title: MyString
-  description: MyText
-  due_on: 2013-04-22
+  title: "Launch Fundraising Campaign"
+  description: "Some substantive description of the Launch Fundraising Campaign goal"
+  due_on: 2013-07-15
   is_complete: false
