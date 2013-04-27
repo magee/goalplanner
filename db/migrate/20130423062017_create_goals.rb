@@ -7,6 +7,7 @@ class CreateGoals < ActiveRecord::Migration
       t.date :due_on
       t.boolean :is_template
       t.integer :startup_id
+      t.boolean :is_complete
 
       t.timestamps
     end

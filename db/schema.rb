@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130426225752) do
+ActiveRecord::Schema.define(:version => 20130426223826) do
 
   create_table "goals", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130426225752) do
     t.date     "due_on"
     t.boolean  "is_template"
     t.integer  "startup_id"
+    t.boolean  "is_complete"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -30,11 +31,14 @@ ActiveRecord::Schema.define(:version => 20130426225752) do
     t.text     "description"
     t.date     "due_on"
     t.integer  "owner_id"
+    t.float    "percent_complete"
     t.boolean  "is_complete"
     t.integer  "order"
     t.integer  "goal_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "startup_id"
+    t.boolean  "is_template"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "people", :force => true do |t|

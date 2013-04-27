@@ -10,6 +10,8 @@ class CreateMilestones < ActiveRecord::Migration
       t.boolean :is_complete
       t.integer :order
       t.integer :goal_id
+      t.integer :startup_id
+      t.boolean :is_template
 
       t.timestamps
     end

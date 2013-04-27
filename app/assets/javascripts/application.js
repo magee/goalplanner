@@ -19,3 +19,5 @@
 //= require moment
 //= require jquery.ui.datepicker
 //= require jquery.ui.all
+//= require fs-goalplanner
+//= require modernizr
