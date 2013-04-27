@@ -67,7 +67,7 @@
 }
 #proto-group {
   position: absolute;
-  margin-top: 65px;
+  margin: 60px 10px 10px 10px;
   float:left;
 }
 div.task-circle {
@@ -79,17 +79,16 @@ div.task-circle {
   background-color: lightgrey;
   height: 50px;
   width: 50px;
-/*  opacity:.5;
-  filter:Alpha(Opacity=50);
-*/  -moz-border-radius:50%;
+  -moz-border-radius:50%;
   -khtml-border-radius:50%;
   -webkit-border-radius:50%;
   border-radius:50%;
 }
+div.task-circle.red {
+  background-color: #FAB6B1;
+}
 ol.breadcrumb-progress {
-  margin-top: -30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: -50px auto 50px auto;
 }
 .progress {
   -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
@@ -117,7 +116,7 @@ ol.breadcrumb-progress {
   height: 10px;
   width: 720px;
   background-color: darkgrey;
-  margin: 80px 0 0 135px;
+  margin: 60px 0 0 135px;
 }
 .progress-bar.four {
   width: 400px;
@@ -126,6 +125,9 @@ ol.breadcrumb-progress {
 .class-circle span {
   margin-top: 10px;
   padding-top: 10px;
+}
+.progress-0 {
+  clip: rect(auto, 0px, auto, auto);
 }
 .progress-10 {
   clip: rect(auto, 5px, auto, auto);
@@ -165,9 +167,16 @@ li div.label {
   z-index: 500;
 }
 .dashboard {
-  font-size: .7em;
-  margin: 20px 0 10px 0;
+  text-align: center;
+  line-height: 1.5em;
+  width: 100px;
+  font-size: .9em;
+  margin: 50px 50px 0 0;
   float: right;
+}
+.dashboard #status {
+  font-size: 1.5em;
+  color:#fe6d00;
 }
 .dashboard td {
   padding: 5px;
@@ -222,4 +231,65 @@ table.tasks td, table.tasks th {
 }
 .table-box.tasks {
   margin-top: 5px;
+}
+.table-box.user {
+  width: 400px;
+}
+.table-box.goal {
+  width: 500px;
+}
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+.inline-label {
+  display: inline;
+  margin-right: 10px;
+}
+div .custom-template {
+  margin: 0 0 0 50px;
+}
+.table-box.goal div.highlight {
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+div.new-goal div.progress-bar {
+  height: 7px;
+  margin-left: 270px;
+  margin-top: 10px;
+  width: 420px;
+}
+div.new-goal div.task-circle {
+  margin-top: 7px;
+  height: 30px;
+  width: 30px;
+}
+div.new-goal .progress {
+  background-color:#fe6d00;
+  margin: -30px 0 0 45px;
+  height: 30px;
+  width: 30px;
+}
+div.new-goal h3.separator-header {
+  margin-top: -10px
+}
+p.page-title.float-right {
+  margin-right: 80px;
+}
+li.toolname {
+  color:#fe6d00;
+  color: red;
+}
+.btn-group>.btn-small.active{
+  background:#adadad;
+}
+#inplace-edit {
+  color:#fe6d00;
+  float: right;
+  margin: 0 10px 10px 0;
+}
+#next {
+  color:#fe6d00;
+  float: right;
+  margin: 10px 20px -10px 0;
 }

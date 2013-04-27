@@ -39,16 +39,16 @@
     <div class="navbar navbar-center">
       <div class="navbar-inner">
         <ul class="nav nav-pointer">
-          <li>
+          <li class="dropdown">
             <a href="./goals/new.html">start a new goal</a>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="./goals/goals.html">review existing goals</a>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="./teammembers.html">review team activity</a>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="./templates.html">add/edit templates</a>
           </li>
         </ul>
@@ -58,18 +58,49 @@
     <div id="main">
       <div class="wrapper">
         <p class="page-title">
-          <img class="app-logo" src="./lib/assets/app-logo.png"/><br />
+<!--           <img class="app-logo" src="./lib/assets/app-logo.png"/><br /> -->
           goal planner
         </p>
       </div>
-<!--       TODO:  see if it's possible to get this to work locally -->
-<!--       <div class="handdrawn arrow-right">
-        <p class="content">
-          <i class="arrow arrow-right-up-short"></i>
-          Select an option from the menu here
-        </p>
+      <div class="wrapper">
+        <h3 class="separator-header"><span>templates</span></h3>
+          <div class="table-box">
+            <table class="table" id="goalsList">
+              <thead>
+                <tr>
+<!--                   <th>Select</th> -->
+                  <th>Template name</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="task">
+                  <td>
+                    <a href="#">Media Outreach</a>
+                  </td>
+                  <td>
+                    <a href="#" class="normal-text">30 days</a>
+                  </td>
+                </tr>
+                <tr class="task">
+                  <td>
+                    <a href="#">Launch Fundraising Campaign</a>
+                  </td>
+                  <td>
+                    <a href="#" class="normal-text">45 days</a>
+                  </td>
+                </tr>
+                <tr class="even">
+                  <td colspan="3">
+                  <a class="add_new" href="./edit-template.html">add a template</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
- -->    </div>
+    </div>
   </div><!-- /page -->
 
 </body>
