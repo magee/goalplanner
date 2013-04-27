@@ -2,7 +2,8 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = Goal.all
+    #  TODO:  change this to get rid of magic number 1
+    @goals = Goal.by_startup(1)
 
     respond_to do |format|
       format.html # index.html.erb
