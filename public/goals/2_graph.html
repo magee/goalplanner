@@ -5,12 +5,20 @@
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
 
   <!-- local copy of Foundersuite stylesheet -->
   <link rel="stylesheet" href="../lib/assets/fs-app.css" />
 
   <!-- temp development script & style sheets - one or both may be modified to use FS's existing ones -->
   <script language="javascript" src="../lib/assets/app.js"></script>
+  <script language="javascript">
+    $(document).ready(function(){
+      var start = moment();
+      var end = moment([2013, 7, 15]);
+      $(".countdown").text("t-minus " + -1 * start.diff(end, 'days') + " days");
+    });
+  </script>
 
   <!-- goal-planner stylesheet -->
   <link rel="stylesheet" href="../lib/assets/app.css" /></head>
@@ -74,8 +82,8 @@
         <br />
         <div class="graph-title">
           <div class="title">Launch Fundraising Campaign</div>
-          <div class="launch-date">target launch: May 1, 2013</div>
-          <div class="countdown">t-minus 7 days</div>
+          <div class="launch-date">target launch: July 15, 2013</div>
+          <div class="countdown"></div>
         </div>
       </div> <!-- wrapper -->
 

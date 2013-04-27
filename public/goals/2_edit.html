@@ -11,6 +11,13 @@
 
   <!-- temp development script & style sheets - one or both may be modified to use FS's existing ones -->
   <script language="javascript" src="../lib/assets/app.js"></script>
+  <script language="javascript">
+    $(document).ready(function(){
+      var start = moment();
+      var end = moment([2013, 7, 15]);
+      $(".countdown").text("t-minus " + -1 * start.diff(end, 'days') + " days");
+    });
+  </script>
 
   <!-- goal-planner stylesheet -->
   <link rel="stylesheet" href="../lib/assets/app.css" />
@@ -72,8 +79,8 @@
         <br />
         <div class="graph-title">
           <div class="title">Launch Fundraising Campaign</div>
-          <div class="launch-date">target launch: May 1, 2013</div>
-          <div class="countdown">t-minus 7 days</div>
+          <div class="launch-date">target launch: July 15, 2013</div>
+          <div class="countdown"></div>
         </div>
 <!--         <div id="page_button"></div>
           <div id="add_new" class="btn btn-primary btn-toggle-slide float-right">add new goal
