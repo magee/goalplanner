@@ -12190,3 +12190,487 @@ ActionView::Template::Error (undefined local variable or method `admin_users_pat
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:36:13 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:36:15 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:36:16 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:36:22 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:36:24 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:36:27 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:36:29 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/goals/new.html" for 127.0.0.1 at 2013-04-28 14:36:32 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered layouts/_app-title.html.erb (0.1ms)
+  Rendered goals/_form.html.erb (37.4ms)
+  Rendered goals/new.html.erb within layouts/application (39.2ms)
+Compiled fs-app.css  (1ms)  (pid 22801)
+Compiled fs-goalplanner.css  (0ms)  (pid 22801)
+Compiled goals.css  (3ms)  (pid 22801)
+Compiled milestones.css  (1ms)  (pid 22801)
+Compiled people.css  (1ms)  (pid 22801)
+Compiled products.css  (2ms)  (pid 22801)
+Compiled scaffolds.css  (18ms)  (pid 22801)
+Compiled startups.css  (2ms)  (pid 22801)
+Compiled tasks.css  (1ms)  (pid 22801)
+Compiled users.css  (1ms)  (pid 22801)
+Compiled jquery.ui.core.css  (2ms)  (pid 22801)
+Compiled jquery.ui.theme.css  (14ms)  (pid 22801)
+Compiled jquery.ui.accordion.css  (30ms)  (pid 22801)
+Compiled jquery.ui.menu.css  (6ms)  (pid 22801)
+Compiled jquery.ui.autocomplete.css  (55ms)  (pid 22801)
+Compiled jquery.ui.button.css  (9ms)  (pid 22801)
+Compiled jquery.ui.datepicker.css  (9ms)  (pid 22801)
+Compiled jquery.ui.resizable.css  (6ms)  (pid 22801)
+Compiled jquery.ui.dialog.css  (58ms)  (pid 22801)
+Compiled jquery.ui.progressbar.css  (6ms)  (pid 22801)
+Compiled jquery.ui.selectable.css  (6ms)  (pid 22801)
+Compiled jquery.ui.slider.css  (7ms)  (pid 22801)
+Compiled jquery.ui.spinner.css  (10ms)  (pid 22801)
+Compiled jquery.ui.tabs.css  (6ms)  (pid 22801)
+Compiled jquery.ui.tooltip.css  (6ms)  (pid 22801)
+Compiled jquery.ui.base.css  (386ms)  (pid 22801)
+Compiled jquery.ui.all.css  (404ms)  (pid 22801)
+Compiled application.css  (609ms)  (pid 22801)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (17.4ms)
+Completed 500 Internal Server Error in 750ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007f7fd572acc0>:0x007f7fd113e590>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2290603622564944343_70093468470720'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___3021760042888592275_70093507589620'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/goals/new.html" for 127.0.0.1 at 2013-04-28 14:37:05 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.7ms)
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered goals/_form.html.erb (18.7ms)
+  Rendered goals/new.html.erb within layouts/application (52.4ms)
+Compiled jquery.js  (2ms)  (pid 23102)
+Compiled jquery_ujs.js  (0ms)  (pid 23102)
+Compiled fs-goalplanner.js  (0ms)  (pid 23102)
+Compiled goals.js  (140ms)  (pid 23102)
+Compiled milestones.js  (134ms)  (pid 23102)
+Compiled people.js  (134ms)  (pid 23102)
+Compiled products.js  (129ms)  (pid 23102)
+Compiled startups.js  (129ms)  (pid 23102)
+Compiled tasks.js  (169ms)  (pid 23102)
+Compiled users.js  (132ms)  (pid 23102)
+Compiled moment.js  (0ms)  (pid 23102)
+Compiled jquery.ui.core.js  (0ms)  (pid 23102)
+Compiled jquery.ui.datepicker.js  (11ms)  (pid 23102)
+Compiled jquery.ui.widget.js  (0ms)  (pid 23102)
+Compiled jquery.ui.accordion.js  (14ms)  (pid 23102)
+Compiled jquery.ui.position.js  (0ms)  (pid 23102)
+Compiled jquery.ui.menu.js  (13ms)  (pid 23102)
+Compiled jquery.ui.autocomplete.js  (28ms)  (pid 23102)
+Compiled jquery.ui.button.js  (3ms)  (pid 23102)
+Compiled jquery.ui.mouse.js  (3ms)  (pid 23102)
+Compiled jquery.ui.draggable.js  (12ms)  (pid 23102)
+Compiled jquery.ui.resizable.js  (5ms)  (pid 23102)
+Compiled jquery.ui.dialog.js  (44ms)  (pid 23102)
+Compiled jquery.ui.droppable.js  (6ms)  (pid 23102)
+Compiled jquery.ui.effect.js  (0ms)  (pid 23102)
+Compiled jquery.ui.effect-blind.js  (10ms)  (pid 23102)
+Compiled jquery.ui.effect-bounce.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-clip.js  (3ms)  (pid 23102)
+Compiled jquery.ui.effect-drop.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-explode.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-fade.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-fold.js  (3ms)  (pid 23102)
+Compiled jquery.ui.effect-highlight.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-pulsate.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-scale.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-shake.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-slide.js  (2ms)  (pid 23102)
+Compiled jquery.ui.effect-transfer.js  (2ms)  (pid 23102)
+Compiled jquery.ui.progressbar.js  (3ms)  (pid 23102)
+Compiled jquery.ui.selectable.js  (5ms)  (pid 23102)
+Compiled jquery.ui.slider.js  (5ms)  (pid 23102)
+Compiled jquery.ui.sortable.js  (5ms)  (pid 23102)
+Compiled jquery.ui.spinner.js  (5ms)  (pid 23102)
+Compiled jquery.ui.tabs.js  (4ms)  (pid 23102)
+Compiled jquery.ui.tooltip.js  (5ms)  (pid 23102)
+Compiled jquery.ui.all.js  (559ms)  (pid 23102)
+Compiled application.js  (1775ms)  (pid 23102)
+  Rendered layouts/_site-banner.html.erb (0.7ms)
+  Rendered layouts/_menu-bar.html.erb (24.7ms)
+Completed 500 Internal Server Error in 2457ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007fc47ba5cd18>:0x007fc47ba61a20>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2412253071207886213_70240964901440'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__3249076348689540635_70240964892900'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/goals/new.html" for 127.0.0.1 at 2013-04-28 14:37:07 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered layouts/_app-title.html.erb (0.1ms)
+  Rendered goals/_form.html.erb (6.8ms)
+  Rendered goals/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_site-banner.html.erb (0.3ms)
+  Rendered layouts/_menu-bar.html.erb (21.0ms)
+Completed 500 Internal Server Error in 97ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007fc47ba5cd18>:0x007fc47be36538>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2412253071207886213_70240964901440'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__3249076348689540635_70240964892900'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/lib/assets/fs-fs-goalplanner.css" for 127.0.0.1 at 2013-04-28 14:37:13 -0700
+
+ActionController::RoutingError (No route matches [GET] "/lib/assets/fs-fs-goalplanner.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/goals/new.html" for 127.0.0.1 at 2013-04-28 14:37:16 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered layouts/_app-title.html.erb (0.1ms)
+  Rendered goals/_form.html.erb (6.6ms)
+  Rendered goals/new.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (47.6ms)
+Completed 500 Internal Server Error in 91ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007fc47ba5cd18>:0x007fc47be287f8>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2412253071207886213_70240964901440'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__3249076348689540635_70240964892900'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/goals/new.html" for 127.0.0.1 at 2013-04-28 14:38:01 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered layouts/_app-title.html.erb (0.1ms)
+  Rendered goals/_form.html.erb (7.2ms)
+  Rendered goals/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (16.3ms)
+Completed 500 Internal Server Error in 62ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007fc47ba5cd18>:0x007fc47ba1d5f0>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2412253071207886213_70240934364340'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__3249076348689540635_70240964892900'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/goals" for 127.0.0.1 at 2013-04-28 14:38:11 -0700
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`startup_id` = 1[0m
+Completed 500 Internal Server Error in 51ms
+
+NameError (undefined local variable or method `send_message' for #<GoalsController:0x007fc47fb909b0>):
+  app/controllers/goals_controller.rb:9:in `block in index'
+  app/controllers/goals_controller.rb:8:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at 2013-04-28 14:38:11 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.4ms)
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered goals/_form.html.erb (6.9ms)
+  Rendered goals/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (16.7ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007fc47ba5cd18>:0x007fc47b9f7170>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2412253071207886213_70240934364340'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__3249076348689540635_70240964892900'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+Connecting to database specified by database.yml
