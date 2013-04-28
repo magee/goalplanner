@@ -6,12 +6,11 @@ class GoalsController < ApplicationController
     @goals = Goal.by_startup(1)
 
     respond_to do |format|
-      send_message
       format.html # index.html.erb
       format.json { render json: @goals }
     end
 
-    def send_message 
+    def send_message
       UserMailer.test_assigned("mageemooney@me.com").deliver
     end
   end
