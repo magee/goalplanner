@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  user_name: "mageemooney"
+  user_name: "mageemooney@me.com"
   password: "tenderloin"
   startup_id: 1
   role: admin
