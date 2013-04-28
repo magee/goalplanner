@@ -11,7 +11,7 @@ class GoalsController < ApplicationController
       format.json { render json: @goals }
     end
 
-    def send_message do
+    def send_message 
       UserMailer.test_assigned("mageemooney@me.com").deliver
     end
   end
