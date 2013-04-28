@@ -1,17 +1,17 @@
 FsGoalplanner::Application.routes.draw do
   resources :startups
 
-
   resources :people
 
+  resources :goals do
+    resources :milestones
+  end
+
+  resources :milestones do
+    resources :tasks
+  end
 
   resources :tasks
-
-
-  resources :milestones
-
-
-  resources :goals
 
 
   # The priority is based upon order of creation:
