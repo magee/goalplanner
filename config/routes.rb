@@ -1,5 +1,6 @@
 FsGoalplanner::Application.routes.draw do
   devise_for :users
+  resources :users
 
   resources :people
 
@@ -16,7 +17,6 @@ FsGoalplanner::Application.routes.draw do
   namespace :admin do
     resources :templates
     resources :startups
-    resources :users
   end
 
 
