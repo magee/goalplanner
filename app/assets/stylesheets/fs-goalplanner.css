@@ -4,7 +4,9 @@
   src: url('jennasue-webfont-7223bec614edab1b17133f137673c644.eot');
 }
 */
-
+html {
+  background:#fff;
+}
 .logo {
   float: left;
   width: 87%;
@@ -232,8 +234,14 @@ table.tasks td, table.tasks th {
 .table-box.tasks {
   margin-top: 5px;
 }
-.table-box.user {
+.table-box.small {
   width: 400px;
+}
+.table-box.medium {
+  width: 550px;
+}
+.table-box.medium.padded {
+  padding: 30px;
 }
 .table-box.goal {
   width: 500px;
@@ -313,4 +321,13 @@ div.error-explanation h2 {
   background-color: #c00;
   color: #fff;
 }
-
+.devise_links {
+  float: right;
+  color:#fe6d00;
+  font-size: 1em;
+  padding: 20px 5px 0 20px;
+}
+.devise_send {
+  margin-top: -8px;
+  margin-left: 10px;
+}
