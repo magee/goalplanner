@@ -1,19 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  user_name: "Magee Mooney"
+  user_name: "mageemooney"
+  password: "tenderloin"
   startup_id: 1
   role: admin
-  email: "testing"
+  email: "mageemooney@me.com"
 
 two:
-  user_name: "Nathan Beckford"
+  user_name: "nathanb"
+  password: "tenderloin"
   startup_id: 1
   role: admin
   email: "testing2"
 
 three:
-  user_name: "Margaret User"
+  user_name: "anon_user"
+  password: "tenderloin"
   startup_id: 1
   role: user
   email: "testing3"

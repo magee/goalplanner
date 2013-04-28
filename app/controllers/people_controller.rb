@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  # TODO: add default startup_id of the one belonging to the current_user
   # GET /people
   # GET /people.json
   def index
