@@ -1,6 +1,4 @@
 FsGoalplanner::Application.routes.draw do
-  resources :startups
-
   resources :people
 
   resources :goals do
@@ -12,6 +10,12 @@ FsGoalplanner::Application.routes.draw do
   end
 
   resources :tasks
+
+  namespace :admin do
+    resources :templates
+    resources :startups
+  end
+
 
 
   # The priority is based upon order of creation:

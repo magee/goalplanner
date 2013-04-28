@@ -10,14 +10,12 @@
       <li>
         <%= link_to 'review team activity', people_path %>
       </li>
-    <%= if !current_user.try(:admin?) then ( %>
       <li>
         <%= link_to 'add/edit templates', admin_templates_path %>
       </li>
       <li>
         <%= link_to 'add/edit users', admin_users_path %>
       </li>
-    <%= ) end %>
     </ul>
   </div>
 </div>
