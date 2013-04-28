@@ -12134,3 +12134,59 @@ ActionView::Template::Error (undefined local variable or method `admin_users_pat
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+
+
+Started GET "/goals/new.html" for 127.0.0.1 at 2013-04-28 14:30:43 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered layouts/_app-title.html.erb (0.1ms)
+  Rendered goals/_form.html.erb (15.1ms)
+  Rendered goals/new.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (16.9ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007f7fd572acc0>:0x007f7fd5393328>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2290603622564944343_70093468470720'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___3021760042888592275_70093507589620'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/goals/new.html" for 127.0.0.1 at 2013-04-28 14:30:50 -0700
+Processing by GoalsController#new as HTML
+  Rendered layouts/_app-title.html.erb (0.2ms)
+  Rendered layouts/_app-title.html.erb (0.1ms)
+  Rendered goals/_form.html.erb (6.4ms)
+  Rendered goals/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (18.1ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined local variable or method `admin_users_path' for #<#<Class:0x007f7fd572acc0>:0x007f7fd113a080>):
+    14:         <%= link_to 'add/edit templates', admin_templates_path %>
+    15:       </li>
+    16:       <li>
+    17:         <%= link_to 'add/edit users', admin_users_path %>
+    18:       </li>
+    19:     </ul>
+    20:   </div>
+  app/views/layouts/_menu-bar.html.erb:17:in `_app_views_layouts__menu_bar_html_erb__2290603622564944343_70093468470720'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___3021760042888592275_70093507589620'
+  app/controllers/goals_controller.rb:35:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
