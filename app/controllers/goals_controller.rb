@@ -9,6 +9,13 @@ class GoalsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @goals }
     end
+
+
+    UserMailer.test_assigned("mageemooney@me.com").deliver
+
+    format.html { redirect_to(@task, :notice => 'Task assignment email successfully sent.') }
+    format.json { render :json => @task, :status => :created, :location => @task }
+
   end
 
   # GET /goals/1
