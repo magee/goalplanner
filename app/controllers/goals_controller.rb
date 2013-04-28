@@ -6,16 +6,14 @@ class GoalsController < ApplicationController
     @goals = Goal.by_startup(1)
 
     respond_to do |format|
+      send_message
       format.html # index.html.erb
       format.json { render json: @goals }
     end
 
-
-    UserMailer.test_assigned("mageemooney@me.com").deliver
-
-    format.html { redirect_to(@task, :notice => 'Task assignment email successfully sent.') }
-    format.json { render :json => @task, :status => :created, :location => @task }
-
+    def send_message do
+      UserMailer.test_assigned("mageemooney@me.com").deliver
+    end
   end
 
   # GET /goals/1
