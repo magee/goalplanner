@@ -1,10 +1,11 @@
-<%= render 'layouts/app-title' %>
+<h1>Listing users</h1>
 
 <table>
   <tr>
     <th>User name</th>
-    <th>Startup</th>
-    <th>Role</th>
+    <th>Password</th>
+    <th>Person</th>
+    <th>Is admin</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +14,9 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.user_name %></td>
-    <td><%= user.startup_id %></td>
-    <td><%= user.role %></td>
+    <td><%= user.password %></td>
+    <td><%= user.person_id %></td>
+    <td><%= user.is_admin %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

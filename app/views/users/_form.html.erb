@@ -1,4 +1,3 @@
-<%= render 'layouts/app-title' %>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -17,12 +16,16 @@
     <%= f.text_field :user_name %>
   </div>
   <div class="field">
-    <%= f.label :startup_id %><br />
-    <%= f.number_field :startup_id %>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :role %><br />
-    <%= f.text_field :role %>
+    <%= f.label :person_id %><br />
+    <%= f.number_field :person_id %>
+  </div>
+  <div class="field">
+    <%= f.label :is_admin %><br />
+    <%= f.check_box :is_admin %>
   </div>
   <div class="actions">
     <%= f.submit %>
