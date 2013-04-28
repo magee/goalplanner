@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_name: "Magee Mooney"
+  startup_id: 1
+  role: admin
+  email: "testing"
+
+two:
+  user_name: "Nathan Beckford"
+  startup_id: 1
+  role: admin
+  email: "testing2"
+
+three:
+  user_name: "Margaret User"
+  startup_id: 1
+  role: user
+  email: "testing3"
