@@ -31264,3 +31264,394 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/logo-temp.png" for 127.0.0.1 at 2013-04-28 15:53:20 -0700
 Served asset /logo-temp.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.3ms)[0m  DELETE FROM `admins`
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', '2013-04-28 22:55:19', '2013-04-28 22:55:19', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@gmail.com', '2013-04-28 22:55:19', '2013-04-28 22:55:19', 298486374)
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `goals`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (1, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 0, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (2, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 0, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (3, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 1, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (4, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 1, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (5, 'Another Goal for Startup 1', 'Media', 'Some substantive description of another goal', '2013-08-26', 0, 0, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (6, 'First Goal Startup 2', 'Fundraising', 'Some substantive description of First Goal', '2013-07-15', 0, 0, 2, '2013-04-28 22:55:19', '2013-04-28 22:55:19')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `milestones`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 1, 2, 1, 1, 1, 1, 1.0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 1, 0.33, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 113629430)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 1, 1, 0.66, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 1, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 1018350795)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 1, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 51848956)
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 374648174)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 1, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 1, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 991788158)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 5, 1, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 507103779)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 457008489)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 0, 2, 1, 1, 1, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 587967610)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 21578242)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 4, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 241469500)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 4, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 339908452)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 3, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 1047793131)
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 510532105)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 4, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 125146708)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 3, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 92282751)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 3, 0, '2013-04-28 22:55:19', '2013-04-28 22:55:19', 112740059)
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `people`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Magee', 'Mooney', 'mageemooney@me.com', 1, 1, 1, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Mike', 'Caliguire', 'mageemooney@gmail.com', 1, 2, 1, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Jennifer', 'Jones', 'jen_jones@domain.com', 1, 1, 0, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Tom', 'Williams', 'TWilliams@domain.com', 1, 1, 0, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Luis', 'Alvarado', 'lmalverado@domain.com', 1, 1, 0, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 1018350795)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Timothy', 'Desjardins', 'ttsu@domain.com', 1, 1, 0, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 51848956)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM `startups`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('Geewicket Labs', '2013-04-28 22:55:20', '2013-04-28 22:55:20', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('iBusiness', '2013-04-28 22:55:20', '2013-04-28 22:55:20', 298486374)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `tasks`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Create story list', '...more details...', '2013-04-22', 3, 0, 1, 2, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant magazines', '...more details...', '2013-04-22', 1, 1, 2, 3, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant blogs', '...more details...', '2013-04-22', 1, 0, 3, 3, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Make list of writers', '...more details...', '2013-04-22', 1, 0, 4, 3, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Marketing brief', '...more details...', '2013-04-22', 1, 1, 4, 4, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 1018350795)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Private demo video', '...more details...', '2013-04-22', 4, 0, 6, 4, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 51848956)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Press release', '...more details...', '2013-04-22', 4, 1, 7, 4, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 374648174)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Get contacts from PR firm', '...more details...', '2013-04-22', 5, 0, 8, 6, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Pitch deck built', '...more details...', '2013-04-22', 3, 1, 9, 9, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 991788158)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('AngelList profile', '...more details...', '2013-04-22', 6, 0, 10, 9, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 507103779)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Financial model built', '...more details...', '2013-04-22', 7, 0, 11, 9, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 457008489)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from attorney', '...more details...', '2013-04-22', 5, 1, 12, 10, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 587967610)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from advisory board', '...more details...', '2013-04-22', 5, 0, 13, 10, '2013-04-28 22:55:20', '2013-04-28 22:55:20', 21578242)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`user_name`, `password`, `startup_id`, `role`, `email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', 'tenderloin', 1, 'admin', 'mageemooney@me.com', '2013-04-28 22:55:20', '2013-04-28 22:55:20', 980190962)
+Mysql2::Error: Unknown column 'startup_id' in 'field list': INSERT INTO `users` (`user_name`, `password`, `startup_id`, `role`, `email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', 'tenderloin', 1, 'admin', 'mageemooney@me.com', '2013-04-28 22:55:20', '2013-04-28 22:55:20', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `admins`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', '2013-04-28 22:58:56', '2013-04-28 22:58:56', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@gmail.com', '2013-04-28 22:58:56', '2013-04-28 22:58:56', 298486374)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `goals`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (1, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 0, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (2, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 0, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (3, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (4, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (5, 'Another Goal for Startup 1', 'Media', 'Some substantive description of another goal', '2013-08-26', 0, 0, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (6, 'First Goal Startup 2', 'Fundraising', 'Some substantive description of First Goal', '2013-07-15', 0, 0, 2, '2013-04-28 22:58:56', '2013-04-28 22:58:56')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `milestones`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 1, 2, 1, 1, 1, 1, 1.0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 1, 0.33, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 1, 1, 0.66, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 1, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 1018350795)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 1, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 51848956)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 374648174)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 1, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 1, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 991788158)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 5, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 507103779)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 457008489)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 0, 2, 1, 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 587967610)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 21578242)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 4, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 241469500)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 4, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 339908452)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 3, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 1047793131)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 510532105)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 4, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 125146708)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 3, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 92282751)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 3, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 112740059)
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `people`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Magee', 'Mooney', 'mageemooney@me.com', 1, 1, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Mike', 'Caliguire', 'mageemooney@gmail.com', 1, 2, 1, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Jennifer', 'Jones', 'jen_jones@domain.com', 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Tom', 'Williams', 'TWilliams@domain.com', 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 281110143)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Luis', 'Alvarado', 'lmalverado@domain.com', 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 1018350795)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Timothy', 'Desjardins', 'ttsu@domain.com', 1, 1, 0, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 51848956)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `startups`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('Geewicket Labs', '2013-04-28 22:58:56', '2013-04-28 22:58:56', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('iBusiness', '2013-04-28 22:58:56', '2013-04-28 22:58:56', 298486374)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `tasks`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Create story list', '...more details...', '2013-04-22', 3, 0, 1, 2, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant magazines', '...more details...', '2013-04-22', 1, 1, 2, 3, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant blogs', '...more details...', '2013-04-22', 1, 0, 3, 3, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Make list of writers', '...more details...', '2013-04-22', 1, 0, 4, 3, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Marketing brief', '...more details...', '2013-04-22', 1, 1, 4, 4, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 1018350795)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Private demo video', '...more details...', '2013-04-22', 4, 0, 6, 4, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 51848956)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Press release', '...more details...', '2013-04-22', 4, 1, 7, 4, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 374648174)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Get contacts from PR firm', '...more details...', '2013-04-22', 5, 0, 8, 6, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Pitch deck built', '...more details...', '2013-04-22', 3, 1, 9, 9, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 991788158)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('AngelList profile', '...more details...', '2013-04-22', 6, 0, 10, 9, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 507103779)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Financial model built', '...more details...', '2013-04-22', 7, 0, 11, 9, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 457008489)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from attorney', '...more details...', '2013-04-22', 5, 1, 12, 10, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 587967610)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from advisory board', '...more details...', '2013-04-22', 5, 0, 13, 10, '2013-04-28 22:58:56', '2013-04-28 22:58:56', 21578242)[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`user_name`, `password`, `startup_id`, `role`, `email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', 'tenderloin', 1, 'admin', 'mageemooney@me.com', '2013-04-28 22:58:56', '2013-04-28 22:58:56', 980190962)
+Mysql2::Error: Unknown column 'startup_id' in 'field list': INSERT INTO `users` (`user_name`, `password`, `startup_id`, `role`, `email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', 'tenderloin', 1, 'admin', 'mageemooney@me.com', '2013-04-28 22:58:56', '2013-04-28 22:58:56', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+  [1m[35m (27.5ms)[0m  ALTER TABLE `users` ADD `startup_id` int(11)
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130428225649')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `admins`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', '2013-04-28 22:59:16', '2013-04-28 22:59:16', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@gmail.com', '2013-04-28 22:59:16', '2013-04-28 22:59:16', 298486374)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `goals`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (1, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 0, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (2, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 0, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (3, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (4, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (5, 'Another Goal for Startup 1', 'Media', 'Some substantive description of another goal', '2013-08-26', 0, 0, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (6, 'First Goal Startup 2', 'Fundraising', 'Some substantive description of First Goal', '2013-07-15', 0, 0, 2, '2013-04-28 22:59:16', '2013-04-28 22:59:16')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `milestones`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 1, 2, 1, 1, 1, 1, 1.0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 1, 0.33, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 113629430)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 1, 1, 0.66, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 281110143)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 1, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 1018350795)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 1, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 51848956)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 374648174)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 1, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 1, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 991788158)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 5, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 507103779)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 457008489)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 0, 2, 1, 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 587967610)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 21578242)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 4, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 241469500)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 4, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 339908452)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 3, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 1047793131)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 510532105)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 4, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 125146708)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 3, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 92282751)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 3, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 112740059)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `people`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Magee', 'Mooney', 'mageemooney@me.com', 1, 1, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Mike', 'Caliguire', 'mageemooney@gmail.com', 1, 2, 1, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Jennifer', 'Jones', 'jen_jones@domain.com', 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Tom', 'Williams', 'TWilliams@domain.com', 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Luis', 'Alvarado', 'lmalverado@domain.com', 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 1018350795)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Timothy', 'Desjardins', 'ttsu@domain.com', 1, 1, 0, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 51848956)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `startups`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('Geewicket Labs', '2013-04-28 22:59:16', '2013-04-28 22:59:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('iBusiness', '2013-04-28 22:59:16', '2013-04-28 22:59:16', 298486374)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `tasks`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Create story list', '...more details...', '2013-04-22', 3, 0, 1, 2, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant magazines', '...more details...', '2013-04-22', 1, 1, 2, 3, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant blogs', '...more details...', '2013-04-22', 1, 0, 3, 3, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 113629430)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Make list of writers', '...more details...', '2013-04-22', 1, 0, 4, 3, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 281110143)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Marketing brief', '...more details...', '2013-04-22', 1, 1, 4, 4, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 1018350795)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Private demo video', '...more details...', '2013-04-22', 4, 0, 6, 4, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 51848956)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Press release', '...more details...', '2013-04-22', 4, 1, 7, 4, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 374648174)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Get contacts from PR firm', '...more details...', '2013-04-22', 5, 0, 8, 6, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Pitch deck built', '...more details...', '2013-04-22', 3, 1, 9, 9, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 991788158)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('AngelList profile', '...more details...', '2013-04-22', 6, 0, 10, 9, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 507103779)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Financial model built', '...more details...', '2013-04-22', 7, 0, 11, 9, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 457008489)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from attorney', '...more details...', '2013-04-22', 5, 1, 12, 10, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 587967610)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from advisory board', '...more details...', '2013-04-22', 5, 0, 13, 10, '2013-04-28 22:59:16', '2013-04-28 22:59:16', 21578242)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`user_name`, `password`, `startup_id`, `role`, `email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', 'tenderloin', 1, 'admin', 'mageemooney@me.com', '2013-04-28 22:59:16', '2013-04-28 22:59:16', 980190962)
+Mysql2::Error: Unknown column 'role' in 'field list': INSERT INTO `users` (`user_name`, `password`, `startup_id`, `role`, `email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', 'tenderloin', 1, 'admin', 'mageemooney@me.com', '2013-04-28 22:59:16', '2013-04-28 22:59:16', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `admins`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', '2013-04-28 23:00:07', '2013-04-28 23:00:07', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `admins` (`email`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@gmail.com', '2013-04-28 23:00:07', '2013-04-28 23:00:07', 298486374)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `goals`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (1, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 0, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (2, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 0, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (3, 'Media Outreach', 'Media', 'Some substantive description of the Media Outreach goal', '2013-08-26', 0, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (4, 'Launch Fundraising Campaign', 'Fundraising', 'Some substantive description of the Launch Fundraising Campaign goal', '2013-07-15', 0, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (5, 'Another Goal for Startup 1', 'Media', 'Some substantive description of another goal', '2013-08-26', 0, 0, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `goals` (`id`, `title`, `short_title`, `description`, `due_on`, `is_complete`, `is_template`, `startup_id`, `created_at`, `updated_at`) VALUES (6, 'First Goal Startup 2', 'Fundraising', 'Some substantive description of First Goal', '2013-07-15', 0, 0, 2, '2013-04-28 23:00:07', '2013-04-28 23:00:07')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `milestones`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 1, 2, 1, 1, 1, 1, 1.0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 1, 0.33, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `percent_complete`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 1, 1, 0.66, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 1, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 1018350795)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `owner_id`, `startup_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 1, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 51848956)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 374648174)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 1, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 638205575)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 1, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 991788158)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 5, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 507103779)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Blogs', 'More substantive description', '2013-05-02', 0, 1, 1, 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 457008489)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Story Ideas', 'More substantive description', '2013-04-30', 0, 2, 1, 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 587967610)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target Journalists', 'More substantive description', '2013-05-02', 0, 3, 1, 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 21578242)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-04-30', 0, 4, 1, 1, 4, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 241469500)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Lineup Intros', 'More substantive description', '2013-05-02', 0, 5, 1, 1, 4, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 339908452)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Identify Magazines', 'More substantive description', '2013-04-30', 0, 6, 1, 1, 3, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 1047793131)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Funding Strategy', 'More substantive description', '2013-05-02', 0, 1, 2, 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 510532105)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Target VC List', 'More substantive description', '2013-04-30', 0, 2, 2, 1, 4, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 125146708)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Pitch Materials', 'More substantive description', '2013-05-02', 0, 3, 2, 1, 3, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 92282751)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `milestones` (`title`, `description`, `due_on`, `is_complete`, `order`, `goal_id`, `startup_id`, `owner_id`, `is_template`, `created_at`, `updated_at`, `id`) VALUES ('Intros Lined Up', 'More substantive description', '2013-04-30', 0, 4, 2, 1, 3, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 112740059)
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `people`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Magee', 'Mooney', 'mageemooney@me.com', 1, 1, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Mike', 'Caliguire', 'mageemooney@gmail.com', 1, 2, 1, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Jennifer', 'Jones', 'jen_jones@domain.com', 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Tom', 'Williams', 'TWilliams@domain.com', 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Luis', 'Alvarado', 'lmalverado@domain.com', 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 1018350795)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `is_active`, `startup_id`, `is_founder`, `created_at`, `updated_at`, `id`) VALUES ('Timothy', 'Desjardins', 'ttsu@domain.com', 1, 1, 0, '2013-04-28 23:00:07', '2013-04-28 23:00:07', 51848956)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `startups`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('Geewicket Labs', '2013-04-28 23:00:08', '2013-04-28 23:00:08', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `startups` (`name`, `created_at`, `updated_at`, `id`) VALUES ('iBusiness', '2013-04-28 23:00:08', '2013-04-28 23:00:08', 298486374)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `tasks`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Create story list', '...more details...', '2013-04-22', 3, 0, 1, 2, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant magazines', '...more details...', '2013-04-22', 1, 1, 2, 3, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Identify relevant blogs', '...more details...', '2013-04-22', 1, 0, 3, 3, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 113629430)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Make list of writers', '...more details...', '2013-04-22', 1, 0, 4, 3, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 281110143)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Marketing brief', '...more details...', '2013-04-22', 1, 1, 4, 4, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 1018350795)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Private demo video', '...more details...', '2013-04-22', 4, 0, 6, 4, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 51848956)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Press release', '...more details...', '2013-04-22', 4, 1, 7, 4, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 374648174)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Get contacts from PR firm', '...more details...', '2013-04-22', 5, 0, 8, 6, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Pitch deck built', '...more details...', '2013-04-22', 3, 1, 9, 9, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 991788158)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('AngelList profile', '...more details...', '2013-04-22', 6, 0, 10, 9, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 507103779)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Financial model built', '...more details...', '2013-04-22', 7, 0, 11, 9, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 457008489)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from attorney', '...more details...', '2013-04-22', 5, 1, 12, 10, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 587967610)
+  [1m[36mFixture Insert (2.2ms)[0m  [1mINSERT INTO `tasks` (`title`, `description`, `due_on`, `owner_id`, `is_complete`, `order`, `milestone_id`, `created_at`, `updated_at`, `id`) VALUES ('Contacts from advisory board', '...more details...', '2013-04-22', 5, 0, 13, 10, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 21578242)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`user_name`, `password`, `startup_id`, `email`, `is_admin`, `created_at`, `updated_at`, `id`) VALUES ('mageemooney@me.com', 'tenderloin', 1, 'mageemooney@me.com', 1, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`user_name`, `password`, `startup_id`, `email`, `is_admin`, `created_at`, `updated_at`, `id`) VALUES ('nathanb', 'tenderloin', 1, 'testing2', 1, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 298486374)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`user_name`, `password`, `startup_id`, `email`, `is_admin`, `created_at`, `updated_at`, `id`) VALUES ('anon_user', 'tenderloin', 1, 'testing3', 0, '2013-04-28 23:00:08', '2013-04-28 23:00:08', 113629430)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1

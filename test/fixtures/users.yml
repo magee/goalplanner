@@ -4,19 +4,19 @@ one:
   user_name: "mageemooney@me.com"
   password: "tenderloin"
   startup_id: 1
-  role: admin
   email: "mageemooney@me.com"
+  is_admin: true
 
 two:
   user_name: "nathanb"
   password: "tenderloin"
   startup_id: 1
-  role: admin
   email: "testing2"
+  is_admin: true
 
 three:
   user_name: "anon_user"
   password: "tenderloin"
   startup_id: 1
-  role: user
   email: "testing3"
+  is_admin: false
