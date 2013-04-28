@@ -1,0 +1,23 @@
+<div class="navbar navbar-center">
+  <div class="navbar-inner">
+    <ul class="nav nav-pointer">
+      <li>
+          <%= link_to 'start a new goal', new_goal_path %>
+      </li>
+      <li>
+          <%= link_to 'review existing goals', goals_path %>
+      </li>
+      <li>
+        <%= link_to 'review team activity', people_path %>
+      </li>
+    <%= if !current_user.try(:admin?) then ( %>
+      <li>
+        <%= link_to 'add/edit templates', admin_templates_path %>
+      </li>
+      <li>
+        <%= link_to 'add/edit users', admin_users_path %>
+      </li>
+    <%= ) end %>
+    </ul>
+  </div>
+</div>
