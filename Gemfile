@@ -7,6 +7,9 @@ gem 'rails', '3.2.12'
 
 gem 'mysql2'
 
+# authentication
+gem 'devise'
+
 # datetime handling
 gem 'momentjs-rails'
 
