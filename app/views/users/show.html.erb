@@ -1,17 +1,14 @@
+<%= render 'layouts/app-title' %>
+<div class="table-box medium padded">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>User name:</b>
-  <%= @user.user_name %>
+  <b>User:</b>
+  <%= @user.email %>
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
-
-<p>
-  <b>Person:</b>
+  <b>Linked person id:</b>
   <%= @user.person_id %>
 </p>
 
@@ -20,6 +17,8 @@
   <%= @user.is_admin %>
 </p>
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<br />
+<%= link_to 'Back', users_path, :class => "fs-link left" %>
+<%= link_to 'Edit', edit_user_path(@user), :class => "fs-link" %>
+<%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link" %>
+</div>
