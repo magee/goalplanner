@@ -338,7 +338,11 @@ div.error-explanation h2 {
   margin-right: 10px;
 }
 .fs-link+.fs-link {
-  margin-left: 10px;
+  margin: 0 30px;
+}
+.fs-link+.fs-link.left {
+  margin-right: 10px;
+  margin-left: 0;
 }
 .fs-link.small {
   font-size: .9em;
@@ -371,6 +375,14 @@ div.error-explanation h2 {
   font-size: .75em;
   width: 500px;
 }
+.table-box.small input, .table-box.small textarea {
+  font-size: .75em;
+  width: 350px;
+}
 td.center {
   text-align: center;
+}
+.dialog_links {
+  color: red;
+  padding-top: 50px;
 }
