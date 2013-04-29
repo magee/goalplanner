@@ -12,6 +12,7 @@ gem 'devise'
 
 # datetime handling
 gem 'momentjs-rails'
+gem 'bootstrap-datepicker-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

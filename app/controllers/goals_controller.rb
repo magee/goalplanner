@@ -1,5 +1,7 @@
 class GoalsController < ApplicationController
-before_filter :authenticate_user!
+
+  before_filter :authenticate_user!
+
   # GET /goals
   # GET /goals.json
   def index
@@ -9,10 +11,6 @@ before_filter :authenticate_user!
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @goals }
-    end
-
-    def send_message
-      UserMailer.test_assigned("mageemooney@me.com").deliver
     end
   end
 

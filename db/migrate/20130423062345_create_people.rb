@@ -3,10 +3,10 @@ class CreatePeople < ActiveRecord::Migration
     create_table :people do |t|
       t.string :first_name
       t.string :last_name
-      t.string :email
-      t.boolean :is_active
-      t.integer :startup_id
-      t.boolean :is_founder
+      t.string :email, :null => false
+      t.boolean :is_active, :null => false, :default => true
+      t.integer :startup_id, :null => false
+      t.boolean :is_founder, :null => false, :default => false
 
       t.timestamps
     end

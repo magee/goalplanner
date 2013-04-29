@@ -1,8 +1,9 @@
+<div class="table-box medium padded">
+
 <%= form_for(@goal) do |f| %>
   <% if @goal.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
-
       <ul>
       <% @goal.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -12,22 +13,33 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :due_on %><br />
+    <%= f.label :due_on %>
     <%= f.date_select :due_on %>
   </div>
   <div class="field">
-    <%= f.label :is_complete %><br />
+    <%= f.label :is_complete %>
     <%= f.check_box :is_complete %>
   </div>
+  <%= if current_user.try(:is_admin?) then ( %>
+  <div class="field">
+    <%= f.label :is_template %>
+    <%= f.check_box :is_template %>
+  </div>
+  <%= ) end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
+    <%= link_to 'cancel', @goal, :id => "cancel", :class => "fs-link link_to_submit" %>
   </div>
 <% end %>
+<%= link_to 'back to goals', goals_path, :class => "fs-link left" %>
+</div>
+
+

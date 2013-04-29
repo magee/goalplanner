@@ -1,26 +1,21 @@
 <%= render 'layouts/app-title' %>
-<table>
+<div class="table-box padded">
+  <table class="table" id="goalList">
   <thead>
-    <th>ID</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Due on</th>
-    <th>Is complete</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>goal</th>
+    <th>description</th>
+    <th>due</th>
+    <th class="center">complete?</th>
+    <th>edit</th>
   </head>
   <tbody>
 <% @goals.each do |goal| %>
   <tr>
-    <td><%= goal.id %></td>
-    <td><%= goal.title %></td>
+    <td><%= link_to goal.title, goal %></td>
     <td><%= goal.description %></td>
-    <td><%= goal.due_on %></td>
-    <td><%= goal.is_complete %></td>
-    <td><%= link_to 'Show', goal %></td>
-    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-    <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= goal.due_on.strftime("%m/%d/%Y") %></td>
+    <td class="center"><%= if goal.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
+    <td><%= link_to "edit", edit_goal_path %></td>
   </tr>
 <% end %>
   </tbody>
@@ -28,4 +23,5 @@
 
 <br />
 
-<%= link_to 'New Goal', new_goal_path %>
+<%= link_to 'New Goal', new_goal_path, :class => 'fs-link left small' %>
+

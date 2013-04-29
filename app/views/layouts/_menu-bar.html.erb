@@ -11,10 +11,10 @@
         <%= link_to 'review team activity', people_path %>
       </li>
     <%= if current_user.try(:is_admin?) then ( %>
-    <%= ) else ( %>
       <li>
         <%= link_to 'add/edit users', admin_users_path %>
       </li>
+    <%= ) else ( %>
     <%= ) end %>
     </ul>
   </div>

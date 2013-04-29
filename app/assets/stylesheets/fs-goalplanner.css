@@ -42,7 +42,7 @@ html {
 .table-box {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   border:1px solid #e3e3e3;
   width: 80%;
 }
@@ -240,7 +240,7 @@ table.tasks td, table.tasks th {
 .table-box.medium {
   width: 550px;
 }
-.table-box.medium.padded {
+.padded {
   padding: 30px;
 }
 .table-box.goal {
@@ -321,13 +321,56 @@ div.error-explanation h2 {
   background-color: #c00;
   color: #fff;
 }
-.devise_links {
-  float: right;
+.fs-btn {
   color:#fe6d00;
-  font-size: 1em;
+  float: right;
+  margin: 0 0 0 20px;
+}
+.fs-btn.left {
+  float: left;
+  margin: 0 20px 0 0;
+}
+.fs-link, .fs-link a, .fs-link a:hover, .fs-link a:visited {
+  color:#fe6d00;
+  float: right;
+}
+.fs-link.left+.fs-link.left {
+  margin-right: 10px;
+}
+.fs-link+.fs-link {
+  margin-left: 10px;
+}
+.fs-link.small {
+  font-size: .9em;
+}
+.fs-link.left {
+  float: left;
+}
+.fs-link input[type=submit] {
+  border-radius: 50%;
+}
+.fs-link.link_to_submit {
+  margin-top:15px;
+}
+.fs-link#cancel {
+  margin-right: 20px;
+}
+.fs_link.devise {
   padding: 20px 5px 0 20px;
+  margin: 0;
+}
+.fs_link.devise.left {
+  float: left;
+  padding-left:0;
 }
 .devise_send {
   margin-top: -8px;
   margin-left: 10px;
+}
+.table-box input, .table-box textarea {
+  font-size: .75em;
+  width: 500px;
+}
+td.center {
+  text-align: center;
 }
