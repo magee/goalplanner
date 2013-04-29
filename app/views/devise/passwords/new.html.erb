@@ -8,10 +8,10 @@
   <%= f.label "Give us your email to send password reset instructions." %>
   <div>
     <%= f.email_field :email, :autofocus => true %>
-    <%= f.submit "send", :class => "btn btn-small devise_send" %>
+  <div><%= link_to_submit 'send ', :class => "fs-link link_to_submit" %></div>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="dialog_links"><%= render "devise/shared/links" %></div>
 
 </div>
