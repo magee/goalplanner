@@ -59516,3 +59516,2447 @@ Migrating to AddDeviseToAdmins (20130428234445)
   [1m[35m (14.5ms)[0m  DROP INDEX `index_admins_on_reset_password_token` ON `admins`
   [1m[36m (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20130428234445'[0m
   [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 17:11:56 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+ERROR: compiling _app_views_layouts__menu_bar_html_erb__1566484811803531765_70259735903440 RAISED /Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:13: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+... if current_user.try(:admin?) );@output_buffer.safe_concat('
+...                               ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:20: syntax error, unexpected keyword_end
+    ');@output_buffer.append= ( end );@output_buffer.safe_concat('
+                                   ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_layouts__menu_bar_html_erb__1566484811803531765_70259735903440(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/_menu-bar";_old_output_buffer = @output_buffer;bar = local_assigns[:bar];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="navbar navbar-center">
+  <div class="navbar-inner">
+    <ul class="nav nav-pointer">
+      <li>
+          ');@output_buffer.append= ( link_to 'start a new goal', new_goal_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+      <li>
+          ');@output_buffer.append= ( link_to 'review existing goals', goals_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+      <li>
+        ');@output_buffer.append= ( link_to 'review team activity', people_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+    ');@output_buffer.append= ( if current_user.try(:admin?) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <li>
+        ');@output_buffer.append= ( link_to 'add/edit templates', admin_templates_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+      <li>
+        ');@output_buffer.append= ( link_to 'add/edit templates', admin_users_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+    ');@output_buffer.append= ( end );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </ul>
+  </div>
+</div>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__4444804030355967595_70259785037280'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:145:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__4330984231171714750__process_action__3720853975525529605__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__2991841674399038637__call__752668875198375149__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered layouts/_menu-bar.html.erb (1.1ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:13: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+... if current_user.try(:admin?) );@output_buffer.safe_concat('
+...                               ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:20: syntax error, unexpected keyword_end
+    ');@output_buffer.append= ( end );@output_buffer.safe_concat('
+                                   ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+    10:       <li>
+    11:         <%= link_to 'review team activity', people_path %>
+    12:       </li>
+    13:     <%= if current_user.try(:admin?) %>
+    14:       <li>
+    15:         <%= link_to 'add/edit templates', admin_templates_path %>
+    16:       </li>
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__4444804030355967595_70259785037280'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 17:12:09 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+ERROR: compiling _app_views_layouts__menu_bar_html_erb__1566484811803531765_70259752488960 RAISED /Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:13: syntax error, unexpected ')'
+...urrent_user.try(:admin?) then );@output_buffer.safe_concat('
+...                               ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:20: syntax error, unexpected keyword_end
+    ');@output_buffer.append= ( end );@output_buffer.safe_concat('
+                                   ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_layouts__menu_bar_html_erb__1566484811803531765_70259752488960(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/_menu-bar";_old_output_buffer = @output_buffer;bar = local_assigns[:bar];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="navbar navbar-center">
+  <div class="navbar-inner">
+    <ul class="nav nav-pointer">
+      <li>
+          ');@output_buffer.append= ( link_to 'start a new goal', new_goal_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+      <li>
+          ');@output_buffer.append= ( link_to 'review existing goals', goals_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+      <li>
+        ');@output_buffer.append= ( link_to 'review team activity', people_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+    ');@output_buffer.append= ( if current_user.try(:admin?) then );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <li>
+        ');@output_buffer.append= ( link_to 'add/edit templates', admin_templates_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+      <li>
+        ');@output_buffer.append= ( link_to 'add/edit templates', admin_users_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </li>
+    ');@output_buffer.append= ( end );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </ul>
+  </div>
+</div>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__4444804030355967595_70259785037280'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:145:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__4330984231171714750__process_action__3720853975525529605__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__2991841674399038637__call__752668875198375149__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered layouts/_menu-bar.html.erb (1.0ms)
+Completed 500 Internal Server Error in 79ms
+
+ActionView::Template::Error (/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:13: syntax error, unexpected ')'
+...urrent_user.try(:admin?) then );@output_buffer.safe_concat('
+...                               ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:20: syntax error, unexpected keyword_end
+    ');@output_buffer.append= ( end );@output_buffer.safe_concat('
+                                   ^
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/mageemooney/javascript_projects/foundersuite/fs-goalplanner/app/views/layouts/_menu-bar.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+    10:       <li>
+    11:         <%= link_to 'review team activity', people_path %>
+    12:       </li>
+    13:     <%= if current_user.try(:admin?) then %>
+    14:       <li>
+    15:         <%= link_to 'add/edit templates', admin_templates_path %>
+    16:       </li>
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__4444804030355967595_70259785037280'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_site-banner.html.erb (0.1ms)
+  Rendered layouts/_menu-bar.html.erb (1.9ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-app.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /fs-app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /fs-goalplanner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /goals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /milestones.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /startups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.spinner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.tooltip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.all.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /fs-goalplanner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /goals.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /milestones.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /moment.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.autocomplete.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.droppable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.spinner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /jquery.ui.all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-temp.png" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /logo-temp.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png" for 127.0.0.1 at 2013-04-28 17:12:22 -0700
+Served asset /icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/app-logo.png" for 127.0.0.1 at 2013-04-28 17:12:23 -0700
+Served asset /app-logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (2.3ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-app.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /fs-app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /fs-goalplanner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /milestones.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /goals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /startups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.spinner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.tooltip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.all.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /fs-goalplanner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /goals.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /milestones.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /moment.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.autocomplete.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.droppable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.spinner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /jquery.ui.all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png" for 127.0.0.1 at 2013-04-28 17:12:46 -0700
+Served asset /icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/app-logo.png" for 127.0.0.1 at 2013-04-28 17:12:47 -0700
+Served asset /app-logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-temp.png" for 127.0.0.1 at 2013-04-28 17:12:47 -0700
+Served asset /logo-temp.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (2.4ms)
+Completed 200 OK in 67ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fs-app.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /fs-app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /goals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /fs-goalplanner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /milestones.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /startups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.spinner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.tooltip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.ui.all.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /fs-goalplanner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /goals.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:55 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /milestones.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /moment.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.autocomplete.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.droppable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.spinner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /jquery.ui.all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-temp.png" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /logo-temp.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app-logo.png" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /app-logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png" for 127.0.0.1 at 2013-04-28 17:12:56 -0700
+Served asset /icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/icons-s46aee9ee3d-51cb3acd5eab582f8460075ed5e84d14.png"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (1.5ms)
+Completed 200 OK in 62ms (Views: 45.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /milestones.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-app.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /fs-app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /goals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /fs-goalplanner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /startups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.spinner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.tooltip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.all.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /fs-goalplanner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /goals.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /milestones.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /moment.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.autocomplete.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.droppable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:57 -0700
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.spinner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /jquery.ui.all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-temp.png" for 127.0.0.1 at 2013-04-28 17:12:58 -0700
+Served asset /logo-temp.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/templates" for 127.0.0.1 at 2013-04-28 17:13:00 -0700
+
+ActionController::RoutingError (uninitialized constant Admin::TemplatesController):
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `constantize'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__2991841674399038637__call__752668875198375149__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (2.0ms)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fs-goalplanner.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /fs-goalplanner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /goals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-app.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /fs-app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /milestones.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /startups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.spinner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.tooltip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.all.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /fs-goalplanner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /goals.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /milestones.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /moment.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.autocomplete.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.droppable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.spinner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /jquery.ui.all.js - 304 Not Modified (43ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-temp.png" for 127.0.0.1 at 2013-04-28 17:13:32 -0700
+Served asset /logo-temp.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_site-banner.html.erb (0.2ms)
+  Rendered layouts/_menu-bar.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /fs-goalplanner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /goals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-app.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /fs-app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /milestones.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /startups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.spinner.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.tooltip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.all.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fs-goalplanner.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /fs-goalplanner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /goals.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/milestones.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /milestones.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /moment.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.autocomplete.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.droppable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.spinner.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /jquery.ui.all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-temp.png" for 127.0.0.1 at 2013-04-28 17:13:34 -0700
+Served asset /logo-temp.png - 304 Not Modified (0ms)

@@ -21,6 +21,7 @@ FsGoalplanner::Application.routes.draw do
   namespace :admin do
     resources :templates
     resources :startups
+    resources :users
   end
 
   root :to => "home#index"
