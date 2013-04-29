@@ -1,5 +1,7 @@
-<h2>Sign up</h2>
+<%= render "layouts/app-title" %>
+<%= render "layouts/separator-header", :separator_title => "sign up" %>
 
+<div class="table-box small padded">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -10,9 +12,10 @@
   <%= f.password_field :password %></div>
 
   <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+  <%= f.password_field :password_confirmation %>
+  <div><%= f.submit "submit", :class => "btn btn-small" %></div>
+  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
