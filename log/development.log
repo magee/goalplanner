@@ -59498,3 +59498,21 @@ Migrating to AddDeviseToAdmins (20130428234445)
   [1m[35m (24.2ms)[0m  CREATE UNIQUE INDEX `index_admins_on_reset_password_token` ON `admins` (`reset_password_token`)
   [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130428234445')[0m
   [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (33.4ms)[0m  ALTER TABLE `users` DROP `encrypted_password`
+  [1m[36m (30.8ms)[0m  [1mALTER TABLE `users` DROP `reset_password_token`[0m
+  [1m[35m (23.4ms)[0m  ALTER TABLE `users` DROP `reset_password_sent_at`
+  [1m[36m (22.3ms)[0m  [1mALTER TABLE `users` DROP `remember_created_at`[0m
+  [1m[35m (21.2ms)[0m  ALTER TABLE `users` DROP `sign_in_count`
+  [1m[36m (26.2ms)[0m  [1mALTER TABLE `users` DROP `current_sign_in_at`[0m
+  [1m[35m (21.5ms)[0m  ALTER TABLE `users` DROP `last_sign_in_at`
+  [1m[36m (23.0ms)[0m  [1mALTER TABLE `users` DROP `current_sign_in_ip`[0m
+  [1m[35m (21.9ms)[0m  ALTER TABLE `users` DROP `last_sign_in_ip`
+  [1m[36m (17.3ms)[0m  [1mDROP INDEX `index_admins_on_email` ON `admins`[0m
+  [1m[35m (14.5ms)[0m  DROP INDEX `index_admins_on_reset_password_token` ON `admins`
+  [1m[36m (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20130428234445'[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
