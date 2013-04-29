@@ -1,4 +1,6 @@
 FsGoalplanner::Application.routes.draw do
+  devise_for :admins
+
   get "home/index"
 
   devise_for :users

@@ -59372,3 +59372,129 @@ ActionView::Template::Error (Missing host to link to! Please provide the :host p
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (0.5ms)[0m  ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Mysql2::Error: Duplicate column name 'email': ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (0.4ms)[0m  ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Mysql2::Error: Duplicate column name 'email': ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (36.0ms)[0m  ALTER TABLE `admins` DROP `email`
+  [1m[36m (24.9ms)[0m  [1mALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE `admins` ADD `encrypted_password` varchar(255) DEFAULT '' NOT NULL
+Mysql2::Error: Duplicate column name 'encrypted_password': ALTER TABLE `admins` ADD `encrypted_password` varchar(255) DEFAULT '' NOT NULL
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (25.3ms)[0m  ALTER TABLE `admins` DROP `email`
+  [1m[36m (22.2ms)[0m  [1mALTER TABLE `admins` DROP `encrypted_password`[0m
+  [1m[35m (20.6ms)[0m  ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+  [1m[36m (25.8ms)[0m  [1mALTER TABLE `admins` ADD `encrypted_password` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE `admins` ADD `reset_password_token` varchar(255)
+Mysql2::Error: Duplicate column name 'reset_password_token': ALTER TABLE `admins` ADD `reset_password_token` varchar(255)
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (0.4ms)[0m  ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Mysql2::Error: Duplicate column name 'email': ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (0.6ms)[0m  ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Mysql2::Error: Table 'fsgoalmanager.admins' doesn't exist: ALTER TABLE `admins` ADD `email` varchar(255) DEFAULT '' NOT NULL
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateGoals (20130423062017)
+Migrating to CreateMilestones (20130423062149)
+Migrating to CreateTasks (20130423062240)
+Migrating to CreatePeople (20130423062345)
+Migrating to CreateStartups (20130426223826)
+Migrating to CreateUsers (20130428212152)
+Migrating to AddDeviseToUsers (20130428213916)
+Migrating to AddStartupIdToUsers (20130428225649)
+Migrating to AddDeviseToAdmins (20130428234445)
+  [1m[35m (16.0ms)[0m  CREATE TABLE `admins` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255)) ENGINE=InnoDB
+  [1m[36m (23.3ms)[0m  [1mCREATE UNIQUE INDEX `index_admins_on_email` ON `admins` (`email`)[0m
+  [1m[35m (24.2ms)[0m  CREATE UNIQUE INDEX `index_admins_on_reset_password_token` ON `admins` (`reset_password_token`)
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130428234445')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
