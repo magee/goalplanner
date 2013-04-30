@@ -1,3 +1,6 @@
+<%= render "layouts/separator-header", :separator_title => "edit team member" %>
+
+<div class="table-box medium padded">
 <%= form_for(@person) do |f| %>
   <% if @person.errors.any? %>
     <div id="error_explanation">
@@ -28,6 +31,10 @@
     <%= f.check_box :is_active %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
+    <%= link_to 'cancel', @person, :id => "cancel", :class => "fs-link link_to_submit" %>
   </div>
 <% end %>
+    <%= link_to 'back to list', people_path, :class => "fs-link left" %>
+</div>
+

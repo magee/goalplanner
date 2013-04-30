@@ -4,7 +4,8 @@
   <table class="table" id="goalList">
   <thead>
     <th>task</th>
-    <th>description</th>
+    <th>parent milestone</th>
+    <th>grandparent goal</th>
     <th>due</th>
     <th class="center">complete?</th>
     <th>edit</th>
@@ -13,7 +14,8 @@
 <% @tasks.each do |task| %>
   <tr>
     <td><%= link_to task.title, task %></td>
-    <td><%= task.description %></td>
+    <td><%= task.milestone.title %></td>
+    <td><%= task.milestone.goal.title %></td>
     <td><%= task.due_on.strftime("%m/%d/%Y") %></td>
     <td class="center"><%= if task.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
     <td><%= link_to "edit", edit_task_path(task) %></td>
@@ -23,6 +25,5 @@
 </table>
 
 <br />
-
 <%= link_to 'new task', new_task_path, :class => 'fs-link' %>
 

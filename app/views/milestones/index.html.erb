@@ -1,32 +1,27 @@
 <%= render 'layouts/app-title' %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Due on</th>
-    <th>Is complete</th>
-    <th>Order</th>
-    <th>Goal</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<%= render 'layouts/separator-header', :separator_title => "milestones" %>
+<div class="table-box padded">
+  <table class="table" id="goalList">
+  <thead>
+    <th>milestone</th>
+    <th>parent goal</th>
+    <th>due</th>
+    <th class="center">complete?</th>
+    <th>edit</th>
+  </head>
+  <tbody>
 <% @milestones.each do |milestone| %>
   <tr>
-    <td><%= milestone.title %></td>
-    <td><%= milestone.description %></td>
-    <td><%= milestone.due_on %></td>
-    <td><%= milestone.is_complete %></td>
-    <td><%= milestone.order %></td>
-    <td><%= milestone.goal_id %></td>
-    <td><%= link_to 'Show', milestone %></td>
-    <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
-    <td><%= link_to 'Destroy', milestone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to milestone.title, milestone %></td>
+    <td><%= milestone.goal.title %></td>
+    <td><%= milestone.due_on.strftime("%m/%d/%Y") %></td>
+    <td class="center"><%= if milestone.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
+    <td><%= link_to "edit", edit_milestone_path(milestone) %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />
+<%= link_to 'new milestone', new_milestone_path, :class => 'fs-link' %>
 
-<%= link_to 'New Milestone', new_milestone_path %>

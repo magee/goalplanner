@@ -1,36 +1,37 @@
 <%= render 'layouts/app-title' %>
-<p id="notice"><%= notice %></p>
+<%= render "layouts/separator-header", :separator_title => "users" %>
 
-<p>
-  <b>ID:</b>
-  <%= @person.id %>
-</p>
+<div class="table-box medium padded">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Startup ID:</b>
-  <%= @person.startup_id %>
-</p>
+  <p>
+    <b>First name:</b>
+    <%= @person.first_name %>
+  </p>
 
-<p>
-  <b>First name:</b>
-  <%= @person.first_name %>
-</p>
+  <p>
+    <b>Startup ID:</b>
+    <%= @person.startup_id %>
+  </p>
 
-<p>
-  <b>Last name:</b>
-  <%= @person.last_name %>
-</p>
+  <p>
+    <b>Last name:</b>
+    <%= @person.last_name %>
+  </p>
 
-<p>
-  <b>Email:</b>
-  <%= @person.email %>
-</p>
+  <p>
+    <b>Email:</b>
+    <%= @person.email %>
+  </p>
 
-<p>
-  <b>Is active:</b>
-  <%= @person.is_active %>
-</p>
+  <p>
+    <b>Is active:</b>
+    <%= @person.is_active %>
+  </p>
 
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+  <div class="dialog_links">
+    <%= link_to 'edit', edit_person_path(@person), :class => "fs-link" %>
+    <%= link_to 'delete', @person, :class => "fs-link", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'back to list', people_path, :class => "fs-link left" %>
+  </div>
+</div>

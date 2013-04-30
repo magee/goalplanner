@@ -1,28 +1,24 @@
 <%= render 'layouts/app-title' %>
-<table>
+<%= render "layouts/separator-header", :separator_title => "team members" %>
+
+<div class="table-box medium padded">
+  <table class="table" id="goalList">
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Is active</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>name</th>
+    <th>email</th>
+    <th>active?</th>
   </tr>
 
 <% @people.each do |person| %>
   <tr>
-    <td><%= person.first_name %></td>
-    <td><%= person.last_name %></td>
+    <td><%= link_to person.full_name, person %></td>
     <td><%= person.email %></td>
     <td><%= person.is_active %></td>
-    <td><%= link_to 'Show', person %></td>
-    <td><%= link_to 'Edit', edit_person_path(person) %></td>
-    <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Person', new_person_path %>
+<%= link_to 'add team member', new_person_path, :class => "fs-link" %>
+</div>
