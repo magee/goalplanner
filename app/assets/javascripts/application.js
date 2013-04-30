@@ -24,3 +24,7 @@
 $('.complete_task').bind('ajax:success', function() {
     $(this).closest('tr').fadeOut();
 });
+
+$(function() {
+  $( "#datepicker" ).datepicker();
+});
