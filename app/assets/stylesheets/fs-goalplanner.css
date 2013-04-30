@@ -6,6 +6,7 @@
 */
 html {
   background:#fff;
+  overflow-y: scroll;
 }
 .logo {
   float: left;

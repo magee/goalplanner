@@ -1,0 +1,48 @@
+<%= render "layouts/separator-header", :separator_title => "#{new_model.title}" %>
+
+<div class="table-box small padded">
+
+<%= form_for(new_model) do |f| %>
+  <% if new_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(new_model.errors.count, "error") %> prohibited this model from being saved:</h2>
+      <ul>
+      <% new_model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :is_complete %>
+    <%= f.check_box :is_complete %>
+  </div>
+  <%= if current_user.try(:is_admin?) then ( %>
+  <div class="field">
+    <%= f.label :is_template %>
+    <%= f.check_box :is_template %>
+  </div>
+  <div class="field">
+    <%= f.label :due_on %><br />
+    <%= f.text_field :due_on, :id => :datepicker %>
+  </div>
+  <%= ) end %>
+  <div class="actions">
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link" %>
+</div>
+<% end %>
+
+
