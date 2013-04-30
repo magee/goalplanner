@@ -130,7 +130,7 @@ DEPENDENCIES
   bootstrap-datepicker-rails
   coffee-rails (~> 3.2.1)
   devise
-  factory_girl_rails
+  factory_girl_rails (~> 4.0)
   jquery-datatables-rails
   jquery-rails
   jquery-ui-rails
