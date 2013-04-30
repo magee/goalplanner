@@ -1,0 +1,223 @@
+<div class="table-box tasks">
+<table class="tid_01 tasks">
+  <thead>
+    <tr>
+      <th colspan="4">
+        <% @milestones = @goal.milestones %>
+        <br />
+        <br />
+      </th>
+    </tr>
+    <tr>
+      <th>milestone</th>
+      <th>tasks</th>
+      <th>owner</th>
+      <th>due date</th>
+      <th>complete?</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @milestones.each do |milestone| %>
+  <tr>
+    <td><%= milestone.title %></td>
+    <td><%= milestone.tasks.count %></td>
+    <td><%= milestone.owner_id %></td>
+    <td><%= milestone.due_on %></td>
+    <td class="center">
+      <input data-remote="true" class="complete_task" class="complete_task" type="checkbox"
+        <%= milestone.is_complete ? " checked " : " " %>
+       value="is_complete">
+    </td>
+  </tr>
+<% end %>
+
+<!--
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox"  value="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--  *********** table 2 ***********  -->
+<table class="tid_02 hidden tasks">
+  <thead>
+    <tr>
+      <th colspan="4">
+        Story Ideas
+        <br />
+        <br />
+      </th>
+    </tr>
+    <tr>
+      <th>task</th>
+      <th>owner</th>
+      <th>due date</th>
+      <th>complete?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Create story list</td>
+      <td>Jennifer</td>
+      <td>June 18</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" class="complete_task" type="checkbox" checked value="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--  *********** table 3 ***********  -->
+<table class="tid_03 hidden tasks">
+  <thead>
+    <tr>
+      <th colspan="4">
+        Target Journalists
+        <br />
+        <br />
+      </th>
+    </tr>
+    <tr>
+      <th>task</th>
+      <th>owner</th>
+      <th>due date</th>
+      <th>complete?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Identify relevant magazines</td>
+      <td>Jennifer</td>
+      <td>June 22</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" checked value="1">
+      </td>
+    </tr>
+    <tr>
+      <td>Identify relevant blogs</td>
+      <td>Jennifer</td>
+      <td>June 22</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" value="1">
+      </td>
+    </tr>
+    <tr>
+      <td>Make list of writers</td>
+      <td>Jennifer</td>
+      <td>June 22</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" value="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--  *********** table 4 ***********  -->
+<table class="tid_04 tasks">
+  <thead>
+    <tr>
+      <th colspan="4">
+        Pitch Materials
+        <br />
+        <br />
+      </th>
+    </tr>
+    <tr>
+      <th>task</th>
+      <th>owner</th>
+      <th>due date</th>
+      <th>complete?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Marketing brief</td>
+      <td>Jennifer</td>
+      <td>July 4</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" checked value="1">
+      </td>
+    </tr>
+    <tr>
+      <td>Private demo video</td>
+      <td>Tom</td>
+      <td>July 6</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" value="1">
+      </td>
+    </tr>
+    <tr>
+      <td>Press release</td>
+      <td>Tom</td>
+      <td>May 19</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" checked value="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--  *********** table 5 ***********  -->
+<table class="tid_05 hidden tasks">
+  <thead>
+    <tr>
+      <th colspan="4">
+        Line up Intros
+        <br />
+        <br />
+      </th>
+    </tr>
+    <tr>
+      <th>task</th>
+      <th>owner</th>
+      <th>due date</th>
+      <th>complete?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Get contacts from PR firm</td>
+      <td>Tom</td>
+      <td>July 13</td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" value="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="tid_06 hidden tasks">
+  <thead>
+    <tr>
+      <th colspan="5">
+        Identify Magazines
+        <br />
+        <br />
+      </th>
+    </tr>
+    <tr>
+      <th>task</th>
+      <th>owner</th>
+      <th>due date</th>
+      <th>complete?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="center">
+        <input data-remote="true" class="complete_task" type="checkbox" value="1">
+      </td>
+    </tr>
+-->
+  </tbody>
+</table>
+</div>

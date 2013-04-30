@@ -1,0 +1,45 @@
+<div class="progress-bar"></div>
+<ol class="breadcrumb-progress">
+  <li class="task">
+    <div class="tid_01 task-circle">
+    </div>
+    <div class="progress tid_01 progress-0">&nbsp;
+    </div>
+    <div class="title">Identify Blogs</div>
+  </li>
+  <li>
+    <div class="tid_02 task-circle">
+    </div>
+    <div class="progress tid_02 progress-100">&nbsp;
+    </div>
+    <div class="title">Story ideas</div>
+  </li>
+  <li>
+    <div class="tid_03 task-circle">
+    </div>
+    <div class="progress tid_03 progress-30">&nbsp;
+    </div>
+    <div class="title">Target Journalists</div>
+  </li>
+  <li>
+    <div class="tid_04 task-circle">
+    </div>
+    <div class="progress tid_04 progress-60">
+    </div>
+      <div class="title">Pitch Materials</div>
+  </li>
+  <li>
+    <div class="tid_05 task-circle">
+    </div>
+    <div class="progress tid_05 progress-0">
+    </div>
+      <div class="title">Line up Intros</div>
+  </li>
+  <li>
+    <div class="tid_06 task-circle">
+    </div>
+    <div class="progress tid_06 progress-0">
+    </div>
+      <div class="title">Identify Magazines</div>
+  </li>
+</ol>

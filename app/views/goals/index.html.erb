@@ -1,4 +1,5 @@
 <%= render 'layouts/app-title' %>
+<%= render 'layouts/separator-header', :separator_title => "goals" %>
 <div class="table-box padded">
   <table class="table" id="goalList">
   <thead>
@@ -23,5 +24,5 @@
 
 <br />
 
-<%= link_to 'New Goal', new_goal_path, :class => 'fs-link left small' %>
+<%= link_to 'new goal', new_goal_path, :class => 'fs-link' %>
 

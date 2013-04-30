@@ -13,16 +13,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :due_on %>
-    <%= f.date_select :due_on %>
   </div>
   <div class="field">
     <%= f.label :is_complete %>
@@ -33,13 +33,18 @@
     <%= f.label :is_template %>
     <%= f.check_box :is_template %>
   </div>
+  <div class="field">
+    <%= f.label :due_on %>
+    <%= f.date_select :due_on %>
+  </div>
   <%= ) end %>
   <div class="actions">
-    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
-    <%= link_to 'cancel', @goal, :id => "cancel", :class => "fs-link link_to_submit" %>
-  </div>
-<% end %>
-<%= link_to 'back to goals', goals_path, :class => "fs-link left" %>
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link" %>
 </div>
+<% end %>
+  <div class="dialog_links">
+    <%= link_to 'cancel', @goal, :id => "cancel", :class => "fs-link" %>
+    <%= link_to 'delete', @goal, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left" %>
+  </div>
 
 

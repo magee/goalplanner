@@ -1,36 +1,4 @@
-<%= render 'layouts/app-title' %>
-<div class="table-box medium padded">
+<%= render 'show_title' %>
+<%= render 'progress_orbs' %>
+<%= render 'goal_milestones' %>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @goal.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @goal.description %>
-</p>
-
-<p>
-  <b>Due on:</b>
-  <%= @goal.due_on %>
-</p>
-
-<p>
-  <b>Is complete:</b>
-  <%= @goal.is_complete %>
-</p>
-
-<%= if current_user.try(:is_admin?) then ( %>
-<p>
-  <b>Is template:</b>
-  <%= @goal.is_template %>
-</p>
-<%= ) end %>
-<br />
-<%= link_to 'Back', goals_path, :class => "fs-link left" %>
-<%= link_to 'Edit', edit_goal_path(@goal), :class => "fs-link" %>
-<%= link_to 'Delete', @goal, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link" %>
-</div>
