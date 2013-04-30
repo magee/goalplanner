@@ -1,5 +1,8 @@
 FsGoalplanner::Application.routes.draw do
 
+  get "static_pages/help"
+  get "static_pages/goal_show"
+  get "static_pages/goal_graph"
   get "home/index"
 
   devise_for :users
