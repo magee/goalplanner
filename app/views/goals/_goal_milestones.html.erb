@@ -21,7 +21,13 @@
 <% @milestones.each do |milestone| %>
   <tr>
     <td><%= milestone.title %></td>
-    <td><%= milestone.tasks.count %></td>
+    <td><%= milestone.tasks.count %>: <br />
+
+        <% milestone.tasks.each do |task| %>
+          <%= task.title %><br />
+        <% end %>
+
+    </td>
     <td><%= milestone.owner_id %></td>
     <td><%= milestone.due_on %></td>
     <td class="center">

@@ -7,7 +7,6 @@
     <th>description</th>
     <th>due</th>
     <th class="center">complete?</th>
-    <th>edit</th>
   </head>
   <tbody>
 <% @tasks.each do |task| %>
@@ -16,7 +15,6 @@
     <td><%= task.description %></td>
     <td><%= task.due_on.strftime("%m/%d/%Y") %></td>
     <td class="center"><%= if task.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
-    <td><%= link_to "edit", edit_task_path(task) %></td>
   </tr>
 <% end %>
   </tbody>

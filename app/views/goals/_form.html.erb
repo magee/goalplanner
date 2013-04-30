@@ -1,4 +1,6 @@
-<div class="table-box medium padded">
+<%= render "layouts/separator-header", :separator_title => "add/edit goal" %>
+
+<div class="table-box small padded">
 
 <%= form_for(@goal) do |f| %>
   <% if @goal.errors.any? %>
@@ -34,8 +36,8 @@
     <%= f.check_box :is_template %>
   </div>
   <div class="field">
-    <%= f.label :due_on %>
-    <%= f.date_select :due_on %>
+    <%= f.label :due_on %><br />
+    <%= f.text_field :due_on, :id => :datepicker %>
   </div>
   <%= ) end %>
   <div class="actions">
