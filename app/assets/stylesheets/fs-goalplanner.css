@@ -118,7 +118,7 @@ ol.breadcrumb-progress {
   height: 10px;
   width: 720px;
   background-color: darkgrey;
-  margin: 60px 0 0 135px;
+  margin: 60px 0 0 165px;
 }
 .progress-bar.four {
   width: 400px;
@@ -218,18 +218,22 @@ table.tasks {
   border:1px solid #e3e3e3;
   margin:20px auto;
   overflow:hidden;
-
   font-size: .85em;
 }
 table.tasks td, table.tasks th {
-  text-align: center;
   border:1px solid #e3e3e3;
-  padding: 10px 10px;
+  padding: 5px;
 }
 .table.tasks td {
   text-align: left;
   border: 1px solid black;
-  margin: 100px;
+}
+.table.tasks th {
+  text-align: center;
+}
+.table.tasks td.desc{
+  text-align: left;
+  border: 1px solid black;
 }
 .table-box.tasks {
   margin-top: 5px;
@@ -371,11 +375,11 @@ div.error-explanation h2 {
   margin-top: -8px;
   margin-left: 10px;
 }
-.table-box input, .table-box textarea {
+.table-box input:not[type=checkbox], .table-box textarea {
   font-size: .75em;
   width: 500px;
 }
-.table-box.small input, .table-box.small textarea {
+.table-box.small input:not[type=checkbox], .table-box.small textarea {
   font-size: .75em;
   width: 350px;
 }

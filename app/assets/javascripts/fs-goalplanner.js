@@ -65,10 +65,5 @@ $(document).ready(function () {
       $(this).text("edit");
     }
   });
-
-  $(function() {
-    $( "#datepicker" ).datepicker();
-  });
-
 });
 
