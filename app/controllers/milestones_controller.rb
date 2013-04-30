@@ -2,8 +2,7 @@ class MilestonesController < ApplicationController
   # GET /milestones
   # GET /milestones.json
   def index
-    @milestones = Milestone.all
-
+    @milestones = Milestone.all(:include => :tasks)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @milestones }
@@ -13,7 +12,7 @@ class MilestonesController < ApplicationController
   # GET /milestones/1
   # GET /milestones/1.json
   def show
-    @milestone = Milestone.find(params[:id])
+    @milestone = Milestone.find(params[:id], :include => :tasks)
 
     respond_to do |format|
       format.html # show.html.erb

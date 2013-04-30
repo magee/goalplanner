@@ -2,7 +2,7 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    #  TODO:  change this to get rid of magic number 1
+    #  TODO:  change this to whatever startup indicator is used by FS to get rid of magic number 1
     @goals = Goal.by_startup(1)
 
     respond_to do |format|
@@ -81,4 +81,6 @@ class GoalsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end
