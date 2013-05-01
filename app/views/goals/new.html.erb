@@ -1,2 +1,27 @@
 <%= render 'layouts/app-title' %>
-<%= render 'layouts/new-form', :new_model => @goal %>
+<%= render 'new-steps', :step => 1 %>
+
+<div class="wrapper new-goal">
+<h3 class="separator-header"><span>new goal</span></h3>
+    <div class="table-box goal">
+      <div style="padding: 10px;">
+         <form>
+          <fieldset class="select-template">
+          <div class="select-template">
+            <label class="inline-label" for="select-template">select a goal template:</label>
+              <select class="custom-template" style="width: 400px" id="goal-templates">
+               <option value = "0"></option>
+             </select>
+             </input>
+          </div>
+          <div class="highlight">or...</div>
+          <label style="margin-top: 10px;">define your own:</label>
+          <div class="custom-template">
+            <label class="inline-label" for="goal-title">goal name:</label><input type="text" name="goal-title" id="goal-title" /><br />
+            <div id="next">next</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

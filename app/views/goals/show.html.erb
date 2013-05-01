@@ -1,4 +1,5 @@
 <%= render 'show_title' %>
-<%= render 'progress_orbs' %>
-<%= render 'goal_milestones' %>
-
+<%= render 'progress_orbs', :goal => @goal.id %>
+<div class="table-box tasks">
+  <%= render 'table-3' %>
+</div>
