@@ -1,2 +1,7 @@
 <%= render 'layouts/app-title' %>
 <%= render 'layouts/new-form', :new_model => @milestone %>
+
+  <div class="actions">
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
+    <%= link_to 'cancel', @milestone, :id => "cancel", :class => "fs-link link_to_submit" %>
+  </div>
