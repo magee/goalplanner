@@ -6,6 +6,7 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+
 group :development, :testing do
   gem "factory_girl_rails", "~> 4.0"
 end
