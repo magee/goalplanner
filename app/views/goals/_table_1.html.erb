@@ -1,0 +1,39 @@
+<table class="tid_01 tasks">
+  <thead>
+    <tr>
+      <th colspan="4">
+        <% @milestones = @goal.milestones %>
+        <br />
+        <br />
+      </th>
+    </tr>
+    <tr>
+      <th>milestone</th>
+      <th>tasks</th>
+      <th>owner</th>
+      <th>due date</th>
+      <th>complete?</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @goal.milestones.each do |milestone| %>
+  <tr>
+    <td><%= milestone.title %></td>
+    <td><%= milestone.tasks.count %>: <br />
+
+        <% milestone.tasks.each do |task| %>
+          <%= task.title %><br />
+        <% end %>
+
+    </td>
+    <td><%= milestone.owner_id %></td>
+    <td><%= milestone.due_on %></td>
+    <td class="center">
+      <input data-remote="true" class="complete_task" class="complete_task" type="checkbox"
+        <%= milestone.is_complete ? " checked " : " " %>
+       value="is_complete">
+    </td>
+  </tr>
+<% end %>
+</table>
