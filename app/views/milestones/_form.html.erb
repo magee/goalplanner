@@ -38,10 +38,5 @@
     <%= f.label :goal_id %><br />
     <%= f.number_field :goal_id %>
   </div>
-  <div class="actions">
-    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
-    <%= link_to 'cancel', @milestone, :id => "cancel", :class => "fs-link link_to_submit" %>
-  </div>
 <% end %>
-    <%= link_to 'back to list', milestone_path, :class => "fs-link left" %>
 </div>
