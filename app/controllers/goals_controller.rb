@@ -31,6 +31,11 @@ class GoalsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @goal }
     end
+
+    def template_goals
+      Goal.is_template
+    end
+
   end
 
   # GET /goals/1/edit
@@ -81,6 +86,5 @@ class GoalsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
 
 end
