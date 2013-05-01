@@ -6,7 +6,7 @@
       </div>
       <div class="user-opt span5 offset3">
         <% if user_signed_in? %>
-        <%= current_user.user_name %>
+        <div class="login_user"><%= current_user.user_name %></div>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn-info btn") %>
         <% else %>
           <%= link_to('Login', new_user_session_path, :class => "btn-info btn" )  %>
