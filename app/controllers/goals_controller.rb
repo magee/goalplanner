@@ -33,7 +33,7 @@ class GoalsController < ApplicationController
     end
 
     def template_goals
-      Goal.is_template
+      Goal.is_template == "true"
     end
 
   end
