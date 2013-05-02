@@ -15,10 +15,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %>
-    <%= f.text_field :id %>
-  </div>
-  <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
@@ -40,6 +36,10 @@
     <%= f.text_field :due_on, :id => :datepicker %>
   </div>
   <%= ) end %>
+  <div class="actions">
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
+    <%= link_to 'cancel', @milestone, :id => "cancel", :class => "fs-link link_to_submit" %>
+  </div>
 <% end %>
 
 

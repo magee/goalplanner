@@ -1,12 +1,15 @@
 <div class="progress-bar-sass"></div>
+<div class="orbs">
 <ol class="breadcrumb-progress">
 <%= @goal.milestones.each do |milestone| %>
   <li>
-    <div class="task-circle" id="#{milestone.id}">
+    <div class="task-circle %= milestone.id %>">
     </div>
-    <div class="progress progress-0">
+    <div class="progress <%= milestone.id %> progress-0">
     </div>
     <div class="title"><%= milestone.title %></div>
   </li>
 <% end %>
 </ol>
+</div>
+

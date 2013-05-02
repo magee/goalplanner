@@ -7,16 +7,21 @@
     <th>description</th>
     <th>due</th>
     <th class="center">complete?</th>
+    <th>iCal</th>
     <th>edit</th>
+    <th>delete</th>
   </head>
   <tbody>
 <% @goals.each do |goal| %>
   <tr>
     <td><%= link_to goal.title, goal %></td>
     <td><%= goal.description %></td>
-    <td><%= goal.due_on.strftime("%m/%d/%Y") %></td>
+    <td><%= goal.due_on %></td>
     <td class="center"><%= if goal.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
+    <td><%= link_to "iCal", :controller => 'goals', :action => 'format_for_iCal' %></td>
     <td><%= link_to "edit", edit_goal_path(goal) %></td>
+    <td><%= link_to 'delete', goal, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left" %>
+</td>
   </tr>
 <% end %>
   </tbody>

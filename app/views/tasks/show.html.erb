@@ -1,4 +1,7 @@
 <%= render 'layouts/app-title' %>
+<%= render "layouts/separator-header", :separator_title => @task.title %>
+
+<div class="table-box small padded">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -17,25 +20,14 @@
 </p>
 
 <p>
-  <b>Owner:</b>
-  <%= @task.owner_id %>
-</p>
-
-<p>
   <b>Is complete:</b>
   <%= @task.is_complete %>
 </p>
 
-<p>
-  <b>Order:</b>
-  <%= @task.order %>
-</p>
+  <div class="dialog_links">
+    <%= link_to 'cancel', tasks_path, :class => "fs-link left" %>
+    <%= link_to 'edit', edit_task_path(@task) %> |
+  </div>
 
-<p>
-  <b>Milestone:</b>
-  <%= @task.milestone_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+    <%= link_to 'delete', @task, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left" %>
+</div>

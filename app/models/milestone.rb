@@ -1,5 +1,5 @@
 class Milestone < ActiveRecord::Base
-  attr_accessible :description, :due_on, :goal_id, :is_complete, :order, :title
+  attr_accessible :description, :due_on, :goal_id, :is_complete, :order, :title, :percent_complete
   belongs_to :goal
   has_many :tasks
 

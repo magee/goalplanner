@@ -8,11 +8,14 @@
           <%= link_to 'review existing goals', goals_path %>
       </li>
       <li>
-        <%= link_to 'review team activity', people_path %>
+          <%= link_to 'review existing milestones', milestones_path %>
+      </li>
+      <li>
+        <div class="hidden"><%= link_to 'review team activity', people_path %></div>
       </li>
     <%= if current_user.try(:is_admin?) then ( %>
       <li>
-        <%= link_to 'add/edit users', admin_users_path %>
+        <%= link_to 'add/edit users', users_path %>
       </li>
     <%= ) end %>
     </ul>

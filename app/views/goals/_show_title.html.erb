@@ -1,9 +1,7 @@
 <div class="graph-title">
   <div class="title"><%= @goal.title %></div>
   <div class="launch-date">target launch: <%= @goal.due_on.strftime("%m/%d/%Y") %><br />
-    t-minus: <%= -1 * (DateTime.now - @goal.due_on).to_i %><br />
-    milestone count: <%= @goal.milestones.count %><br />
-    task count: <%= @goal.tasks.count %> ("8")
+    t-minus: <%= -1 * (DateTime.now - @goal.due_on).to_i %> days<br />
   </div>
   <div class="countdown"></div>
 </div>

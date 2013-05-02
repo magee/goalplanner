@@ -10,7 +10,7 @@ $max_orb_count: 6;
 $orb_margin-left: 144 * ($max_orb_count - $milestone_count);
 
 /*  for dev/test */
-$percent_complete: 20px;
+$percent_complete: 0px;
 
 html {
   background:#fff;
@@ -88,7 +88,7 @@ div.task-circle {
   -webkit-box-shadow:inset 0 0 10px 0 rgba(0,0,0,0.5);
   -moz-box-shadow:inset 0 0 10px 0 rgba(0,0,0,0.5);
   box-shadow:inset 0 0 10px 0 rgba(0,0,0,0.5);
-  margin: 50px 0 0 (45px + 0px);
+  margin: 50px 0 0 (45px);
   color: #000;
   background-color: lightgrey;
   height: 50px;
@@ -104,13 +104,16 @@ div.task-circle.red {
 ol.breadcrumb-progress {
   margin: -50px auto 50px auto;
 }
+.orbs {
+  margin-left: ($milestone_count);
+}
 .progress {
   -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
   -moz-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
   box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
   position:absolute;
   background-color:#fe6d00;
-  margin: -50px 0 0 (45px + 60px);
+  margin: -50px 0 0 (45px);
   color: #000;
   height: 50px;
   width: 50px;
@@ -132,7 +135,9 @@ ol.breadcrumb-progress {
   width: 720px;
   background-color: darkgrey;
   margin: 60px 0 0 155px;
+  .five {
 
+  }
   .four {
     width: 400px;
     margin-left: 290px;
@@ -140,8 +145,8 @@ ol.breadcrumb-progress {
 }
 .progress-bar-sass {
   $max_orb_count: 6;
-  $width: (144 * $milestone_count);
-  $orb_margin-left: 144 * ($max_orb_count - $milestone_count);
+  $width: (140 * $milestone_count);
+  $orb_margin-left: 95 + (144 * ($max_orb_count - $milestone_count));
   position:absolute;
   -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.9);
   -moz-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.9);
@@ -155,7 +160,23 @@ ol.breadcrumb-progress {
   margin-top: 10px;
   padding-top: 10px;
 }
-
+.progress {
+  -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
+  -moz-box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
+  box-shadow:inset 0 0 5px 0 rgba(0,0,0,0.5);
+  position:absolute;
+  background-color:#fe6d00;
+  margin: -50px 0 0 (45px);
+  color: #000;
+  height: 50px;
+  width: 50px;
+  -moz-border-radius:50%;
+  -khtml-border-radius:50%;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+  z-index: 400;
+  clip: rect(auto, $percent_complete, auto, auto);
+}
 .progress-0 {
   clip: rect(auto, $percent_complete, auto, auto);
 }
@@ -239,7 +260,7 @@ li div.label {
   font-size: .75em;
   margin-left: 100px;
 }
-table.tasks {
+table.milestonetasks {
   -webkit-border-radius:10px;
   -moz-border-radius:10px;
   border-radius:10px;
@@ -248,18 +269,18 @@ table.tasks {
   overflow:hidden;
   font-size: .85em;
 }
-table.tasks td, table.tasks th {
+table.milestonetasks td, table.milestonetasks th {
   border:1px solid #e3e3e3;
   padding: 5px;
 }
-.table.tasks td {
+.table.milestonetasks td {
   text-align: left;
   border: 1px solid black;
 }
-.table.tasks th {
+.table.milestonetasks th {
   text-align: center;
 }
-.table.tasks td.desc{
+.table.milestonetasks td.desc{
   text-align: left;
   border: 1px solid black;
 }

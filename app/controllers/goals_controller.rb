@@ -1,9 +1,13 @@
 class GoalsController < ApplicationController
+
   # GET /goals
   # GET /goals.json
   def index
-    #  TODO:  change this to whatever startup indicator is used by FS to get rid of magic number 1
-    @goals = Goal.by_startup(1)
+
+    #  Default test startup_id
+    $startup_id = 1
+    #  TODO: for integration, get startup id from main site
+    @goals = Goal.by_startup($startup_id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -86,5 +90,4 @@ class GoalsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
 end

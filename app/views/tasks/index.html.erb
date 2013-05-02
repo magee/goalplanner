@@ -13,7 +13,7 @@
   <tr>
     <td><%= link_to task.title, task %></td>
     <td><%= task.description %></td>
-    <td><%= task.due_on.strftime("%m/%d/%Y") %></td>
+    <td><%= task.due_on %></td>
     <td class="center"><%= if task.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
   </tr>
 <% end %>

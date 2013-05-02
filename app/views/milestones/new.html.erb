@@ -1,5 +1,9 @@
-<%= render 'layouts/app-title' %>
-<%= render 'layouts/new-form', :new_model => @milestone %>
+<div class="page-title">
+<!--   <%= image_tag "app-logo.png", :class => "app-logo" %><br /> -->
+  goal planner
+</div>
+
+<%= render 'form' %>
 
   <div class="actions">
     <%= link_to 'delete', @milestone, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left link_to_submit" %>
