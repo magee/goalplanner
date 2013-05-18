@@ -16,6 +16,14 @@
   <% end %>
 
   <div class="field">
+    <%= f.label "Related milestone" %>
+    <%= collection_select(:task, :milestone_id, Milestone.all, :id, :title) %>
+  </div>
+  <div class="field">
+    <%= f.label "Assigned to" %>
+    <%= collection_select(:task, :person_id, Person.all, :id, :email) %>
+  </div>
+  <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
