@@ -1,0 +1,28 @@
+  <title>Foundersuite | startup management software</title>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+
+  <!-- local copy of Foundersuite stylesheet -->
+  <link rel="stylesheet" href="./lib/assets/fs-fs-goalplanner.css" />
+
+  <!-- temp development script & style sheets - one or both may be modified to use FS's existing ones -->
+  <script language="javascript" src="./lib/assets/app.js"></script>
+
+  <!-- goal-planner stylesheet -->
+  <link rel="stylesheet" href="./lib/assets/fs-goalplanner.css" />
+
+
+  <title>Foundersuite | startup management software</title>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+
+  <!-- local copy of Foundersuite stylesheet -->
+  <link rel="stylesheet" href="../lib/assets/fs-fs-goalplanner.css" />
+
+  <!-- temp development script & style sheets - one or both may be modified to use FS's existing ones -->
+  <script language="javascript" src="../lib/assets/app.js"></script>
+
+  <!-- goal-planner stylesheet -->
+  <link rel="stylesheet" href="../lib/assets/fs-goalplanner.css" />

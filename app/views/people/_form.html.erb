@@ -1,0 +1,40 @@
+<%= render "layouts/separator-header", :separator_title => "edit team member" %>
+
+<div class="table-box small padded">
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :is_active %><br />
+    <%= f.check_box :is_active %>
+  </div>
+  <div class="actions">
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
+    <%= link_to 'cancel', @person, :id => "cancel", :class => "fs-link link_to_submit" %>
+  </div>
+<% end %>
+    <%= link_to 'back to list', people_path, :class => "fs-link left" %>
+</div>
+

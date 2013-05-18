@@ -1,0 +1,37 @@
+<%= render 'layouts/app-title' %>
+<%= render "layouts/separator-header", :separator_title => "milestones" %>
+
+<div class="table-box medium padded">
+  <p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @milestone.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @milestone.description %>
+</p>
+
+<p>
+  <b>Due on:</b>
+  <%= @milestone.due_on %>
+</p>
+
+<p>
+  <b>Is complete:</b>
+  <%= @milestone.is_complete %>
+</p>
+
+<p>
+  <b>Goal:</b>
+  <%= @milestone.goal.title %>
+</p>
+
+  <div class="dialog_links">
+    <%= link_to 'edit', edit_milestone_path(@milestone), :class => "fs-link" %>
+    <%= link_to 'delete', @milestone, :class => "fs-link", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'back to list', milestones_path, :class => "fs-link left" %>
+  </div>
+</div>
