@@ -44,12 +44,12 @@ ActiveRecord::Schema.define(:version => 20130430023811) do
   create_table "people", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email"
-    t.boolean  "is_active"
-    t.integer  "startup_id"
-    t.boolean  "is_founder"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "email",                         :null => false
+    t.boolean  "is_active",  :default => true,  :null => false
+    t.integer  "startup_id",                    :null => false
+    t.boolean  "is_founder", :default => false, :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "startups", :force => true do |t|
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20130430023811) do
     t.string   "short_title"
     t.text     "description"
     t.date     "due_on"
-    t.integer  "owner_id"
+    t.integer  "person_id"
     t.boolean  "is_complete"
     t.integer  "order"
     t.integer  "milestone_id"

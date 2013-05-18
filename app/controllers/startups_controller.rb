@@ -1,4 +1,5 @@
 class StartupsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /startups
   # GET /startups.json
   def index

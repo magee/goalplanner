@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :short_title
       t.text :description
       t.date :due_on
-      t.integer :owner_id
+      t.integer :person_id
       t.boolean :is_complete
       t.integer :order
       t.integer :milestone_id

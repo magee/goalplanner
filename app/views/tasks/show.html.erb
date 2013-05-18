@@ -15,6 +15,11 @@
 </p>
 
 <p>
+  <b>Owner:</b>
+  <%= @task.person_id %>
+</p>
+
+<p>
   <b>Due on:</b>
   <%= @task.due_on %>
 </p>
@@ -24,10 +29,11 @@
   <%= @task.is_complete %>
 </p>
 
-  <div class="dialog_links">
-    <%= link_to 'cancel', tasks_path, :class => "fs-link left" %>
-    <%= link_to 'edit', edit_task_path(@task) %> |
-  </div>
 
-    <%= link_to 'delete', @task, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left" %>
+
+  <div class="dialog_links">
+    <%= link_to 'edit', edit_task_path(@task), :class => "fs-link" %>
+    <%= link_to 'delete', @task, :class => "fs-link", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'back to list', tasks_path, :class => "fs-link left" %>
+  </div>
 </div>

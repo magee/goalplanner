@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  before_filter :authenticate_user!
   # TODO: add default startup_id of the one belonging to the current_user
   # GET /people
   # GET /people.json

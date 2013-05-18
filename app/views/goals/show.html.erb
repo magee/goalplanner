@@ -1,33 +1,26 @@
-<%= render 'show_title' %>
+  <%= render 'show_title' %>
   <% if (@goal.milestones.count == 0 ) then ( %>
-    <h3 class="separator-header"><span>no milestones specified yet</span></h3>
+    <h3 class="separator-header">
+      <span>no milestones defined yet</span>
+    </h3>
+
   <% ) else ( %>
     <div class="progress-bar-sass"></div>
     <div class="orbs">
     <ol class="breadcrumb-progress">
+
     <% @goal.milestones.each do |milestone| %>
       <li>
-
-        <div class="task-circle <%= milestone.id %>">
-        </div>
-        <div class="progress <%= milestone.id %> progress-<%=milestone.percent_complete.to_i%>">
-        </div>
+        <div class="task-circle <%= milestone.id %>"></div>
+        <div class="progress <%= milestone.id %> progress-<%=milestone.percent_complete.to_i%>"></div>
         <div class="title"><%= milestone.title %></div>
-
       </li>
     <% end %>
+
     </ol>
     </div>
+    <%= render 'task_tables', :goal => @goal %>
+
   <% ) end %>
-<div class="table-box tasks">
-  <%= render 'table_2' %>
-  <%= render 'table_3' %>
-  <%= render 'table_4' %>
-  <%= render 'table_5' %>
-  <%= render 'table_6' %>
-  <%= render 'table_7' %>
-  <%= render 'table_8' %>
-  <%= render 'table_9' %>
-  <%= render 'table_10' %>
-  <%= render 'table_11' %>
-</div>
+
+

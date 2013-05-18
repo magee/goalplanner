@@ -8,6 +8,7 @@
     <th>due</th>
     <th class="center">complete?</th>
     <th>edit</th>
+    <th>delete</th>
   </head>
   <tbody>
 <% @milestones.each do |milestone| %>
@@ -17,6 +18,7 @@
     <td><%= milestone.due_on.strftime("%m/%d/%Y") %></td>
     <td class="center"><%= if milestone.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
     <td><%= link_to "edit", edit_milestone_path(milestone) %></td>
+    <td><%= link_to 'delete', milestone, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left" %>
   </tr>
 <% end %>
   </tbody>

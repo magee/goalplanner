@@ -1,7 +1,15 @@
 <div class="graph-title">
   <div class="title"><%= @goal.title %></div>
+
+  <% if (@goal.due_on) then ( %>
   <div class="launch-date">target launch: <%= @goal.due_on.strftime("%m/%d/%Y") %><br />
     t-minus: <%= -1 * (DateTime.now - @goal.due_on).to_i %> days<br />
   </div>
+  <%) else (%>
+  <div class="launch-date">target launch: <br />
+    t-minus: ?? days<br />
+  </div>
+  <%) end %>
+
   <div class="countdown"></div>
 </div>

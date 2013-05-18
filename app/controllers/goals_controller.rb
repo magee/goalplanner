@@ -1,4 +1,5 @@
 class GoalsController < ApplicationController
+  before_filter :authenticate_user!
 
   # GET /goals
   # GET /goals.json
@@ -89,5 +90,8 @@ class GoalsController < ApplicationController
       format.html { redirect_to goals_url }
       format.json { head :no_content }
     end
+  end
+
+  def format_for_iCal
   end
 end

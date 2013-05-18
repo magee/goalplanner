@@ -7,8 +7,7 @@ one:
   is_complete: false
   order: 1
   goal_id: 1
-  owner_id: 1
-  startup_id: 1
+  person_id: 1
   is_template: true
 
 two:
@@ -18,8 +17,7 @@ two:
   is_complete: true
   order: 2
   goal_id: 1
-  owner_id: 1
-  startup_id: 1
+  person_id: 1
   is_template: true
   percent_complete: 1.0
 
@@ -30,8 +28,7 @@ three:
   is_complete: false
   order: 3
   goal_id: 1
-  owner_id: 1
-  startup_id: 1
+  person_id: 1
   is_template: true
   percent_complete: .33
 
@@ -42,8 +39,7 @@ four:
   is_complete: false
   order: 4
   goal_id: 1
-  owner_id: 1
-  startup_id: 1
+  person_id: 1
   is_template: true
   percent_complete: .66
 
@@ -54,8 +50,7 @@ five:
   is_complete: false
   order: 5
   goal_id: 1
-  owner_id: 1
-  startup_id: 1
+  person_id: 1
   is_template: true
 
 six:
@@ -65,8 +60,7 @@ six:
   is_complete: false
   order: 6
   goal_id: 1
-  owner_id: 1
-  startup_id: 1
+  person_id: 1
   is_template: true
 
 seven:
@@ -76,8 +70,7 @@ seven:
   is_complete: false
   order: 1
   goal_id: 2
-  startup_id: 1
-  owner_id: 1
+  person_id: 1
   is_template: true
 
 eight:
@@ -87,8 +80,7 @@ eight:
   is_complete: false
   order: 2
   goal_id: 2
-  startup_id: 1
-  owner_id: 1
+  person_id: 1
   is_template: true
 
 nine:
@@ -98,8 +90,7 @@ nine:
   is_complete: false
   order: 3
   goal_id: 2
-  startup_id: 1
-  owner_id: 1
+  person_id: 1
   is_template: true
 
 ten:
@@ -109,8 +100,7 @@ ten:
   is_complete: false
   order: 4
   goal_id: 2
-  startup_id: 1
-  owner_id: 5
+  person_id: 5
   is_template: true
 
 eleven:
@@ -120,8 +110,7 @@ eleven:
   is_complete: false
   order: 1
   goal_id: 1
-  startup_id: 1
-  owner_id: 1
+  person_id: 1
   is_template: false
 
 twelve:
@@ -131,8 +120,7 @@ twelve:
   is_complete: false
   order: 2
   goal_id: 1
-  startup_id: 1
-  owner_id: 1
+  person_id: 1
   is_template: false
 
 thirteen:
@@ -142,8 +130,7 @@ thirteen:
   is_complete: false
   order: 3
   goal_id: 1
-  startup_id: 1
-  owner_id: 1
+  person_id: 1
   is_template: false
 
 fourteen:
@@ -153,8 +140,7 @@ fourteen:
   is_complete: false
   order: 4
   goal_id: 1
-  startup_id: 1
-  owner_id: 4
+  person_id: 4
   is_template: false
 
 fifteen:
@@ -164,8 +150,7 @@ fifteen:
   is_complete: false
   order: 5
   goal_id: 1
-  startup_id: 1
-  owner_id: 4
+  person_id: 4
   is_template: false
 
 sixteen:
@@ -175,8 +160,7 @@ sixteen:
   is_complete: false
   order: 6
   goal_id: 1
-  startup_id: 1
-  owner_id: 3
+  person_id: 3
   is_template: false
 
 seventeen:
@@ -186,8 +170,7 @@ seventeen:
   is_complete: false
   order: 1
   goal_id: 2
-  startup_id: 1
-  owner_id: 1
+  person_id: 1
   is_template: false
 
 eighteen:
@@ -197,8 +180,7 @@ eighteen:
   is_complete: false
   order: 2
   goal_id: 2
-  startup_id: 1
-  owner_id: 4
+  person_id: 4
   is_template: false
 
 nineteen:
@@ -208,8 +190,7 @@ nineteen:
   is_complete: false
   order: 3
   goal_id: 2
-  startup_id: 1
-  owner_id: 3
+  person_id: 3
   is_template: false
 
 twenty:
@@ -219,7 +200,6 @@ twenty:
   is_complete: false
   order: 4
   goal_id: 2
-  startup_id: 1
-  owner_id: 3
+  person_id: 3
   is_template: false
 

@@ -12,6 +12,10 @@ html {
 body {
   min-width: 980px; }
 
+.alert, .notice {
+  position: absolute;
+  margin-top: 150px; }
+
 .logo {
   float: left;
   width: 87%;

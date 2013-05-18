@@ -19,6 +19,10 @@ html {
 body {
   min-width:$page_min_width;
 }
+.alert, .notice {
+  position: absolute;
+  margin-top: 150px;
+}
 .logo {
   float: left;
   width: 87%;
