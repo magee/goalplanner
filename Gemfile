@@ -7,9 +7,8 @@ gem 'rails', '3.2.12'
 
 gem 'mysql2'
 
-group :development, :testing do
-  gem "factory_girl_rails", "~> 4.0"
-end
+#for multistep forms
+gem 'wicked'
 
 # authentication
 gem 'devise'
