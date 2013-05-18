@@ -4,7 +4,6 @@
   <table class="table" id="goalList">
   <thead>
     <th>milestone</th>
-    <th>parent goal</th>
     <th>due</th>
     <th class="center">complete?</th>
     <th>edit</th>
@@ -14,8 +13,13 @@
 <% @milestones.each do |milestone| %>
   <tr>
     <td><%= link_to milestone.title, milestone %></td>
-    <td><%= milestone.goal.title %></td>
-    <td><%= milestone.due_on.strftime("%m/%d/%Y") %></td>
+    <td>
+      <% if (milestone.due_on) then ( %>
+        <%= milestone.due_on.strftime("%m/%d/%Y") %>
+      <%) end %>
+
+
+    </td>
     <td class="center"><%= if milestone.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
     <td><%= link_to "edit", edit_milestone_path(milestone) %></td>
     <td><%= link_to 'delete', milestone, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left" %>
