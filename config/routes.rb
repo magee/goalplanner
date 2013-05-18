@@ -9,7 +9,7 @@ FsGoalplanner::Application.routes.draw do
   resources :users
 
   resources :people
-
+  resources :goal_steps
   resources :goals do
     resources :milestones
   end
