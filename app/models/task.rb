@@ -3,7 +3,12 @@ class Task < ActiveRecord::Base
   belongs_to :milestone
   belongs_to :person
 
-  validate :milestone_id, :presence => true
-  validate :title, :presence => true
+  validates :milestone_id, :title, :presence => true
+  validate :due_on_cannot_be_in_the_past
 
+  def due_on_cannot_be_in_the_past
+    if !due_on.blank? and due_on < Date.today
+      errors.add(:due_on, "can't be in the past")
+    end
+  end
 end
