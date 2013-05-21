@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>New Task Assignment</h1>
+    <p>
+       <%= @user.first_name + " " + @user.last_name %>,
+    </p>
+    <p>
+      A new task has been assigned to you by <%= @founder.first_name + " " + @founder.last_name %> in Foundersuite GoalPlanner.
+
+      <!-- TODO:  add full text of the task (including milestone and goals?) -->
+    </p>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<div class="navbar navbar-center">
+  <div class="navbar-inner">
+    <ul class="nav nav-pointer">
+      <li>
+          <%= link_to 'start a new goal', new_goal_path %>
+      </li>
+      <li>
+          <%= link_to 'review goals', goals_path %>
+      </li>
+      <li>
+          <%= link_to 'review milestones', milestones_path %>
+      </li>
+      <li>
+          <%= link_to 'review tasks', tasks_path %>
+      </li>
+      <li>
+        <div class="hidden"><%= link_to 'review team activity', people_path %></div>
+      </li>
+    <%= if current_user.try(:is_admin?) then ( %>
+      <li>
+        <%= link_to 'add/edit users', users_path %>
+      </li>
+    <%= ) end %>
+    </ul>
+  </div>
+</div>

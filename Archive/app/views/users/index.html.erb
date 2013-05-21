@@ -1,0 +1,24 @@
+<%= render 'layouts/app-title' %>
+<%= render "layouts/separator-header", :separator_title => "users" %>
+
+<div class="table-box medium padded">
+  <table class="table" id="goalList">
+  <tr>
+    <th>User</th>
+    <th>associated team member</th>
+    <th>admin?</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.email, user %></td>
+    <td><%= user.person_id %></td>
+    <td><%= user.is_admin %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'new user', new_user_path, :class => "fs-link" %>
+</div>

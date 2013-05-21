@@ -1,0 +1,21 @@
+  <%= render 'show_title' %>
+  <% if (@milestones.count == 0 ) then ( %>
+    <h3 class="separator-header">
+      <span>no milestones defined yet</span>
+    </h3>
+
+  <% ) else ( %>
+    <div class="progress-bar-sass"></div>
+    <%= form_for @goal, :remote => true do |g| %>
+      <div class="orbs">
+      <ol class="breadcrumb-progress">
+      <% @milestones.each do |milestone| %>
+        <%= render 'milestone_orb', :f => g, :milestone => milestone  %>
+      <% end %>
+      </ol>
+      <%= render 'task_tables', :f => g, :milestones => @milestones %>
+    <% end %>
+    </div>
+  <% ) end %>
+
+

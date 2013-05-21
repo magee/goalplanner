@@ -1,0 +1,12 @@
+<div class="page-title">
+<!--   <%= image_tag "app-logo.png", :class => "app-logo" %><br /> -->
+  goal planner
+</div>
+
+<%= render 'form' %>
+
+  <div class="actions">
+    <%= link_to 'delete', @milestone, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left link_to_submit" %>
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link link_to_submit" %>
+    <%= link_to 'cancel', @milestone, :id => "cancel", :class => "fs-link link_to_submit" %>
+  </div>

@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  title: "Media Outreach"
+  short_title: "Media"
+  description: "Some substantive description of the Media Outreach goal"
+  due_on: 2013-08-26
+  is_complete: false
+  is_template: false
+  startup_id: 1
+
+two:
+  id: 2
+  title: "Launch Fundraising Campaign"
+  short_title: "Fundraising"
+  description: "Some substantive description of the Launch Fundraising Campaign goal"
+  due_on: 2013-07-15
+  is_complete: false
+  is_template: false
+  startup_id: 1
+
+three:
+  id: 3
+  title: "Media Outreach"
+  short_title: "Media"
+  description: "Some substantive description of the Media Outreach goal"
+  due_on: 2013-08-26
+  is_complete: false
+  is_template: true
+  startup_id: 0
+
+four:
+  id: 4
+  title: "Launch Fundraising Campaign"
+  short_title: "Fundraising"
+  description: "Some substantive description of the Launch Fundraising Campaign goal"
+  due_on: 2013-07-15
+  is_complete: false
+  is_template: true
+  startup_id: 0
+
+five:
+  id: 5
+  title: "Another Goal for Startup 1"
+  short_title: "Media"
+  description: "Some substantive description of another goal"
+  due_on: 2013-08-26
+  is_complete: false
+  is_template: false
+  startup_id: 1
+
+six:
+  id: 6
+  title: "First Goal Startup 2"
+  short_title: "Fundraising"
+  description: "Some substantive description of First Goal"
+  due_on: 2013-07-15
+  is_complete: false
+  is_template: false
+  startup_id: 2

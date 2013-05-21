@@ -1,0 +1,26 @@
+<%= render 'layouts/app-title' %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Founder</th>
+    <th>Founder email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @startups.each do |startup| %>
+  <tr>
+    <td><%= startup.name %></td>
+    <td><%= startup.founder %></td>
+    <td><%= startup.founder_email %></td>
+    <td><%= link_to 'Show', startup %></td>
+    <td><%= link_to 'Edit', edit_startup_path(startup) %></td>
+    <td><%= link_to 'Destroy', startup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Startup', new_startup_path %>

@@ -1,0 +1,46 @@
+<%= render "layouts/separator-header", :separator_title => "add/edit task" %>
+
+<div class="table-box small padded">
+
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Related milestone" %>
+    <%= collection_select(:task, :milestone_id, Milestone.all, :id, :title) %>
+  </div>
+  <div class="field">
+    <%= f.label "Assigned to" %>
+    <%= collection_select(:task, :person_id, Person.all, :id, :email) %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :due_on %>
+    <%= f.text_field :due_on, :id => "datepicker" %>
+  </div>
+  <div class="field">
+    <%= f.label :is_complete %>
+    <%= f.check_box :is_complete %>
+  </div>
+  <div class="actions">
+    <%= link_to_submit 'save', :id => "link_to_submit", :class => "fs-link" %>
+</div>
+<% end %>
+

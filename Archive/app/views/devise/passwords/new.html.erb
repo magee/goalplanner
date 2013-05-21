@@ -1,0 +1,17 @@
+<%= render "layouts/app-title" %>
+<%= render "layouts/separator-header", :separator_title => "forgot your password?" %>
+
+<div class="table-box medium padded">
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <%= f.label "Give us your email to send password reset instructions." %>
+  <div>
+    <%= f.email_field :email, :autofocus => true %>
+  <div><%= link_to_submit 'send ', :class => "fs-link link_to_submit" %></div>
+  </div>
+<% end %>
+
+<div class="dialog_links"><%= render "devise/shared/links" %></div>
+
+</div>

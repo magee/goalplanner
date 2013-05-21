@@ -1,0 +1,19 @@
+<div class="wrapper status-bar new-goal">
+  <% step_list = ["Describe your goal", "Define milestones", "Identify tasks"] %>
+    <!-- Pull Milestone Title Here -->
+  <div class="progress-bar"></div>
+  <ol class="breadcrumb-progress">
+    <% i = 0 %>
+    <% step_list.each do |this_step| %>
+    <li class="task">
+      <div class="task-circle">
+      </div>
+      <div id="<% i %>" class="progress progress-<%= if i >= 1 then (0) else (100) end %>">
+      </div>
+      <div class="title"><%= this_step %></div>
+    </li>
+    <% i= i+1 %>
+    <% end %>
+  </ol>
+</div>
+

@@ -1,0 +1,31 @@
+<%= render 'layouts/app-title' %>
+<%= render 'layouts/separator-header', :separator_title => "goals" %>
+<div class="table-box padded">
+  <table class="table" id="goalList">
+  <thead>
+    <th>goal</th>
+    <th>description</th>
+    <th>due</th>
+    <th class="center">complete?</th>
+    <th>edit</th>
+    <th>delete</th>
+  </head>
+  <tbody>
+<% @goals.each do |goal| %>
+  <tr>
+    <td><%= link_to goal.title, goal %></td>
+    <td><%= goal.description %></td>
+    <td><%= goal.due_on %></td>
+    <td class="center"><%= if goal.is_complete then ( %>yes<%= ) else ( %>no<%= ) end %></td>
+    <td><%= link_to "edit", edit_goal_path(goal) %></td>
+    <td><%= link_to 'delete', goal, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fs-link left" %>
+</td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'new goal', new_goal_path, :class => 'fs-link' %>
+

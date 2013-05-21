@@ -1,0 +1,18 @@
+<%= render "layouts/app-title" %>
+<%= render "layouts/separator-header", :separator_title => "sign in" %>
+  <%= devise_error_messages! %>
+
+<div class="table-box small padded">
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+  <div><%= link_to_submit 'sign in ', :class => "fs-link link_to_submit" %></div>
+
+<% end %>
+
+<div class="dialog_links"><%= render "devise/shared/links" %></div>
+</div>
+

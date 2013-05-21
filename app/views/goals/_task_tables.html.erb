@@ -1,0 +1,37 @@
+<% @milestones.each do |milestone| %>
+  <%= f.fields_for :milestone do |m| %>
+    <table class="<%= milestone.id %> milestonetasks hidden">
+    <thead>
+      <tr>
+        <th colspan="4"><%= milestone.title %></th>
+      </tr>
+      <tr>
+        <th>task</th>
+        <th>owner</th>
+        <th>due date</th>
+        <th>complete?</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% milestone.tasks.each do |task| %>
+        <tr>
+        <%= m.fields_for :tasks do |t| %>
+          <fieldset>
+            <td><%= task.title %></td>
+            <td><%= task.person_id %></td>
+            <td><%= task.due_on %></td>
+            <td class="center">
+              <%= check_box_tag task.id, '', false, { 'data-href' => completed_task_path(task) } %>
+            </td>
+          </fieldset>
+        <% end %>
+      </tr>
+      <% end %>
+
+
+
+     </tbody>
+    </table>
+  <% end %>
+<% end %>
