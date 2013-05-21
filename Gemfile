@@ -4,11 +4,13 @@ gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'pg'  #for heroku deployment
-#gem 'mysql2'
+group :production do
+  gem 'pg'  #for heroku deployment
+end
 
 group :development do
   gem 'pry'
+  gem 'mysql2'
 end
 
 #for multistep forms
