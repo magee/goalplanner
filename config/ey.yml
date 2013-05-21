@@ -26,3 +26,4 @@ environments:
   prototype_development:
     migrate: true
     migration_command: rake db:migrate
+    precompile_assets: true
