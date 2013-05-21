@@ -1,9 +1,7 @@
       <fieldset class="select-template">
         <div class="select-template">
           <label class="inline-label" for="select-template">select a goal template:</label>
-            <select class="custom-template" style="width: 400px" id="goal-templates">
-             <option value = "0"></option>
-           </select>
+          <%= collection_select(:startup_goals, :id, Goal.template_goals, :id, :title) %>
            </input>
         </div>
       </fieldset>
@@ -12,7 +10,7 @@
       </div>
 
       <div class="custom-template">
-        <%= form_for @goal do |f| %>
+          <%= form_for @goal, :remote => true do |f| %>
           <% if @goal.errors.any? %>
             <div id="error_explanation">
               <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>

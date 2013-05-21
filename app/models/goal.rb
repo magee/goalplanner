@@ -24,4 +24,8 @@ class Goal < ActiveRecord::Base
     end
   end
 
+  def self.template_goals
+    Goal.where("is_template = ?", 1)
+  end
+
 end

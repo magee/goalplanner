@@ -1,26 +1,57 @@
   <%= render 'show_title' %>
-  <% if (@goal.milestones.count == 0 ) then ( %>
+  <% if (@milestones.count == 0 ) then ( %>
     <h3 class="separator-header">
       <span>no milestones defined yet</span>
     </h3>
 
   <% ) else ( %>
     <div class="progress-bar-sass"></div>
-    <div class="orbs">
-    <ol class="breadcrumb-progress">
+    <%= form_for @goal, :remote => true do |g| %>
+      <div class="orbs">
+      <ol class="breadcrumb-progress">
+      <% @milestones.each do |milestone| %>
+        <li data-remote-on-hover=true >
+          <div class="task-circle <%= milestone.id %>"></div>
+          <div class="progress <%= milestone.id %> progress-<%= milestone.percent_complete.to_i%>"></div>
+          <div class="title"><%= milestone.title %></div>
+        </li>
+      <% end %>
+      </ol>
 
-    <% @goal.milestones.each do |milestone| %>
-      <li>
-        <div class="task-circle <%= milestone.id %>"></div>
-        <div class="progress <%= milestone.id %> progress-<%=milestone.percent_complete.to_i%>"></div>
-        <div class="title"><%= milestone.title %></div>
-      </li>
-    <% end %>
+      <% @milestones.each do |milestone| %>
+        <%= g.fields_for milestone, :index => milestone do |m| %>
+          <table class="<%= milestone.id %>  milestonetasks">
+          <thead>
+            <tr>
+              <th colspan="4"><%= milestone.title %></th>
+            </tr>
+            <tr>
+              <th>task</th>
+              <th>owner</th>
+              <th>due date</th>
+              <th>complete?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <% milestone.tasks.each do |task| %>
 
-    </ol>
-    </div>
-    <%= render 'task_tables', :goal => @goal %>
-
+              <%= m.fields_for tasks do |t| %>
+              <fieldset>
+                <td><%= t.input :field_key, as: :hidden %><%= t.title %></td>
+                <td><%= t.person_id %></td>
+                <td><%= t.due_on %></td>
+                <td><%= t.is_complete %></td>
+              </fieldset>
+              <% end %>
+              <% end %>
+            </tr>
+            <% end %>
+           </tbody>
+          </table>
+        <% end %>
+      <% end %>
+      </div>
   <% ) end %>
 
 

@@ -18,6 +18,11 @@ $(->
       $("#response").html("Saved!").show().fadeOut("slow")
     )
     .bind('ajax:error', (xhr, status, error) -> )
+
+  $("li[data-remote-on-hover]")
+    .hover( ->
+      alert("test")
+    )
 )
 
 window.onbeforeunload = (e) ->

@@ -9,7 +9,7 @@ class Milestone < ActiveRecord::Base
   scope :not_complete,  :conditions => { :is_complete => false }
   scope :is_complete,  :conditions => { :is_complete => true }
 
-  validates :goal_id, :title :presence => true
+  validates :goal_id, :title, :presence => true
 
   validate :due_on_cannot_be_in_the_past
 
@@ -18,4 +18,9 @@ class Milestone < ActiveRecord::Base
       errors.add(:due_on, "can't be in the past")
     end
   end
+
+  def self.template_milestones
+    Milestone.goal.where("is_template = ?", 1)
+  end
+
 end

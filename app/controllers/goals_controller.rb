@@ -20,7 +20,7 @@ class GoalsController < ApplicationController
   # GET /goals/1.json
   def show
     @goal = Goal.find(params[:id])
-
+    @milestones = @goal.milestones
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @goal }
