@@ -36,6 +36,7 @@ class TasksController < ApplicationController
   # GET /tasks/1/edit
   def edit
     @task = Task.find(params[:id])
+
   end
 
   # POST /tasks
@@ -58,6 +59,11 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
+
+    def completed
+      @task.is_complete = true
+      @task.save
+    end
 
     respond_to do |format|
       if @task.update_attributes(params[:task])

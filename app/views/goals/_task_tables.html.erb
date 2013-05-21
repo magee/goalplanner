@@ -1,36 +1,37 @@
-    <% goal.milestones.each do |milestone| %>
-      <%= form_for milestone do |m| %>
-      <table class="<%= milestone.id %> hidden milestonetasks">
-      <thead>
-        <tr>
-          <th colspan="4">
-            <%= milestone.title %>
-            <br />
-            <br />
-          </th>
-        </tr>
-        <tr>
-          <th>task</th>
-          <th>owner</th>
-          <th>due date</th>
-          <th>complete?</th>
-        </tr>
-      </thead>
-      <tbody>
+<% @milestones.each do |milestone| %>
+  <%= f.fields_for :milestone do |m| %>
+    <table class="<%= milestone.id %> milestonetasks hidden">
+    <thead>
+      <tr>
+        <th colspan="4"><%= milestone.title %></th>
+      </tr>
+      <tr>
+        <th>task</th>
+        <th>owner</th>
+        <th>due date</th>
+        <th>complete?</th>
+      </tr>
+    </thead>
+    <tbody>
 
-      <%= m.fields_for :tasks do |t| %>
-        <%= t.text_field :title %>
-          <tr>
-          <td><%= t.label "task" %> <%= t.text_field :title %></td>
-          <td><%= t.text_field :person_id %></td>
-          <td><%= t.text_field :due_on %></td>
-          <td class="center">
-            <input data-remote="true" id="<%= task.id %>" class="complete_task" class="complete_task" type="checkbox" checked value="1">
-          </td>
-        </tr>
+      <% milestone.tasks.each do |task| %>
+        <tr>
+        <%= m.fields_for :tasks do |t| %>
+          <fieldset>
+            <td><%= task.title %></td>
+            <td><%= task.person_id %></td>
+            <td><%= task.due_on %></td>
+            <td class="center">
+              <%= check_box_tag task.id, '', false, { 'data-href' => completed_task_path(task) } %>
+            </td>
+          </fieldset>
+        <% end %>
+      </tr>
       <% end %>
 
-      </tbody>
+
+
+     </tbody>
     </table>
-    <% end %>
   <% end %>
+<% end %>

@@ -21,6 +21,10 @@ class MilestonesController < ApplicationController
 =end
     @milestone = Milestone.find(params[:id])
 
+    def getTaskList
+      Milestone.tasks.all
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @milestone }

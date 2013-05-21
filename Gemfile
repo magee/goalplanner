@@ -7,6 +7,10 @@ gem 'rails', '3.2.12'
 
 gem 'mysql2'
 
+group :development do
+  gem 'pry'
+end
+
 #for multistep forms
 gem 'wicked'
 

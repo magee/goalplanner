@@ -20,6 +20,7 @@ class GoalsController < ApplicationController
   # GET /goals/1.json
   def show
     @goal = Goal.find(params[:id])
+    @milestones = @goal.milestones
 
     respond_to do |format|
       format.html # show.html.erb
@@ -52,9 +53,9 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(params[:goal])
-
     respond_to do |format|
       if @goal.save
+        session[:goal_id] = @goal.id
         format.html { redirect_to goal_steps_path }
         format.json { render json: goal_steps_path, status: :created, location: @goal }
       else
@@ -92,6 +93,7 @@ class GoalsController < ApplicationController
     end
   end
 
-  def format_for_iCal
+  def current_goal
+    @goal
   end
 end

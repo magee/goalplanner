@@ -4,8 +4,14 @@ class GoalStepsController < ApplicationController
 
   # TODO: defining steps in progress
   def show
-    @goal = goal
-    @goals.attributes = params[:goals]
+    @goal = :goal_id
     render_wizard @goal
   end
+
+  def update
+    @goal = :goal_id
+    @goal.attributes = params[:goal]
+    render_wizard @goal
+  end
+
 end
