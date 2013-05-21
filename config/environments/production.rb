@@ -2,7 +2,7 @@ FsGoalplanner::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # TODO: reconfigure for Foundersuite host email
-  config.action_mailer.default_url_options = {host: => "127.0.0.1:3000"}
+  config.action_mailer.default_url_options = {:host => "127.0.0.1:3000"}
 
   # Code is not reloaded between requests
   config.cache_classes = true
