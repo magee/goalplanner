@@ -1,6 +1,6 @@
 <% @milestones.each do |milestone| %>
   <%= f.fields_for :milestone do |m| %>
-    <table class="<%= milestone.id %>  milestonetasks">
+    <table class="<%= milestone.id %> milestonetasks hidden">
     <thead>
       <tr>
         <th colspan="4"><%= milestone.title %></th>
@@ -21,7 +21,8 @@
             <td><%= task.title %></td>
             <td><%= task.person_id %></td>
             <td><%= task.due_on %></td>
-            <td class="center"><%= check_box_tag "task.is_complete[#{task.is_complete}]", task.id, false, :class => "task_complete" %>
+            <td class="center">
+              <%= check_box_tag task.id, '', false, { 'data-href' => completed_task_path(task) } %>
             </td>
           </fieldset>
         <% end %>

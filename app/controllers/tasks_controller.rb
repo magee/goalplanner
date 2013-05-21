@@ -37,10 +37,6 @@ class TasksController < ApplicationController
   def edit
     @task = Task.find(params[:id])
 
-    def complete
-      complete_state = @task.is_complete
-      render json: { task_id: task_id, is_complete: !complete_state }
-    end
   end
 
   # POST /tasks
@@ -63,6 +59,11 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
+
+    def completed
+      @task.is_complete = true
+      @task.save
+    end
 
     respond_to do |format|
       if @task.update_attributes(params[:task])

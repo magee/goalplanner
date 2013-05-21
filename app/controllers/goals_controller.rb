@@ -21,7 +21,6 @@ class GoalsController < ApplicationController
   def show
     @goal = Goal.find(params[:id])
     @milestones = @goal.milestones
-    p @milestones.map(&:tasks)
 
     respond_to do |format|
       format.html # show.html.erb
