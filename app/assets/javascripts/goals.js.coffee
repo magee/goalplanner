@@ -23,6 +23,19 @@ $(->
     .hover( ->
       alert("test")
     )
+
+  $ ->
+    $('input[type="checkbox"].task_complete').change (e) ->
+      checkbox = $(this)
+      task_id = checkbox.val()
+      task_state = checkbox.getAttribute('checked')
+      $.ajax
+        url: '/task/#{task_id}/edit'
+        method: 'POST'
+        dataType: 'json'
+        data:
+          is_complete: task_state
+
 )
 
 window.onbeforeunload = (e) ->

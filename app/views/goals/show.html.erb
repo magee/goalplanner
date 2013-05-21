@@ -10,47 +10,10 @@
       <div class="orbs">
       <ol class="breadcrumb-progress">
       <% @milestones.each do |milestone| %>
-        <li data-remote-on-hover=true >
-          <div class="task-circle <%= milestone.id %>"></div>
-          <div class="progress <%= milestone.id %> progress-<%= milestone.percent_complete.to_i%>"></div>
-          <div class="title"><%= milestone.title %></div>
-        </li>
+        <%= render 'milestone_orb', :f => g, :milestone => milestone  %>
       <% end %>
       </ol>
-
-      <% @milestones.each do |milestone| %>
-        <%= g.fields_for :milestone do |m| %>
-          <table class="<%= milestone.id %>  milestonetasks">
-          <thead>
-            <tr>
-              <th colspan="4"><%= milestone.title %></th>
-            </tr>
-            <tr>
-              <th>task</th>
-              <th>owner</th>
-              <th>due date</th>
-              <th>complete?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% milestone.tasks.each do |task| %>
-              <tr>
-              <%= m.fields_for :tasks do |t| %>
-                <fieldset>
-                  <td><%= task.title %></td>
-                  <td><%= task.person_id %></td>
-                  <td><%= task.due_on %></td>
-                  <td class="center"><%= check_box_tag "task.is_complete[#{task.is_complete}]",
-  task.id, false %>
-                  </td>
-                </fieldset>
-              <% end %>
-            </tr>
-            <% end %>
-           </tbody>
-          </table>
-        <% end %>
-        <% end %>
+      <%= render 'task_tables', :f => g, :milestones => @milestones %>
       <% end %>
       </div>
   <% ) end %>

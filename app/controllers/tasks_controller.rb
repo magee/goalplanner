@@ -36,6 +36,11 @@ class TasksController < ApplicationController
   # GET /tasks/1/edit
   def edit
     @task = Task.find(params[:id])
+
+    def complete
+      complete_state = @task.is_complete
+      render json: { task_id: task_id, is_complete: !complete_state }
+    end
   end
 
   # POST /tasks
