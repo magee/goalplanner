@@ -19,7 +19,7 @@
       </ol>
 
       <% @milestones.each do |milestone| %>
-        <%= g.fields_for milestone, :index => milestone do |m| %>
+        <%= g.fields_for :milestone do |m| %>
           <table class="<%= milestone.id %>  milestonetasks">
           <thead>
             <tr>
@@ -33,22 +33,23 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
             <% milestone.tasks.each do |task| %>
-
-              <%= m.fields_for tasks do |t| %>
-              <fieldset>
-                <td><%= t.input :field_key, as: :hidden %><%= t.title %></td>
-                <td><%= t.person_id %></td>
-                <td><%= t.due_on %></td>
-                <td><%= t.is_complete %></td>
-              </fieldset>
-              <% end %>
+              <tr>
+              <%= m.fields_for :tasks do |t| %>
+                <fieldset>
+                  <td><%= task.title %></td>
+                  <td><%= task.person_id %></td>
+                  <td><%= task.due_on %></td>
+                  <td class="center"><%= check_box_tag "task.is_complete[#{task.is_complete}]",
+  task.id, false %>
+                  </td>
+                </fieldset>
               <% end %>
             </tr>
             <% end %>
            </tbody>
           </table>
+        <% end %>
         <% end %>
       <% end %>
       </div>
