@@ -4,7 +4,7 @@ FsGoalplanner::Application.routes.draw do
   get "static_pages/goal_show"
   get "static_pages/goal_graph"
   get "home/index"
-
+  get 'task/:id' => 'tasks#completed', :as => :completed_task
   devise_for :users
   resources :users
 

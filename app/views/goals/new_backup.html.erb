@@ -1,0 +1,63 @@
+<%= render 'layouts/app-title' %>
+<% steps_mode = true %>
+<% if (steps_mode) then ( %>
+  <%= render 'new-steps', :step => 1 %>
+<% ) else ( %>
+  <br />
+<% ) end %>
+
+<div class="wrapper new-goal">
+<h3 class="separator-header"><span>new goal</span></h3>
+    <div class="table-box goal">
+      <div style="padding: 10px;">
+
+        <div class="">
+        <fieldset class="select-template">
+        <div class="select-template">
+          <label class="inline-label" for="select-template">select a goal template:</label>
+            <select class="custom-template" style="width: 400px" id="goal-templates">
+             <option value = "0"></option>
+           </select>
+           </input>
+        </div>
+        <div class="highlight">or...</div>
+        <label style="margin-top: 10px;">define your own:</label>
+      </div>
+
+          <div class="custom-template">
+    <%= form_for(@goal) do |f| %>
+      <% if @goal.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+          <ul>
+          <% @goal.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+      <div class="field">
+        <%= f.label :due_on %>
+        <%= f.text_field :due_on, :id => :datepicker %>
+      </div>
+      <div class="actions">
+      <% if (steps_mode) then ( %>
+        <%= link_to_submit 'save', milestones_path, :id => "link_to_submit", :class => "fs-link link_to_submit", :steps_mode => steps_mode %>
+      <% ) else ( %>
+        <%= link_to_submit 'save', milestones_path, :id => "link_to_submit", :class => "fs-link link_to_submit", :steps_mode => steps_mode %>
+      <% ) end %>
+
+      </div><br />
+    <% end %>
+  </div>
+</div>
+
