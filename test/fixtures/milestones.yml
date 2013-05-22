@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  id: 1
   title: "Identify Blogs"
   description: "More substantive description"
   due_on: 2013-05-2
@@ -11,6 +12,7 @@ one:
   is_template: true
 
 two:
+  id: 2
   title: "Story Ideas"
   description: "More substantive description"
   due_on: 2013-04-30
@@ -22,6 +24,7 @@ two:
   percent_complete: 1.0
 
 three:
+  id: 3
   title: "Target Journalists"
   description: "More substantive description"
   due_on: 2013-05-2
@@ -33,6 +36,7 @@ three:
   percent_complete: .33
 
 four:
+  id: 4
   title: "Pitch Materials"
   description: "More substantive description"
   due_on: 2013-04-30
@@ -44,6 +48,7 @@ four:
   percent_complete: .66
 
 five:
+  id: 5
   title: "Lineup Intros"
   description: "More substantive description"
   due_on: 2013-05-2
@@ -54,6 +59,7 @@ five:
   is_template: true
 
 six:
+  id: 6
   title: "Identify Magazines"
   description: "More substantive description"
   due_on: 2013-04-30
@@ -64,6 +70,7 @@ six:
   is_template: true
 
 seven:
+  id: 7
   title: "Funding Strategy"
   description: "More substantive description"
   due_on: 2013-05-2
@@ -74,6 +81,7 @@ seven:
   is_template: true
 
 eight:
+  id: 8
   title: "Target VC List"
   description: "More substantive description"
   due_on: 2013-04-30
@@ -84,6 +92,7 @@ eight:
   is_template: true
 
 nine:
+  id: 9
   title: "Pitch Materials"
   description: "More substantive description"
   due_on: 2013-05-2
@@ -94,6 +103,7 @@ nine:
   is_template: true
 
 ten:
+  id: 10
   title: "Intros Lined Up"
   description: "More substantive description"
   due_on: 2013-04-30
@@ -102,104 +112,3 @@ ten:
   goal_id: 2
   person_id: 5
   is_template: true
-
-eleven:
-  title: "Identify Blogs"
-  description: "More substantive description"
-  due_on: 2013-05-2
-  is_complete: false
-  order: 1
-  goal_id: 1
-  person_id: 1
-  is_template: false
-
-twelve:
-  title: "Story Ideas"
-  description: "More substantive description"
-  due_on: 2013-04-30
-  is_complete: false
-  order: 2
-  goal_id: 1
-  person_id: 1
-  is_template: false
-
-thirteen:
-  title: "Target Journalists"
-  description: "More substantive description"
-  due_on: 2013-05-2
-  is_complete: false
-  order: 3
-  goal_id: 1
-  person_id: 1
-  is_template: false
-
-fourteen:
-  title: "Pitch Materials"
-  description: "More substantive description"
-  due_on: 2013-04-30
-  is_complete: false
-  order: 4
-  goal_id: 1
-  person_id: 4
-  is_template: false
-
-fifteen:
-  title: "Lineup Intros"
-  description: "More substantive description"
-  due_on: 2013-05-2
-  is_complete: false
-  order: 5
-  goal_id: 1
-  person_id: 4
-  is_template: false
-
-sixteen:
-  title: "Identify Magazines"
-  description: "More substantive description"
-  due_on: 2013-04-30
-  is_complete: false
-  order: 6
-  goal_id: 1
-  person_id: 3
-  is_template: false
-
-seventeen:
-  title: "Funding Strategy"
-  description: "More substantive description"
-  due_on: 2013-05-2
-  is_complete: false
-  order: 1
-  goal_id: 2
-  person_id: 1
-  is_template: false
-
-eighteen:
-  title: "Target VC List"
-  description: "More substantive description"
-  due_on: 2013-04-30
-  is_complete: false
-  order: 2
-  goal_id: 2
-  person_id: 4
-  is_template: false
-
-nineteen:
-  title: "Pitch Materials"
-  description: "More substantive description"
-  due_on: 2013-05-2
-  is_complete: false
-  order: 3
-  goal_id: 2
-  person_id: 3
-  is_template: false
-
-twenty:
-  title: "Intros Lined Up"
-  description: "More substantive description"
-  due_on: 2013-04-30
-  is_complete: false
-  order: 4
-  goal_id: 2
-  person_id: 3
-  is_template: false
-
