@@ -11,4 +11,5 @@ class Task < ActiveRecord::Base
       errors.add(:due_on, "can't be in the past")
     end
   end
+
 end

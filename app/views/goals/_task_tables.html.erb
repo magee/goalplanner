@@ -19,7 +19,7 @@
         <%= m.fields_for :tasks do |t| %>
           <fieldset>
             <td><%= task.title %></td>
-            <td><%= task.person_id %></td>
+            <td><%= task.person %></td>
             <td><%= task.due_on %></td>
             <td class="center">
               <%= check_box_tag task.id, '', false, { 'data-href' => completed_task_path(task) } %>
